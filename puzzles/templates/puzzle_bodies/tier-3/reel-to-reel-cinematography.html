@@ -1,0 +1,31 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    img {
+        width: 100%;
+        margin: auto;
+    }
+    img.narrower {
+        width: 75%;
+    }
+    .img-container {
+        display: flex;
+        width: 100%;
+    }
+</style>
+
+<div class="img-container">
+    <img class="narrower" src="{% static 'puzzle_resources/tier-3/reel-to-reel-cinematography/MP_marquis.png' %}"/>
+</div>
+
+<div class="img-container">
+    <img src="{% static 'puzzle_resources/tier-3/reel-to-reel-cinematography/MP_Bulletin.png' %}"/>
+</div>
+
+<p><a target="_blank" href="{% static 'puzzle_resources/tier-3/reel-to-reel-cinematography/MP_stickers.png' %}">Link to high res sticker images</a></p>
+
+<p><a target="_blank" href="https://drive.google.com/drive/folders/19cFLaFORr9z6WBKxXIvFFgttOhD1tupj?usp=sharing">Link to high res posters</a></p>
+
+{% endblock %}

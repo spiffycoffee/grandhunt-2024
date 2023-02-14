@@ -69,9 +69,12 @@
                 </a>
             </th>
             <th>
+                {% comment %}
                 <a href="{% url 'solution' hint.puzzle.slug %}">
                     {{ hint.puzzle }}
                 </a>
+                {% endcomment %} 
+                <p>Solution not available yet</p>
             </th>
             <th>
                 <a href="/admin/puzzles/answersubmission/?team__id__exact={{ hint.team_id }}&puzzle__id__exact={{ hint.puzzle_id }}">

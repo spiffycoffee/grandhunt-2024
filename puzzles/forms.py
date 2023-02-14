@@ -144,19 +144,17 @@ class RequestHintForm(forms.Form):
             _('Describe everything you’ve tried on this puzzle. We will '
             'provide a hint to help you move forward. The more detail you '
             'provide, the less likely it is that we’ll tell you '
-            'something you already know.')
+            'something you already know. Feel free to include a link to '
+            'your team’s Google Workbook or other shared workspace. '
+            'You will have to refresh your page to see when a hint has '
+            'been answered.  Please be patient, we’re working to get your '
+            'hint answered in a timely manner!')
         ),
         widget=forms.Textarea,
     )
 
     def __init__(self, team, *args, **kwargs):
         super(RequestHintForm, self).__init__(*args, **kwargs)
-        notif_choices = [('all', _('Everyone')), ('none', _('No one'))]
-        notif_choices.extend(team.get_emails(with_names=True))
-        self.fields['notify_emails'] = forms.ChoiceField(
-            label=_('When the hint is answered, send an email to:'),
-            choices=notif_choices
-        )
 
 
 class HintStatusWidget(forms.Select):

@@ -1,0 +1,30 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    iframe {
+        width: 80vh;
+        height: 80vh;
+        margin: auto;
+        display: flex;
+    }
+
+    .small {
+        font-size: 80%;
+    }
+</style>
+
+<p>While we were collecting things for our science project, we couldn't help but (slither) link together a bigger mystery!</p>
+
+<iframe src="/static/puzzle_resources/tier-2/questionable-science/Questionable Science - Grid.pdf" ></iframe>
+
+<p class="small"><b>Interactive version (unmarked, rotated): </b><a target="_blank" href="https://tinyurl.com/qs-grand">https://tinyurl.com/qs-grand</a></p>
+
+<p class="small"><b>Note to solvers:</b> Ignore X and Z</p>
+
+<p class="mono">
+    ANSWER: _ _ _ _ _ _ _ _
+</p>
+
+{% endblock %}

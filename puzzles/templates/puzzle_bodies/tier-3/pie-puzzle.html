@@ -1,0 +1,17 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    img {
+        max-width: 100%;
+    }
+</style>
+
+<p>At this pie shop, they have carefully combined the ingredients so that they taste great as a set. What should they call the shop?</p>
+
+<img src="{% static 'puzzle_resources/tier-3/pie-puzzle/1.png' %}">
+
+<img src="{% static 'puzzle_resources/tier-3/pie-puzzle/2.png' %}">
+
+{% endblock %}

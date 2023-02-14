@@ -8,31 +8,33 @@
 
 {% for key in story_points %}
 
-{% if key == 'meta2_done' %}
-<div class="no-break story-chunk">
-    <h4>{% translate "Meta Meta" %}</h4>
-    {% translate "You succeeded!" %}
-</div>
-{% endif %}
-
-{% if key == 'round2_open' %}
-<div class="no-break story-chunk">
-    <h4>{% translate "Intro Meta" %}</h4>
-    {% translate "But wait..." %}
-</div>
-{% endif %}
-
 {% if key == 'round1_open' %}
 <div class="no-break story-chunk">
-    <h4>{% translate "Hunt Open" %}</h4>
-    {% translate "Time to solve puzzles..." %}
+    <h4>Chapter 1: Boot Camp</h4>
+    You've been recruited to join the hunt for the fabled <b><em>thing most grand</em></b>. But first you need to gear up and learn the basics!
+    <br /><br />
+    <a href="{% url 'puzzles' %}">Start your hunt</a>
 </div>
 {% endif %}
 
-{% if key == 'pre_hunt' %}
+{% if key == 'meta1_done' %}
 <div class="no-break story-chunk">
-    <h4>???</h4>
-    {% translate "Get hyped!" %}
+    <h4>Chapter 2: Reconnaissance</h4>
+    "I've <b>LOST MY MIND</b>", you say, as you head out to look for more clues. Stay focused and keep your bearings!
+</div>
+{% endif %}
+
+{% if key == 'meta2_done' %}
+<div class="no-break story-chunk">
+    <h4>Chapter 3: Advanced Tactics</h4>
+    You take a deep breath, feeling <b>INNER PEACE</b>. The <b><em>thing most grand</em></b> must be even farther out than you imagined. You got this!
+</div>
+{% endif %}
+
+{% if key == 'meta3_done' %}
+<div class="no-break story-chunk">
+    <h4>Epilogue</h4>
+    You've found it! The <b><em>thing most grand</em></b> was the <b>COMMUNITY</b> you found along the journey! We hope you enjoyed the hunt, and you'll continue to be a part of ours! 
 </div>
 {% endif %}
 

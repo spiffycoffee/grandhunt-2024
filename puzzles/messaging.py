@@ -44,10 +44,10 @@ VICTORY_DISCORD_USERNAME = 'FIXME PH CongratBot'
 # From a channel you can create them under Integrations > Webhooks.
 # They can be the same webhook if you don't care about keeping them in separate
 # channels.
-ALERT_WEBHOOK_URL = 'FIXME'
-SUBMISSION_WEBHOOK_URL = 'FIXME'
-FREE_ANSWER_WEBHOOK_URL = 'FIXME'
-VICTORY_WEBHOOK_URL = 'FIXME'
+ALERT_WEBHOOK_URL = 'https://example.com'
+SUBMISSION_WEBHOOK_URL = 'https://example.com'
+FREE_ANSWER_WEBHOOK_URL = 'https://example.com'
+VICTORY_WEBHOOK_URL = 'https://example.com'
 
 # Assuming you want messages on a messaging platform that's not Discord but
 # supports at least a vaguely similar API, change the following code
@@ -93,6 +93,7 @@ def log_request_middleware(get_response):
 # maybe could sometimes provide a request, but I don't want to add that
 # coupling right now.)
 def send_mail_wrapper(subject, template, context, recipients):
+    return
     if not recipients:
         return
     # Manually plug in some template variables we know we want
@@ -124,8 +125,8 @@ class DiscordInterface:
 
     # the next two should be big decimal numbers; in Discord, you can right
     # click and Copy ID to get them
-    GUILD = 'FIXME'
-    HINT_CHANNEL = 'FIXME'
+    GUILD = 'FIXME13'
+    HINT_CHANNEL = 'FIXME14'
 
     # You also need to enable the "Server Members Intent" under the "Privileged
     # Gateway Intents" section of the "Bot" page of your application from the
@@ -175,6 +176,7 @@ class DiscordInterface:
     # discord.Client().run(TOKEN)
 
     def update_hint(self, hint):
+        return
         HintsConsumer.send_to_all(json.dumps({'id': hint.id,
             'content': render_to_string('hint_list_entry.html', {
                 'hint': hint, 'now': timezone.localtime()})}))
@@ -219,6 +221,7 @@ class DiscordInterface:
             hint.save(update_fields=('discord_id',))
 
     def clear_hint(self, hint):
+        return
         HintsConsumer.send_to_all(json.dumps({'id': hint.id}))
         if self.client is None:
             logger.info(_('Hint done: {}').format(hint))
@@ -325,6 +328,7 @@ class HintsConsumer(AdminWebsocketConsumer):
     group_id = 'hints'
 
 def show_unlock_notification(context, unlock):
+    return
     data = json.dumps({
         'title': str(unlock.puzzle),
         'text': _('You’ve unlocked a new puzzle!'),
@@ -337,6 +341,7 @@ def show_unlock_notification(context, unlock):
     TeamNotificationsConsumer.send_to_team(unlock.team, data)
 
 def show_solve_notification(submission):
+    return
     if not submission.puzzle.is_meta or submission.puzzle.slug == META_META_SLUG:
         return
     data = json.dumps({
@@ -349,6 +354,7 @@ def show_solve_notification(submission):
     TeamNotificationsConsumer.send_to_team(submission.team, data)
 
 def show_victory_notification(context):
+    return
     data = json.dumps({
         'title': 'Congratulations!',
         'text': _('You’ve finished the %s!') % HUNT_TITLE,
@@ -357,6 +363,7 @@ def show_victory_notification(context):
     TeamNotificationsConsumer.send_to_team(context.team, data)
 
 def show_hint_notification(hint):
+    return
     data = json.dumps({
         'title': str(hint.puzzle),
         'text': _('Hint answered!'),

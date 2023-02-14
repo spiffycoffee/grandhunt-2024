@@ -41,9 +41,30 @@
     font-size: 80%;
     line-height: 1.5;
 }
+
+img {
+    width: 50%;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
 </style>
 
-<h1>{{ hunt_title }}</h1>
+
+{% load static %}
+<div class="logo-container">
+    <img class="logo-elements" src="{% static 'images/grand-hunt-logo.png' %}" alt="{{ hunt_title }}"/>
+    <p class="center logo-elements">Powered by <a href="https://reddit.com/r/CommunityFunds/">Reddit Community Funds</a></p>
+</div>
+
 
 {% if hunt_is_over %}
 <div class="feedback">
@@ -54,7 +75,7 @@
 {% blocktranslate with title=hunt_title %}The {{ title }} is now over, but you can still register and progress through the hunt until {{ hunt_close }}.{% endblocktranslate %}
 {% endif %}
 <br>
-{% with feedback_url="https://FIXME" %}
+{% with feedback_url="https://docs.google.com/forms/d/e/1FAIpQLSdmXgz_N1-SJ1vn7UJpj-qKhKeySIJb6sDKKphbBXZjqKNYyA/viewform" %}
 {% if wrapup_page_visible %}
 {% url 'wrapup' as wrapup_url %}
 {% blocktranslate %}Please fill out our <a href="{{ feedback_url }}">feedback form</a> and check out our <a href="{{ wrapup_url }}">wrap-up</a>!{% endblocktranslate %}
@@ -64,6 +85,8 @@
 {% endwith %}
 </div>
 {% endif %}
+
+<p class="center"><a href="https://www.constructedadventures.com/intro-to-puzzle-hunts">Intro to Puzzle Hunts</a></p>
 
 <div class="info-row">
     <div>
@@ -90,7 +113,7 @@
     <div>
         <h4>{% translate "Who" %}</h4>
         <div class="info-desc">
-            {% with organizer="FIXME" %}
+            {% with organizer="Constructed Adventures" %}
             {% if hunt_is_closed %}
             {% blocktranslate %}This was a puzzlehunt run by {{ organizer }}.{% endblocktranslate %}
             {% else %}
@@ -101,7 +124,7 @@
             {% endif %}
             {% endwith %}
             {% comment %}
-            {% blocktranslate with previous_hunts="FIXME" %}It is the follow-up to the previous <a href="{{ archive_link }}">{{ previous_hunts }} Puzzle Hunts</a>.{% endblocktranslate %}
+            {% blocktranslate with previous_hunts="FIXME18" %}It is the follow-up to the previous <a href="{{ archive_link }}">{{ previous_hunts }} Puzzle Hunts</a>.{% endblocktranslate %}
             {% endcomment %}
         </div>
     </div>
@@ -112,7 +135,7 @@
     <a href="{% url 'register' %}" class="btn">{% translate "Register your team!" %}</a>
 </div>
 <h3 class="print-register">
-    <a>{% translate "Register at" %} https://FIXME</a>
+    <a>{% translate "Register at" %} https://grandhuntdigital.com/</a>
 </h3>
 {% endif %}
 {% endblock %}

@@ -1,0 +1,26 @@
+{% extends "solution.html" %}
+{% load static %}
+{% block puzzle-author %}
+BostonDan
+{% endblock %}
+
+{% block solution-body-md %}
+
+<style>
+    img {
+        width: 100%;
+    }
+</style>
+
+<p>Each purple alien is attacking a blue star; the stars are not placed at random. In particular, note the "critical infrastructure" terminology in the flavor text.  Also note the name of the video game (Sky Defender).  From here, you can deduce that the blue stars represent airports. [FYI, from the list of 15 busiest US airports, by some metric) </p>
+<p>The tri-phase blaster is shooting a volley of 3 fireballs at each of the aliens  For each volley, it is important to determine which the "real" blast is. Looking at the colors of the fireballs, we can determine that the red fireball is the real one </p>
+<p>Now somehow, for a given volley, the identification of the real fireball is combined with the identity of the infrastructure under attack.  In what ways can an airport be identified? In particular, does some identification system have 3 parts?  That’s right, it is the airport's 3-letter code. Take the letter corresponding to the position of the red fireball (the fireball closest to the alien corresponds to the first letter of the airport code). </p>
+<p>The high score list has the same number of entries as the number of airports, and the length of the answer enumeration. Each entry has a 5-digit number and three question marks.  Note the terminology in the flavor text: "zipping around the map", hinting at the zip codes of the airports. Write the airport code corresponding to the zip code for each entry, and read the letter indicated by the red fireball.</p>
+<br>
+<img src="{% static 'puzzle_resources/solutions/tier-2/UnfriendlySkies.png' %}">
+<br>
+<p>Answer: COMPLETION </p>
+<br>
+
+<br>
+{% endblock %}

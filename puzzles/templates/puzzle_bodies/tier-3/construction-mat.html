@@ -1,0 +1,28 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    embed {
+        width: 50%;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+<div class="row">
+    <img src="{% static 'puzzle_resources/tier-3/construction-mat/CuttingInstructions.jpg' %}">
+
+    <embed src="/static/puzzle_resources/tier-3/construction-mat/cuttingmatfinal.pdf" />
+</div>
+
+
+
+{% endblock %}

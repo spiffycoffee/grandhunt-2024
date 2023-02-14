@@ -3,6 +3,7 @@ import datetime
 import re
 import unicodedata
 from urllib.parse import quote_plus
+import logging
 
 from django import forms
 from django.core.exceptions import ValidationError
@@ -377,10 +378,10 @@ class Team(models.Model):
 
         if not HINTS_ENABLED or self.hunt_is_over:
             return 0
-        if self.now < self.creation_time + TEAM_AGE_BEFORE_HINTS:
-            return self.total_hints_awarded
-        days = max(0, (self.now - (HINT_TIME - self.start_offset)).days + 1)
-        return self.total_hints_awarded + sum(HINTS_PER_DAY[:days])
+        # if self.now < self.creation_time + TEAM_AGE_BEFORE_HINTS:
+        #     return self.total_hints_awarded
+        eighthours = max(0, int((self.now - (HINT_TIME - self.start_offset)) / datetime.timedelta(hours=8)) + 1)
+        return self.total_hints_awarded + sum(HINTS_PER_DAY[:eighthours])
 
     def num_hints_used(self):
         return sum(hint.consumes_hint for hint in self.asked_hints)
@@ -450,6 +451,7 @@ class Team(models.Model):
 
     @staticmethod
     def compute_unlocks(context):
+        puzzle_logger = logging.getLogger('puzzles.puzzle')
         metas_solved = []
         puzzles_unlocked = collections.OrderedDict()
         unlocks = []
@@ -470,7 +472,10 @@ class Team(models.Model):
                     unlocked_at = context.now
                 if 0 <= puzzle.unlock_local <= local_solves[puzzle.round.slug]:
                     unlocked_at = context.now
-                if puzzle.slug == META_META_SLUG and all(metas_solved):
+                # if puzzle.slug == META_META_SLUG and all(metas_solved):
+                #     puzzle_logger.info(_(str(metas_solved)))
+                #     unlocked_at = context.now
+                if puzzle.unlock_global < -1 and metas_solved[puzzle.round.order - 2]:
                     unlocked_at = context.now
                 if puzzle.is_meta:
                     metas_solved.append(puzzle.id in context.team.solves)
