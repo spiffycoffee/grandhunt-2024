@@ -11,9 +11,9 @@
     <title>{{ hunt_title }}</title>
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <meta property="og:title" content="FIXME">
+    <meta property="og:title" content="Grand Hunt">
     <meta property="og:description" content="{% blocktranslate with hunt=hunt_title%}Registration for this year's {{ hunt }} is now open!{% endblocktranslate %}">
-    <meta property="og:image" content="{{ domain|slice:'-1' }}FIXME">
+    <meta property="og:image" content="{{ domain|slice:'-1' }}FIXME16">
     <meta property="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -29,7 +29,15 @@
     <script src="{% static "js/notify.js" %}"></script>
     <script src="{% static "js/time.js" %}"></script>
     <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="{% static "images/favicon.ico" %}" type="image/vnd.microsoft.icon">
-    {{ ga_code|safe }}
+    <!--{{ ga_code|safe }}-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); 
+    </style>
 </head>
 <body>
     {% if is_superuser %}
@@ -70,8 +78,8 @@
                     {% translate "Wrap-Up" %}
                 </a>
                 {% endif %}
-                <a{% if request.path == '/archive' %} class="selected-tab"{% endif %} href="{{ archive_link }}">
-                    {% translate "Archive" %}
+                <a href="https://www.thegrandhunt.com/meet-the-team">
+                    Meet the Team
                 </a>
             </div>
             <div class="top-left-actions">

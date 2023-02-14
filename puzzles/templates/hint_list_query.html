@@ -31,9 +31,12 @@
                 </a>
             </td>
             <td>
+                {% comment %}
                 <a href="{% url 'solution' hint.puzzle.slug %}">
                     {{ hint.puzzle }}
                 </a>
+                {% endcomment %} 
+                <p>Solution not available yet</p>
             </td>
             <td>
                 <a href="/admin/puzzles/hint/{{ hint.id }}/change/">

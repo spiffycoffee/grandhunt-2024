@@ -852,7 +852,7 @@ def hints(request):
                 team=team,
                 puzzle=puzzle,
                 hint_question=form.cleaned_data['hint_question'],
-                notify_emails=form.cleaned_data['notify_emails'],
+                notify_emails='none',
                 is_followup=is_followup,
             ).save()
             messages.success(request, _(
@@ -1108,9 +1108,8 @@ def story(request):
     if not STORY_PAGE_VISIBLE and not request.context.is_superuser:
         raise Http404
     story_points = OrderedDict((
-        ('pre_hunt', not request.context.hunt_has_almost_started),
-        ('round1_open', request.context.hunt_has_almost_started), ('meta1_done', False),
-        ('round2_open', False), ('meta2_done', False),
+        ('round1_open', False), ('meta1_done', False),
+        ('meta2_done', False), ('meta3_done', False)
     ))
     if request.context.hunt_has_started:
         for puzzle in request.context.unlocks:

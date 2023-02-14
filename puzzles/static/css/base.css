@@ -1,12 +1,12 @@
 html {
-    --page-bg-rgb: 255, 255, 255;
-    --accent-rgb: 0, 85, 170;
+    --page-bg-rgb: 35, 24, 50;
+    --accent-rgb: 210, 164, 70;
 
     --white-color: white;
     --neutral-color: #bbb;
     --accent-color: rgb(var(--accent-rgb));
-    --accent-bg-color: rgba(var(--accent-rgb), 0.1);
-    --accent-hover-color: #2af;
+    --accent-bg-color: rgba(var(--accent-rgb), 0.4);
+    --accent-hover-color: rgba(var(--accent-rgb), 0.6);
 
     --page-bg-color: rgb(var(--page-bg-rgb));
     --sticky-bg-color: rgba(var(--page-bg-rgb), 0.9);
@@ -19,14 +19,14 @@ html {
     --link-hover-color: var(--accent-hover-color);
 
     --btn-text-color: var(--white-color);
-    --btn-bg-color: var(--accent-color);
+    --btn-bg-color: var(--accent-bg-color);
     --btn-hover-color: var(--accent-hover-color);
 
     --tray-text-color: var(--accent-color);
-    --tray-bg-color: var(--neutral-color);
+    --tray-bg-color: rgba(var(--page-bg-rgb), 0.9);
 
-    --text-font: sans-serif;
-    --btn-font: sans-serif;
+    --text-font: 'Playfair Display', serif;;
+    --btn-font: 'Playfair Display', serif;;
     --input-font: monospace;
     --answer-font: monospace;
 }
@@ -202,12 +202,11 @@ figcaption {
     }
 
     .puzzle-main {
-        background-color: var(--white-color);
+        background-color: var(--accent-bg-color);
         padding: 20px 30px;
     }
 
     .puzzle-main h1, .puzzle-main h2, .puzzle-main h3, .puzzle-main h4 {
-        color: initial;
         background: none;
         border-left: none;
         padding: 0;
@@ -299,6 +298,7 @@ figcaption {
         right: 60px;
         z-index: 800;
         display: none;
+        color: var(--tray-text-color);
     }
 
     .shortcuts form {
@@ -552,11 +552,12 @@ figcaption {
 @media screen {
     .info-row > div {
         border: 2px solid var(--border-color);
+        border-radius: 7px;
     }
 
     .info-row h4 {
         margin: 0;
-        background-color: var(--border-color);
+        background-color: var(--accent-bg-color);
         color: var(--btn-text-color);
         padding-left: 2rem;
         border: none;
@@ -661,7 +662,7 @@ figcaption {
 }
 
 .puzzle-erratum {
-    color: #c32;
+    color: #f77;
     margin-bottom: 1rem;
 }
 
@@ -873,4 +874,10 @@ footer {
     footer {
         display: none;
     }
+}
+
+
+/* BEGIN NEWLY ADDED STYLES */
+.mono {
+    font-family: monospace;
 }
