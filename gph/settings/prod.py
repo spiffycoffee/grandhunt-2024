@@ -10,7 +10,7 @@ DOMAIN = 'https://grandhuntdigital.com/'
 
 # List of places you're serving from, e.g.
 # ['galacticpuzzlehunt.com', 'gph.example.com']; or just ['*']
-ALLOWED_HOSTS = ['grandhuntdigital.com']
+ALLOWED_HOSTS = ['2024.grandhuntdigital.com', 'grandhuntdigital.com', '127.0.0.1', '144.24.46.133']
 
 # Google Analytics
 GA_CODE = '''
