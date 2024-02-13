@@ -92,6 +92,15 @@ The site should now be available. You can check in your browser by going to `{ye
 
 One final step is to add SSL encryption so we support HTTPS and security that comes along with it. 
 
+Due to limitations with LetsEncrypt, our automated SSL provider, the wildcard subdomain DNS record we use isn't good enough for this step. So while you can access the site (without SSL) at this point, we need to add another DNS record explicitly setting up this game.
+
+Go into the admin interface of our domain registrar (NameSilo at the time of writing) and find the DNS records for the grandhuntdigital.com domain and add a new entry. Unless you've recently made some infrastructure changes, it'll probably be the same as the entry for the past year.
+| Hostname | Type | Value | TTL |
+|---|---|---|---|
+| `{year}` | A | 144.24.46.133 | 7200 |
+
+Save this and wait for it to propogate. It may take some time to propogate (up to two hours) so if the following step fails, retry in a bit.
+
 Run `sudo certbot --nginx -d {year}.grandhuntdigital.com` and fill in the requested fields.
 
 
