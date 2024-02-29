@@ -116,7 +116,9 @@ Finally, confirm the new Nginx configuration is valid using `sudo nginx -t` and 
 If you make changes to the Gunicorn files (`/etc/systemd/system/gph{year}.service`), you will need to reboot Gunicorn.
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl restart gunicorn
+sudo systemctl restart gph{year}
 ```
+
+When you make changes to pages, you may also need to run `sudo systemctl restart gph{year}`
 
 If you need to restart Nginx, you can use `sudo systemctl restart nginx`
