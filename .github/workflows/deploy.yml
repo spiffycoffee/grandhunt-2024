@@ -25,4 +25,4 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        script: whoami
+        script: echo 'A Github deploy happened! ' $(date +%s) >> ~/gh-action-demo.txt
