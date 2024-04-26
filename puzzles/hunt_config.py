@@ -4,7 +4,7 @@ from django.utils import timezone
 
 # included in various templates. NOTE, sometimes appears with a "the" before
 # it, maybe check those are what you want.
-HUNT_TITLE = 'Grand Hunt 2023'
+HUNT_TITLE = 'Grand Hunt 2024'
 # included in various templates and displayed on the static site
 HUNT_ORGANIZERS = 'The Architect'
 # included in various templates and set as reply-to for automatic emails
@@ -15,7 +15,7 @@ CONTACT_EMAIL = 'info@thegrandhunt.com'
 MESSAGING_SENDER_EMAIL = 'noreply@grandhuntdigital.com'
 
 # Change this to True to reveal the story page to everyone.
-STORY_PAGE_VISIBLE = True
+STORY_PAGE_VISIBLE = False
 # Change this to True when the wrapup exists.
 WRAPUP_PAGE_VISIBLE = False
 # Change this to True to start showing solve and guess counts on each puzzle.
@@ -26,14 +26,14 @@ INITIAL_STATS_AVAILABLE = False
 SURVEYS_AVAILABLE = False
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
-    year=2023,
+    year=2025,
     month=2,
     day=10,
     hour=12,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
-    year=2023,
+    year=2025,
     month=2,
     day=12,
     hour=12,
