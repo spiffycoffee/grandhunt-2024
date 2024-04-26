@@ -122,3 +122,32 @@ sudo systemctl restart gph{year}
 When you make changes to pages, you may also need to run `sudo systemctl restart gph{year}`
 
 If you need to restart Nginx, you can use `sudo systemctl restart nginx`
+
+
+# Running the Site Locally
+During development, you can also run a local instance of the puzzle hunt site
+
+### Setup
+1. Clone this repo, e.g. `git clone https://github.com/spiffycoffee/grandhunt-2024.git`
+2. (Optional, but recommended) Create a virtualenv to isolate the project's dependencies from your system Python
+```
+python -m venv venv
+```
+then activate the virtualenv
+```
+source venv/bin/activate
+```
+3. Install the project dependencies, `pip -r requirements.txt`
+4. Now everything is installed an ready to run. For the initial run, perform the Django migrations to setup the DB, and create an admin user for yourself
+```
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+### Run Locally
+If you've rebooted / closed your terminal since last time, activate the virtualenv again: `source venv/bin/activate`
+
+4. Establish a salt value to make Django happy, since this is local the value doesn't really matter
+`export SECRET_KEY=*mash the keyboard*`
+5. Start the Django server, `python manage.py runserver`
+6. Access the hunt site via your browser at `localhost:8000`

@@ -22,8 +22,11 @@ os.makedirs(LOGS_DIR, exist_ok=True)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-with open('/etc/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+try:
+    with open('/etc/secret_key.txt') as f:
+        SECRET_KEY = f.read().strip()
+except FileNotFoundError:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 RECAPTCHA_SITEKEY = None
 RECAPTCHA_SECRETKEY = None
