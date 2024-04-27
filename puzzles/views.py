@@ -549,7 +549,10 @@ def render_puzzles(request):
 def puzzle(request):
     '''View a single puzzle's content.'''
     team = request.context.team
-    template_name = 'puzzle_bodies/{}'.format(request.context.puzzle.body_template)
+    template_name = 'puzzle_bodies/r{}/{}-{}'.format(
+            request.context.puzzle.round.pk,
+            request.context.puzzle.order,
+            request.context.puzzle.body_template)
     data = {
         'can_view_hints':
             team and not request.context.hunt_is_closed and (

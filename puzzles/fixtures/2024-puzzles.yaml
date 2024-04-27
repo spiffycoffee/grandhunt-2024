@@ -1,23 +1,24 @@
 - model: puzzles.Round
   pk: 1
   fields:
-    name: Chapter 1: The Museum of Superb Relics
+    name: "Chapter 1: The Museum of Superb Relics"
     slug: the-museum-of-superb-relics
     meta: 11
 - model: puzzles.Round
   pk: 2
   fields:
-    name: Chapter 2: The Lost Temple
+    name: "Chapter 2: The Lost Temple"
     slug: the-lost-temple
 - model: puzzles.Round
   pk: 3
   fields:
-    name: Chapter 3: The Hack
+    name: "Chapter 3: The Hack"
     slug: the-hack
 
 - model: puzzles.Puzzle
   pk: 1
   fields:
+    order: 1
     name: Tickets Please
     slug: tickets-please
     body_template: tickets-please.html
@@ -27,6 +28,7 @@
 - model: puzzles.Puzzle
   pk: 2
   fields:
+    order: 2
     name: Reading the Room
     slug: reading-the-room
     body_template: reading-the-room.html
@@ -36,6 +38,7 @@
 - model: puzzles.Puzzle
   pk: 3
   fields:
+    order: 3
     name: A Sour Experience
     slug: a-sour-experience
     body_template: a-sour-experience.html
@@ -45,6 +48,7 @@
 - model: puzzles.Puzzle
   pk: 4
   fields:
+    order: 4
     name: Crossword Puzzle No. 1 in Black and White
     slug: crossword-puzzle-no-1-in-black-and-white
     body_template: crossword-puzzle-no-1-in-black-and-white.html
@@ -54,8 +58,9 @@
 - model: puzzles.Puzzle
   pk: 5
   fields:
+    order: 5
     name: Pinching Pig-Pennies
-    slug: pinching-pig-pennies 
+    slug: pinching-pig-pennies
     body_template: pinching-pig-pennies.html
     answer: BASS
     round: 1
@@ -63,6 +68,7 @@
 - model: puzzles.Puzzle
   pk: 6
   fields:
+    order: 6
     name: In the Jungle
     slug: in-the-jungle
     body_template: in-the-jungle.html
@@ -72,6 +78,7 @@
 - model: puzzles.Puzzle
   pk: 7
   fields:
+    order: 7
     name: Meet the Museum Staff
     slug: meet-the-museum-staff
     body_template: meet-the-museum-staff.html
@@ -81,7 +88,8 @@
 - model: puzzles.Puzzle
   pk: 8
   fields:
-    name: Reconnaissance 
+    order: 8
+    name: Reconnaissance
     slug: reconnaissance
     body_template: reconnaissance.html
     answer: DEMO
@@ -90,6 +98,7 @@
 - model: puzzles.Puzzle
   pk: 9
   fields:
+    order: 9
     name: Have Your Say
     slug: have-your-say
     body_template: have-your-say.html
@@ -99,6 +108,7 @@
 - model: puzzles.Puzzle
   pk: 10
   fields:
+    order: 10
     name: Choosy Collectors
     slug: choosy-collectors
     body_template: choosy-collectors.html
@@ -108,10 +118,33 @@
 - model: puzzles.Puzzle
   pk: 11
   fields:
+    order: 11
     name: Under Pollock And Key
     slug: under-pollock-and-key
     body_template: under-pollock-and-key.html
     answer: DEMO
+    is_meta: True
     round: 1
     unlock_global: 0
 
+- model: puzzles.Puzzle
+  pk: 12
+  fields:
+    order: 1
+    name: Snakes... Why did it have to be snakes?
+    slug: snakes-why-did-it-have-to-be-snakes
+    body_template: snakes-why-did-it-have-to-be-snakes.html
+    answer: DEMO
+    round: 2
+    unlock_global: 0
+
+- model: puzzles.Puzzle
+  pk: 13
+  fields:
+    order: 1
+    name: Help Me, ChatOMG!
+    slug: help-me-chatomg
+    body_template: help-me-chatomg.html
+    answer: DEMO
+    round: 3
+    unlock_global: 0
