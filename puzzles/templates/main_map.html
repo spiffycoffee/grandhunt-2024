@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+{% if hunt_is_prereleased %}
+<h3 style="text-align: center">
+    {% translate "You are a pre-release testsolver, so you may be seeing puzzles that are locked for the general public. Please be careful!" %}
+</h3>
+{% endif %}
+<div>Giant Map here</div>
+{% endblock %}
