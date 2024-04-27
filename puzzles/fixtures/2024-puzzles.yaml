@@ -1,0 +1,117 @@
+- model: puzzles.Round
+  pk: 1
+  fields:
+    name: Chapter 1: The Museum of Superb Relics
+    slug: the-museum-of-superb-relics
+    meta: 11
+- model: puzzles.Round
+  pk: 2
+  fields:
+    name: Chapter 2: The Lost Temple
+    slug: the-lost-temple
+- model: puzzles.Round
+  pk: 3
+  fields:
+    name: Chapter 3: The Hack
+    slug: the-hack
+
+- model: puzzles.Puzzle
+  pk: 1
+  fields:
+    name: Tickets Please
+    slug: tickets-please
+    body_template: tickets-please.html
+    answer: ISAAC
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 2
+  fields:
+    name: Reading the Room
+    slug: reading-the-room
+    body_template: reading-the-room.html
+    answer: ENGINEERS
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 3
+  fields:
+    name: A Sour Experience
+    slug: a-sour-experience
+    body_template: a-sour-experience.html
+    answer: HAMMER
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 4
+  fields:
+    name: Crossword Puzzle No. 1 in Black and White
+    slug: crossword-puzzle-no-1-in-black-and-white
+    body_template: crossword-puzzle-no-1-in-black-and-white.html
+    answer: SCRIPPS
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 5
+  fields:
+    name: Pinching Pig-Pennies
+    slug: pinching-pig-pennies 
+    body_template: pinching-pig-pennies.html
+    answer: BASS
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 6
+  fields:
+    name: In the Jungle
+    slug: in-the-jungle
+    body_template: in-the-jungle.html
+    answer: PARALLEL
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 7
+  fields:
+    name: Meet the Museum Staff
+    slug: meet-the-museum-staff
+    body_template: meet-the-museum-staff.html
+    answer: SAMPLE
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 8
+  fields:
+    name: Reconnaissance 
+    slug: reconnaissance
+    body_template: reconnaissance.html
+    answer: DEMO
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 9
+  fields:
+    name: Have Your Say
+    slug: have-your-say
+    body_template: have-your-say.html
+    answer: DEMO
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 10
+  fields:
+    name: Choosy Collectors
+    slug: choosy-collectors
+    body_template: choosy-collectors.html
+    answer: DEMO
+    round: 1
+    unlock_global: 0
+- model: puzzles.Puzzle
+  pk: 11
+  fields:
+    name: Under Pollock And Key
+    slug: under-pollock-and-key
+    body_template: under-pollock-and-key.html
+    answer: DEMO
+    round: 1
+    unlock_global: 0
+
