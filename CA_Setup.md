@@ -149,5 +149,5 @@ python manage.py createsuperuser
 ### Run Locally
 If you've rebooted / closed your terminal since last time, activate the virtualenv again: `source venv/bin/activate`
 
-6. Start the Django server, `python manage.py runserver`
-7. Access the hunt site via your browser at `localhost:8000`
+1. Start the Django server, `python manage.py runserver`
+2. Access the hunt site via your browser at `localhost:8000`
