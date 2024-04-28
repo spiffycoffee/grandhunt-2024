@@ -22,7 +22,7 @@
     name: Tickets Please
     slug: tickets-please
     body_template: tickets-please.html
-    answer: ISAAC
+    answer: BANK TRANSFER
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -32,7 +32,7 @@
     name: Reading the Room
     slug: reading-the-room
     body_template: reading-the-room.html
-    answer: ENGINEERS
+    answer: BARBIE DOLL
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -42,7 +42,7 @@
     name: A Sour Experience
     slug: a-sour-experience
     body_template: a-sour-experience.html
-    answer: HAMMER
+    answer: CASUAL FRIDAY
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -52,7 +52,7 @@
     name: Crossword Puzzle No. 1 in Black and White
     slug: crossword-puzzle-no-1-in-black-and-white
     body_template: crossword-puzzle-no-1-in-black-and-white.html
-    answer: SCRIPPS
+    answer: COME AND GO
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -62,7 +62,7 @@
     name: Pinching Pig-Pennies
     slug: pinching-pig-pennies
     body_template: pinching-pig-pennies.html
-    answer: BASS
+    answer: JELLO DESSERT
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -72,7 +72,7 @@
     name: In the Jungle
     slug: in-the-jungle
     body_template: in-the-jungle.html
-    answer: PARALLEL
+    answer: RANT AND RAVE
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -82,7 +82,7 @@
     name: Meet the Museum Staff
     slug: meet-the-museum-staff
     body_template: meet-the-museum-staff.html
-    answer: SAMPLE
+    answer: ROAD BLOCK
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -92,7 +92,7 @@
     name: Reconnaissance
     slug: reconnaissance
     body_template: reconnaissance.html
-    answer: DEMO
+    answer: THIS MEANS WAR
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -102,7 +102,7 @@
     name: Have Your Say
     slug: have-your-say
     body_template: have-your-say.html
-    answer: DEMO
+    answer: UNDER PRESSURE
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -112,7 +112,7 @@
     name: Choosy Collectors
     slug: choosy-collectors
     body_template: choosy-collectors.html
-    answer: DEMO
+    answer: WOULD YOU RATHER
     round: 1
     unlock_global: 0
 - model: puzzles.Puzzle
@@ -122,7 +122,7 @@
     name: Under Pollock And Key
     slug: under-pollock-and-key
     body_template: under-pollock-and-key.html
-    answer: DEMO
+    answer: WORK HARD FOR THE MONET
     is_meta: True
     round: 1
     unlock_global: 0
