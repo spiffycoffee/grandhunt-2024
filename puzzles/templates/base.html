@@ -58,6 +58,11 @@
                 </a>
                 {% endif %}
                 {% if hunt_has_started or hunt_has_almost_started %}
+                <a{% if request.path == '/the-grand-heist' %} class="selected-tab"{% endif %} href="{% url 'the-grand-heist' %}">
+                    {% translate "The Grand Heist" %}
+                </a>
+                {% endif %}
+                {% if hunt_has_started or hunt_has_almost_started %}
                 <a{% if '/puzzle' in request.path or puzzle %} class="selected-tab"{% endif %} href="{% url 'puzzles' %}">
                     {% translate "Puzzles" %}
                 </a>

@@ -881,3 +881,33 @@ footer {
 .mono {
     font-family: monospace;
 }
+
+/* TODO(spiffycoffee): move these to own CSS file */
+.map_item .hide {
+	visibility: hidden;
+
+	color: black;
+	background-color: white;
+	text-align: center;
+	padding: 5px 5px;
+	border-radius: 6px;
+}
+
+.map_item:hover .hide {
+	visibility: visible;
+}
+
+.map_item:hover .item_img {
+	transform: scale(1.1);
+}
+
+.abs-z1 {
+	position: absolute;
+	z-index: 1;
+}
+
+
+.abs-z5 {
+	position: absolute;
+	z-index: 5;
+}
