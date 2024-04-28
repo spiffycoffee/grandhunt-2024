@@ -442,6 +442,17 @@ def edit_team(request):
 
 
 @require_GET
+def main_map(request):
+    '''Main map page (interactive map that leads to the sub-rounds)'''
+
+    if request.context.hunt_has_started:
+        return render(request, 'main_map.html')
+    elif request.context.hunt_has_almost_started:
+        return render(request, 'countdown.html', {'start': request.context.start_time})
+    else:
+        raise Http404
+
+@require_GET
 def puzzles(request):
     '''List all unlocked puzzles.
 
