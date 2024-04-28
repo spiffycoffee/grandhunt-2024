@@ -137,8 +137,10 @@ then activate the virtualenv
 ```
 source venv/bin/activate
 ```
-3. Install the project dependencies, `pip -r requirements.txt`
-4. Now everything is installed an ready to run. For the initial run, perform the Django migrations to setup the DB, and create an admin user for yourself
+3. Install the project dependencies, `pip install -r requirements.txt`
+4. Establish a salt value to make Django happy, since this is local the value doesn't really matter
+`export SECRET_KEY=*mash the keyboard*`
+5. Now everything is installed and ready to run. For the initial run, perform the Django migrations to setup the DB, and create an admin user for yourself
 ```
 python manage.py migrate
 python manage.py createsuperuser
@@ -147,7 +149,5 @@ python manage.py createsuperuser
 ### Run Locally
 If you've rebooted / closed your terminal since last time, activate the virtualenv again: `source venv/bin/activate`
 
-4. Establish a salt value to make Django happy, since this is local the value doesn't really matter
-`export SECRET_KEY=*mash the keyboard*`
-5. Start the Django server, `python manage.py runserver`
-6. Access the hunt site via your browser at `localhost:8000`
+6. Start the Django server, `python manage.py runserver`
+7. Access the hunt site via your browser at `localhost:8000`
