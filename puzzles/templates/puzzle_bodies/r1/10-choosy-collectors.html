@@ -1,0 +1,16 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    img {
+        max-width: 100%;
+    }
+</style>
+
+<object data={% static 'puzzle_resources/r1/p10/choosy-collectors.pdf' %} type="application/pdf" width="100%" height="640">
+    <p><a href={% static 'puzzle_resources/r1/p10/choosy-collectors.pdf' %}>click here to
+    download the PDF file.</a></p>
+</object>
+
+{% endblock %}

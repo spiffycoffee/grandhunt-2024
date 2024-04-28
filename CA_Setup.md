@@ -144,6 +144,7 @@ source venv/bin/activate
 python manage.py migrate
 python manage.py createsuperuser
 ```
+6. To load puzzle metadata to the DB, `python manage.py loaddata 2024-puzzles.yaml`
 
 ### Run Locally
 If you've rebooted / closed your terminal since last time, activate the virtualenv again: `source venv/bin/activate`
