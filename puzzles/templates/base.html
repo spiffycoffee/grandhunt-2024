@@ -61,7 +61,7 @@
                 {% endif %}
                 {% if hunt_has_started or hunt_has_almost_started %}
                 <a{% if '/puzzle' in request.path or puzzle %} class="selected-tab"{% endif %} href="{% url 'puzzles' %}">
-                    {% translate "Puzzles" %}
+                    {% translate "Puzzle List" %}
                 </a>
                 {% endif %}
                 <a{% if '/team' in request.path %} class="selected-tab"{% endif %} href="{% url 'teams' %}">
