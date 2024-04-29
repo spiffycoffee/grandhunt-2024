@@ -1,19 +1,24 @@
 - model: puzzles.Round
   pk: 1
   fields:
+    order: 1
     name: "Chapter 1: The Museum of Superb Relics"
     slug: the-museum-of-superb-relics
     meta: 11
 - model: puzzles.Round
   pk: 2
   fields:
+    order: 2
     name: "Chapter 2: The Lost Temple"
     slug: the-lost-temple
+    meta: 22
 - model: puzzles.Round
   pk: 3
   fields:
+    order: 3
     name: "Chapter 3: The Hack"
     slug: the-hack
+    meta: 33
 
 - model: puzzles.Puzzle
   pk: 1
