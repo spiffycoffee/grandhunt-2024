@@ -1123,7 +1123,7 @@ def story(request):
         raise Http404
     story_points = OrderedDict((
         ('round1_open', False), ('meta1_done', False),
-        ('meta2_done', False), ('meta3_done', False)
+        ('meta2_done', False), ('meta3_done', False), ('meta4_done', False)
     ))
     if request.context.hunt_has_started:
         for puzzle in request.context.unlocks:
@@ -1133,8 +1133,9 @@ def story(request):
                 if puzzle.is_meta:
                     story_points['meta%d_done' % puzzle.round.order] = True
     story_points = [key for (key, visible) in story_points.items() if visible]
-    if request.context.team:
-        story_points.reverse()
+    #This reverse was here last year, but it's messing with the ordering of the story
+    #if request.context.team:
+    #    story_points.reverse()
     return render(request, 'story.html', {'story_points': story_points})
 
 

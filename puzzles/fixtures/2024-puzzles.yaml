@@ -19,6 +19,13 @@
     name: "Chapter 3: The Hack"
     slug: the-hack
     meta: 33
+- model: puzzles.Round
+  pk: 4
+  fields:
+    order: 4
+    name: "The Blueprint"
+    slug: the-blueprint
+    meta: 35
 
 - model: puzzles.Puzzle
   pk: 1
@@ -29,7 +36,8 @@
     body_template: tickets-please.html
     answer: BANK TRANSFER
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 2
   fields:
@@ -39,7 +47,8 @@
     body_template: reading-the-room.html
     answer: BARBIE DOLL
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 3
   fields:
@@ -49,7 +58,8 @@
     body_template: a-sour-experience.html
     answer: CASUAL FRIDAY
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 4
   fields:
@@ -59,7 +69,8 @@
     body_template: crossword-puzzle-no-1-in-black-and-white.html
     answer: COME AND GO
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 5
   fields:
@@ -69,7 +80,8 @@
     body_template: pinching-pig-pennies.html
     answer: JELLO DESSERT
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 6
   fields:
@@ -79,7 +91,8 @@
     body_template: in-the-jungle.html
     answer: RANT AND RAVE
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 7
   fields:
@@ -89,7 +102,8 @@
     body_template: meet-the-museum-staff.html
     answer: ROAD BLOCK
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 8
   fields:
@@ -99,7 +113,8 @@
     body_template: reconnaissance.html
     answer: THIS MEANS WAR
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 9
   fields:
@@ -109,7 +124,8 @@
     body_template: have-your-say.html
     answer: UNDER PRESSURE
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 10
   fields:
@@ -119,7 +135,8 @@
     body_template: choosy-collectors.html
     answer: WOULD YOU RATHER
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 7
 - model: puzzles.Puzzle
   pk: 11
   fields:
@@ -130,7 +147,8 @@
     answer: WORK HARD FOR THE MONET
     is_meta: True
     round: 1
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 8
 
 - model: puzzles.Puzzle
   pk: 12
@@ -141,7 +159,8 @@
     body_template: snakes-why-did-it-have-to-be-snakes.html
     answer: FER-DE-LANCE
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 13
   fields:
@@ -151,7 +170,8 @@
     body_template: burial-flags.html
     answer: DEATH WARDS
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 14
   fields:
@@ -161,7 +181,8 @@
     body_template: sound-and-movement.html
     answer: DANCERS ALL
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 15
   fields:
@@ -171,7 +192,8 @@
     body_template: meandering-streams.html
     answer: RIVER WATER
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 16
   fields:
@@ -181,7 +203,8 @@
     body_template: fearsome-foes.html
     answer: EXPEDITION
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 17
   fields:
@@ -191,7 +214,8 @@
     body_template: blocks.html
     answer: ALTAR STONE
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 18
   fields:
@@ -201,7 +225,8 @@
     body_template: the-river.html
     answer: CROCODILES
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 19
   fields:
@@ -211,7 +236,8 @@
     body_template: sun-moon-and-stars.html
     answer: SUN WORSHIP
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 20
   fields:
@@ -221,7 +247,8 @@
     body_template: star-chart.html
     answer: ASTRONOMIC
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 21
   fields:
@@ -231,7 +258,8 @@
     body_template: the-curious-cave.html
     answer: FLINT KNIFE
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 7
 - model: puzzles.Puzzle
   pk: 22
   fields:
@@ -242,7 +270,8 @@
     answer: THROW A TEMPLE TANTRUM
     is_meta: True
     round: 2
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 8
 
 - model: puzzles.Puzzle
   pk: 23
@@ -253,7 +282,8 @@
     body_template: help-me-chatomg.html
     answer: TERM
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 24
   fields:
@@ -263,7 +293,8 @@
     body_template: take-the-initiative.html
     answer: PARTY
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 25
   fields:
@@ -273,7 +304,8 @@
     body_template: missed-connections.html
     answer: MY BELOVED
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 26
   fields:
@@ -283,7 +315,8 @@
     body_template: crack-team.html
     answer: RIPPER
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 27
   fields:
@@ -293,7 +326,8 @@
     body_template: lets-just-get-takeout.html
     answer: JOB
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 28
   fields:
@@ -303,7 +337,8 @@
     body_template: firewallstreetbets.html
     answer: DOUBLE
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 29
   fields:
@@ -313,7 +348,8 @@
     body_template: weather-conditions.html
     answer: DULL
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 30
   fields:
@@ -323,7 +359,8 @@
     body_template: keeping-up-with-the-keychain.html
     answer: NEXUS
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 31
   fields:
@@ -333,7 +370,8 @@
     body_template: face-the-music.html
     answer: JEWEL
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 32
   fields:
@@ -343,7 +381,8 @@
     body_template: the-marvelous-ms-monster.html
     answer: VOYAGER
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 7
 - model: puzzles.Puzzle
   pk: 33
   fields:
@@ -354,5 +393,30 @@
     answer: TWIDDLE YOUR THUMB DRIVE
     is_meta: True
     round: 3
-    unlock_global: 0
+    unlock_global: -1
+    unlock_local: 8
+
+- model: puzzles.Puzzle
+  pk: 34
+  fields:
+    order: 1
+    name: The Blueprint
+    slug: the-blueprint
+    body_template: the-blueprint.html
+    answer: WITH A MORTAL FRENEMY
+    round: 4
+    unlock_global: -1
+    unlock_local: 0
+- model: puzzles.Puzzle
+  pk: 35
+  fields:
+    order: 2
+    name: The Secret Blueprint
+    slug: the-secret-blueprint
+    body_template: the-secret-blueprint.html
+    answer: REKINDLE AN OLD FLAME
+    is_meta: True
+    round: 4
+    unlock_global: -1
+    unlock_local: 1
 
