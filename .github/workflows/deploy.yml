@@ -1,4 +1,4 @@
-name: Deploy static content to Server
+name: Deploy application to Server
 
 on:
   # Runs on pushes targeting the default branch
@@ -25,4 +25,10 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        script: echo 'A Github deploy happened! ' $(date +%s) >> ~/gh-action-demo.txt
+        script: |
+          cd /var/www/2024
+          git checkout main; git pull
+          python3 manage.py loaddata 2024-puzzles.yaml
+          sudo systemctl restart gph2024
+          python3 manage.py collectstatic --noinput
+          sudo systemctl restart nginx
