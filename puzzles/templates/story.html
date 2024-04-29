@@ -1,10 +1,61 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% block content %}
 
 <h1>{% translate "Story" %}</h1>
 
 <main>
+
+<div class="no-break story-chunk" id="1">
+    <h4>The Job</h4>
+    <img src="{% static 'story_resources/the-job.png' %}" alt="A mysterious letter" width="100%">
+    <br /><br />
+    <a href="{% url 'the-grand-heist' %}">Start your heist</a>
+</div>
+
+<div class="no-break story-chunk" id="2">
+    <h4>The Chase</h4>
+    <p>You twist the key, open the door and — nothing. Well, almost nothing, but certainly not <b>The Lantern</b>. Inside is a postcard, and a scrap of what looks to be part of a <em>blueprint</em>.</p> 
+    <p>Someone got to the safe first! Not just anyone, but master thief <b>The Rival</b>. You've clashed with them during high-stakes heists for most of your professional life. It seems they were one step ahead, but all is not <em>lost</em>.</p>
+    <p>You don your fedora, dust off your whip, and get cracking!</p>
+    <img src="{% static 'story_resources/the-chase.png' %}" alt="A mysterious postcard" width="100%">
+    <br /><br />
+    <a href="{% url 'the-grand-heist' %}">Continue your heist</a>
+</div>
+
+<div class="no-break story-chunk" id="3">
+    <h4>The Escape</h4>
+    <p>You dive headfirst through the temple entrance, right as the boulder crashes behind you. Unfortunately, you couldn't rescue your fedora in time — RIP. But you notice another piece of a <em>blueprint</em> wedged between the stone tiles.</p> 
+    <p><b>The Rival</b> is nowhere to be seen. And <b>The Lantern</b> is nowhere to be found. Dejected, you're about to book a flight home when the not-lantern you stole vibrates. It's a burner phone!</p>
+    <p>You don your fedora, dust off your whip, and get cracking!</p>
+    <img src="{% static 'story_resources/the-escape.png' %}" alt="A mysterious text" width="100%">
+    <br /><br />
+    <a href="{% url 'the-grand-heist' %}">Continue your heist</a>
+</div>
+
+<div class="no-break story-chunk" id="4">
+    <h4>The Rendezvous</h4>
+    <p>You type furiously while the monitor screen reflects in your eyes, thinking to yourself Enhance! I'm in! Wait, what do movies hackers say? Well, whatever you did seems to have worked, as the digital locks pixelate away, and another piece of the <em>blueprint</em> pops out of the printer. You steady your mouse hand, double click, and...</p> 
+    <img src="{% static 'story_resources/the-rendezvous-1.png' %}" alt="A mysterious notification" width="100%">
+    <p><b>The Rival</b> is not one to live in the shadows on their days off. Everyone knows about their super awesome hideout. Heck, you've visited here and there during the peak days of your rivalry, if not for a cup of tea and to steal back a Picasso.</p>
+    <p>You're swiftly escorted between butlers and security guards to the parlor, where <b>The Rival</b> is waiting for you. They pull out what could only be <b>The Lantern</b>!</p>
+    <img src="{% static 'story_resources/the-rendezvous-2.png' %}" alt="A mysterious meeting" width="100%">
+    <p>“I apologize for the runaround,” they say. “I stole <b>The Lantern</b> months ago, then soon realized in order to activate it, I would need someone that rivaled my skills.</p>
+    <p>“So I played <b>The Fixer</b> and sent you down this path. To see if you were still up to the task. To see...,” they hesitate, “if I could trust you”.</p>
+    <p>“Along your way, I've left you blueprint pieces. So where is <b>The Lantern</b>?” They slide you one final note. You pull out the completed blueprint, place the note next to it, and look down at the artifact you've worked so hard to find. “The answer is right in front of you. No slacking!”</p>
+    <a href="{% url 'the-grand-heist' %}">Continue your heist</a>
+</div>
+
+<div class="no-break story-chunk" id="5">
+    <h4>The Rekindling</h4>
+    <img src="{% static 'story_resources/the-rekindling.png' %}" alt="A mysterious reunion" width="100%">
+    <p>Together, you perform the steps needed to activate <b>The Lantern</b>, and in doing so <b>REKINDLE AN OLD FLAME</b>. The power of the ancient artifact is to see each other in a different <em>light</em>. Some of the most exhilarating moments of your life have been shared with <b>The Rival</b>. Really, you're more alike than different. And besides, it was never about the value of the target. It was the thrill of a heist most <em>grand</em>, and someone to share it with.</p> 
+    <p><em>Congratulations</em> on completing <b>The Grand Hunt</b>! Now go out and find your own lantern*</p>
+    <p>*but seriously, please don't steal from us, we have nothing left</p>
+    <a href="{% url 'the-grand-heist' %}">Reminise about your heist</a>
+    <br /><br />
+</div>
 
 {% for key in story_points %}
 

@@ -26,16 +26,16 @@ INITIAL_STATS_AVAILABLE = False
 SURVEYS_AVAILABLE = False
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
-    year=2025,
-    month=2,
-    day=10,
+    year=2024,
+    month=6,
+    day=1,
     hour=12,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
-    year=2025,
-    month=2,
-    day=12,
+    year=2024,
+    month=6,
+    day=6,
     hour=12,
     minute=0,
 ))
@@ -54,7 +54,7 @@ MAX_MEMBERS_PER_TEAM = 6
 HINTS_ENABLED = True
 # Teams accumulate this many hints each day.
 # Actually every 8 hours but I'm not renaming the variable
-HINTS_PER_DAY = (1, 1, 1, 1, 1, 999, 1)
+HINTS_PER_DAY = (1, 1, 1, 1, 1, 1, 1)
 # Teams get the first number in HINTS_PER_DAY at this time, and subsequent
 # numbers every day after until the end of HINTS_PER_DAY.
 HINT_TIME = HUNT_START_TIME + datetime.timedelta(hours=0)
@@ -85,5 +85,5 @@ TEAM_AGE_BEFORE_FREE_ANSWERS = datetime.timedelta(days=3)
 # through the major milestones of the hunt (e.g. to determine how much story
 # they can view) and to classify puzzles as intro-round or not. They won't make
 # sense for every hunt.
-INTRO_ROUND_SLUG = 'tier-1'
-META_META_SLUG = 'reddit-or-not'
+INTRO_ROUND_SLUG = 'the-museum-of-superb-relics'
+META_META_SLUG = 'the-secret-blueprint'

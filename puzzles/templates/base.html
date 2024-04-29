@@ -49,11 +49,6 @@
                 <a{% if request.path == '/' %} class="selected-tab"{% endif %} href="{% url 'index' %}">
                     {% translate "Home" %}
                 </a>
-                {% if story_page_visible %}
-                <a{% if request.path == '/story' %} class="selected-tab"{% endif %} href="{% url 'story' %}">
-                    {% translate "Story" %}
-                </a>
-                {% endif %}
                 {% if hunt_has_started or hunt_has_almost_started %}
                 <a{% if request.path == '/the-grand-heist' %} class="selected-tab"{% endif %} href="{% url 'the-grand-heist' %}">
                     {% translate "The Grand Heist" %}
@@ -62,6 +57,11 @@
                 {% if hunt_has_started or hunt_has_almost_started %}
                 <a{% if '/puzzle' in request.path or puzzle %} class="selected-tab"{% endif %} href="{% url 'puzzles' %}">
                     {% translate "Puzzle List" %}
+                </a>
+                {% endif %}
+                {% if story_page_visible %}
+                <a{% if request.path == '/story' %} class="selected-tab"{% endif %} href="{% url 'story' %}">
+                    {% translate "Story" %}
                 </a>
                 {% endif %}
                 <a{% if '/team' in request.path %} class="selected-tab"{% endif %} href="{% url 'teams' %}">
