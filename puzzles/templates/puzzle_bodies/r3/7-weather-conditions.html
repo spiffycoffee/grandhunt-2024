@@ -1,0 +1,18 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block puzzle-body-md %}
+
+<style>
+    img {
+        max-width: 100%;
+    }
+</style>
+
+<object data={% static 'puzzle_resources/r3/p7/weather-conditions.pdf' %} type="application/pdf" width="100%" height="640">
+</object>
+
+<p><a href={% static 'puzzle_resources/r3/p7/weather-conditions.pdf' %}>Download PDF</a></p>
+<p><a href=https://docs.google.com/spreadsheets/d/16JODadPTeeE6g1tSzJ9MwqvabcvC9DF4a4wFEwlbGy0/edit?usp=sharing>Copyable Spreadsheet</a></p>
+
+
+{% endblock %}
