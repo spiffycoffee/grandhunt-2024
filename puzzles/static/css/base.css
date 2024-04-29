@@ -25,8 +25,8 @@ html {
     --tray-text-color: var(--accent-color);
     --tray-bg-color: rgba(var(--page-bg-rgb), 0.9);
 
-    --text-font: 'Playfair Display', serif;;
-    --btn-font: 'Playfair Display', serif;;
+    --text-font: 'Helvetica neue';;
+    --btn-font: 'Helvetica neue';;
     --input-font: monospace;
     --answer-font: monospace;
 }
