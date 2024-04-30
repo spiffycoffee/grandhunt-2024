@@ -65,8 +65,8 @@
   fields:
     order: 4
     name: Crossword Puzzle No. 1 in Black and White
-    slug: crossword-puzzle-no-2-in-black-and-white
-    body_template: crossword-puzzle-no-2-in-black-and-white.html
+    slug: crossword-puzzle-no-1-in-black-and-white
+    body_template: crossword-puzzle-no-1-in-black-and-white.html
     answer: COME AND GO
     round: 1
     unlock_global: -1
