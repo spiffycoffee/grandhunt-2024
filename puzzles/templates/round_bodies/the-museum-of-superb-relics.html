@@ -1,7 +1,26 @@
 {% extends "round.html" %}
 {% load static %}
 
+
 {% block round-body %}
-This is a cool round! It has lots of puzzles in it, which you can see below.
-You can also put a meta shell, or whatever you like, in this space.
+<div style="position:relative; width:100%">
+<!-- Base map image -->
+<img style="z-index: -10; width: 100%" src="{% static 'images/wip-round1-map.png' %}"/>
+
+<!-- Individual puzzle map icons -->
+{% for puzzle in round.puzzles %}
+{% if puzzle.puzzle.slug in round.unlocked_slugs %}
+	<div class="map_item abs-z1 {{ puzzle.puzzle.slug }}" >
+		<a href={% url 'puzzle' puzzle.puzzle.slug %}>
+		<img class="item_img abs-z1" style="width: 100%"
+			src="{% static 'images/wip-r1-'|add:puzzle.puzzle.slug|add:'.png' %}"/>
+		{% if puzzle.answer %}
+		<div class="hide abs-z5" style="position: relative; top: 20%">{{puzzle.answer}}</div>
+		{% endif %}
+		</a>
+	</div>
+{% endif %}
+{% endfor %}
+
+</div>
 {% endblock %}
