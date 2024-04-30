@@ -160,7 +160,7 @@
     answer: FER-DE-LANCE
     round: 2
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 13
   fields:
@@ -171,7 +171,7 @@
     answer: DEATH WARDS
     round: 2
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 14
   fields:
@@ -182,7 +182,7 @@
     answer: DANCERS ALL
     round: 2
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 15
   fields:
@@ -192,7 +192,7 @@
     body_template: meandering-streams.html
     answer: RIVER WATER
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 1
 - model: puzzles.Puzzle
   pk: 16
@@ -203,7 +203,7 @@
     body_template: fearsome-foes.html
     answer: EXPEDITION
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 2
 - model: puzzles.Puzzle
   pk: 17
@@ -214,7 +214,7 @@
     body_template: blocks.html
     answer: ALTAR STONE
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 3
 - model: puzzles.Puzzle
   pk: 18
@@ -225,7 +225,7 @@
     body_template: the-river.html
     answer: CROCODILES
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 4
 - model: puzzles.Puzzle
   pk: 19
@@ -236,7 +236,7 @@
     body_template: sun-moon-and-stars.html
     answer: SUN WORSHIP
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 5
 - model: puzzles.Puzzle
   pk: 20
@@ -247,7 +247,7 @@
     body_template: star-chart.html
     answer: ASTRONOMIC
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 6
 - model: puzzles.Puzzle
   pk: 21
@@ -258,7 +258,7 @@
     body_template: the-curious-cave.html
     answer: FLINT KNIFE
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 7
 - model: puzzles.Puzzle
   pk: 22
@@ -270,7 +270,7 @@
     answer: THROW A TEMPLE TANTRUM
     is_meta: True
     round: 2
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 8
 
 - model: puzzles.Puzzle
@@ -283,7 +283,7 @@
     answer: TERM
     round: 3
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 24
   fields:
@@ -294,7 +294,7 @@
     answer: PARTY
     round: 3
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 25
   fields:
@@ -305,7 +305,7 @@
     answer: MY BELOVED
     round: 3
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 26
   fields:
@@ -315,7 +315,7 @@
     body_template: crack-team.html
     answer: RIPPER
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 1
 - model: puzzles.Puzzle
   pk: 27
@@ -326,7 +326,7 @@
     body_template: lets-just-get-takeout.html
     answer: JOB
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 2
 - model: puzzles.Puzzle
   pk: 28
@@ -337,7 +337,7 @@
     body_template: firewallstreetbets.html
     answer: DOUBLE
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 3
 - model: puzzles.Puzzle
   pk: 29
@@ -348,7 +348,7 @@
     body_template: weather-conditions.html
     answer: DULL
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 4
 - model: puzzles.Puzzle
   pk: 30
@@ -359,7 +359,7 @@
     body_template: keeping-up-with-the-keychain.html
     answer: NEXUS
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 5
 - model: puzzles.Puzzle
   pk: 31
@@ -370,7 +370,7 @@
     body_template: face-the-music.html
     answer: JEWEL
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 6
 - model: puzzles.Puzzle
   pk: 32
@@ -381,7 +381,7 @@
     body_template: the-marvelous-ms-monster.html
     answer: VOYAGERS
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 7
 - model: puzzles.Puzzle
   pk: 33
@@ -393,7 +393,7 @@
     answer: TWIDDLE YOUR THUMB DRIVE
     is_meta: True
     round: 3
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 8
 
 - model: puzzles.Puzzle
@@ -406,7 +406,7 @@
     answer: WITH A MORTAL FRENEMY
     round: 4
     unlock_global: -2
-    unlock_local: 0
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 35
   fields:
@@ -417,6 +417,6 @@
     answer: REKINDLE AN OLD FLAME
     is_meta: True
     round: 4
-    unlock_global: -2
+    unlock_global: -1
     unlock_local: 1
 
