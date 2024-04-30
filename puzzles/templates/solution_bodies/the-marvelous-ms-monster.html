@@ -1,0 +1,49 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each clip has a number of common components: a thumbnail, a clip with a sound effect pause in the
+middle, a “next video” thumbnail at the end that wraps around to the first clip, and a number of likes
+2. Overlay the “next video” thumbnail over the actual next video's thumbnail. The red box will highlight a
+specific word in each clip, resulting in the clue AFTER SOUND 10TH WORD LATEST VIDEO
+3. Each sound effect pauses the clip momentarily. Take the 10th word after each sound effect: 70K, AGES,
+BUNKER, YACHT, FBI, TRIANGLE, JET, ESCAPE
+4. Either from clues in the flavor text, MsMonster's name itself, or from the first letter of each sound effect in
+the transcript, identify the tie to MrBeast, one of the biggest YouTube influencers. Each word identified
+matches a word in one of his YouTube video's titles. If there is more than one video that has that word,
+take the latest one (that existed before the upload date February 10th 2024)
+5. As hinted in the flavor text, convert the number of likes in each MsMonster clip to seconds, or a “mm:ss"
+timestamp. In each MrBeast video, scrub to that timestamp
+6. Overlay the same “next video” thumbnail on top of the image of each MrBeast video at each timestamp.
+Each overlay is highlighting the shape of a letter, resulting in the final answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+This one was a weird one. I knew going in it would be a lot of work for potentially little payoff
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Thumbnail with overlay | Word |	10th Word |	Latest Video |	Timestamp |	MrBeast video at timestamp with overlay | Letter
+---|---|---|---|---|---|---
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-1.png' %} alt="grid" height="200"/> | AFTER |	70K |	[Link](https://www.youtube.com/watch?v=_mdKvblL_8s) |	15:39 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-2.png' %} alt="grid" height="200"/>  | V
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-3.png' %} alt="grid" height="200"/> | SOUND |	AGES |	[Link](https://www.youtube.com/watch?v=FM7Z-Xq8Drc) |	11:57 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-4.png' %} alt="grid" height="200"/> | O
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-5.png' %} alt="grid" height="200"/> | 10TH	| BUNKER |	[Link](https://www.youtube.com/watch?v=HBMmK1c44sE) |	7:24 |	<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-6.png' %} alt="grid" height="200"/> | Y
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-7.png' %} alt="grid" height="200"/> | WORD | YACHT | [Link](https://www.youtube.com/watch?v=48h57PspBec) | 4:17 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-8.png' %} alt="grid" height="200"/> | A
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-9.png' %} alt="grid" height="200"/> | LATEST | FBI | [Link](https://www.youtube.com/watch?v=hxwpkM5w3Cc) | 2:20 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-10.png' %} alt="grid" height="200"/> | G
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-11.png' %} alt="grid" height="200"/> | VIDEO |	TRIANGLE |	[Link](https://www.youtube.com/watch?v=E6E22XQPhhg) |	1:33 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-12.png' %} alt="grid" height="200"/> | E
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-13.png' %} alt="grid" height="200"/> | TIME |	JET |	[Link](https://www.youtube.com/watch?v=kX3nB4PpJko) |	5:45 | <img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-14.png' %} alt="grid" height="200"/> | R
+<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-15.png' %} alt="grid" height="200"/> | STAMP |	ESCAPE |	[Link](https://www.youtube.com/watch?v=3jS_yEK8qVI) |	0:38 |	<img src={% static 'puzzle_resources/solutions/r3/the-marvelous-ms-monster-16.png' %} alt="grid" height="200"/> | S
+
+
+{% endblock %}

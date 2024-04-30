@@ -1,0 +1,53 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson, TODO
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each clue is a tangled string that requires transforming each word in the same way to get a
+clue phrase that makes sense
+2. Answer each untangled clue phrase to get a word. Apply the same transform rule on the
+word to get a person's name
+3. The person's name does not match the enumerations provided for the profile. However,
+each name is half of a famous romantic couple. Indexing into the other partner's name by
+the hotness level results in the clue phrase MY HUGS AND KISSES
+4. Each untangled clue phrase has exactly 5 X's and O's (hugs and kisses). Converting X's to
+1's, and O's to 0's results in 5-digit binary-to-letter codes. The converted letters results in
+THE SWIPE IS RIGHT
+5. Putting THE SWIPE IS RIGHT into the answer checker results in one final step to send an
+email to Grand Hunt with your team name's fake dating profile. Providing your profile grants
+the final answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+A spiritual successor to Snap Decisions from last year, with a bit more heat! I'd swipe right on all of your teams' dating profiles ;) 
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+Untangled Clue |	Transform rule |	Clue answer |	Person |	Partner |	Indexed Letter |	Clue X's and O's |	5-digit binary
+--- | --- | --- | --- | --- | --- | --- | ---
+EXAMPLE FEATURES INCLUDE A LEGEND OR AN X TO MARK THE SPOT |	Reverse each word |	MAP |	PAM	 | JIM |	M |	XOXOO |	T
+AMERICAN HOT WAX ACTOR OR ILLEGAL WAY TO WALK |	Add incrementing alphabet letter after each word |	JAY |	JAYZ |	BEYONCE |	Y |	OXOOO |	H
+WITH ITS NEST AN ILLUSORY HOAX AND COMPLEX MUDDLE |	Add a letter before the last that is incremented by two	| MARE |	MARGE |	HOMER |	H |	OOXOX |	E
+SIXTEEN AFTER BRAVO OR SIX EARLIER THAN XRAY |	No changes |	ROMEO |	ROMEO |	JULIET |	U |	XOOXX |	S
+SIX FEET UNDER JOB IN WHICH CLIENTELE EXIT THIS EXISTANCE AND SEEK THE NEXT	| Remove last letter |	MORTICIAN |	MORTICIA |	GOMEZ |	G |	XOXXX	| W
+GRP AGAINST FOX FUR FACTORY FARMING AND MONKEY EXPERIMENTS | Double the second letter |	PETA |	PEETA |	KATNISS |	S |	OXOOX |	I
+FLEXIBLE WORD BEFORE TAKERS QUESTIONS OR LUCK |	Add increasing unit of measurement after second letter |	ANY |	ANTONY	| CLEOPATRA |	A |	XOOOO |	P
+POPULAR BOARD GAME THAT INCLUDES SIX WEAPONS AND SIX SUSPECTS |	Change U's to YD's |	CLUE |	CLYDE |	BONNIE |	N |	OOXOX |	E
+FIRECRACKER THAT FAILS TO EXPLODE FOR EXAMPLE |	Increment every letter by one |	DUD |	EVE |	ADAM |	D |	OXOOX	| I
+IN TAXONOMY A CITRUS DESCRIBING A CAR THAT NEEDS EXTREME FIXING	| Double the third letter and increment by one |	LEMON |	LENNON |	YOKO ONO |	K |	XOOXX |	S
+TEXAN FAMILY IN GIANT OR SMAUG VOICE IN AN UNEXPECTED JOURNEY |	Change last letter to K |	BENEDICT |	BENEDICK |	BEATRICE |	I |	XOOXO |	R
+THROBBING EXTENDED PAIN POSSIBLY OVER AN EX |	Add R and L around each word |	ACHE |	RACHEL |	ROSS |	S |	OXOOX |	I
+OBJECT CONTAINING A RELAXING MIXED DRINK THATS EXACTLY HALF PINT |	Add a dairy item before each word |	CUP |	BUTTERCUP |	WESLEY |	S |	OOXXX |	G
+SLANG FOR EXTREMELY WHEN PAIRED WITH GOOD AND PERFORMED BY GWEN STEFANI |	Change first letter to B |	HELLA |	BELLA |	EDWARD |	E |	OXOOO |	H
+EXECUTIVE PRODUCED BY IDRIS ELBA AND HEADLINES MAX AS MARSHAS BOYFRIEND OFARREL |	Remove H's and I's |	HIJACK |	JACK |	ROSE |	S |	XOXOO |	T
+
+{% endblock %}

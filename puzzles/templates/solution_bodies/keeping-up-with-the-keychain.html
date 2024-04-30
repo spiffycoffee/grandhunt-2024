@@ -1,0 +1,52 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+TODO, David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Solve each crossword clue
+2. Add a “key”-sounding word to the front or back of each answer. The new word can be
+matched to one of the key descriptions
+3. Insert the new word, one letter at a time, into the empty space of each key. Per the
+examples, vowels are entered into top row and consonants in the bottom row, skipping
+boxes based on the ordering of vowels and consonants
+4. The “extraction” key is ASCII. Read the 8 bits of the key as 1's and 0s to get 8-digit ASCII
+letters. Together these spell KEY4 S1 EP4 WD2 (5)
+5. Key 4 is LOKI. For the TV show Loki, Season 1, Episode 4, Word 2 of the title is NEXUS
+
+{% endblock %}
+
+{% block author-notes-html %}
+Loki was an unintended secret theme to this puzzle. But it makes sense the god of stories would weave himself in!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Key | Matching answer |	Add “key” sound	| Binary |	ASCII
+---|---|---|---|---
+1. Extraction  | AS	| ASCII |01001011 |	K
+2. Mousey  | PIN	| PINKY	|	01000101 |	E
+3. Presentable | NOTE	| KEYNOTE |		01011001 |	Y
+4. Godly | LO |	LOKI |		00110100 |	4
+5. Equine | DON	| DONKEY |	 01010011 |	S
+6. Crooked | WON	| WONKY |		00110001 |	1
+7. Squirrelly |	ROC |	ROCKY |	01000101 |	E
+8. Black	| IN	| INKY	| 01010000 |	P
+9. Boozy |ANTI |	CHIANTI	| 	00110100 |	4
+10. Covered |	MAR	| MARQUEE |	0101011 |	W
+11. Cool |FUN	| FUNKY	| 	01000100 |	D
+12. Carved |	TI	| TIKI	| 00110010 |	2
+13. Buttoned | PAD	| KEYPAD |		00101000 |	(
+14. Savory | CHE	| QUICHE |		00110101 |	5
+15. Curious | MON	| MONKEY |		00101001 |	)
+
+<img src={% static 'puzzle_resources/solutions/r3/keeping-up-with-the-keychain.png' %} alt=grid width=100%/>
+
+{% endblock %}

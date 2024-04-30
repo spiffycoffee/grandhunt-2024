@@ -1,0 +1,85 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+TODO, David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each user is an anonymous artist. They are describing themselves using crossword-like
+clues in their playlist song names.
+2. Each artist has a song of the form “Welcome to ____”, where the blank is represented by an
+image in the recommended tracks grid.
+3. The numbers in each username, when converted to letters A1Z26, spell “MAP
+COMMENTER TO TRACK THEN TRACE”
+4. Trace the commenters under each playlist in the track grid, mapping each commenter to
+the artist's “Welcome to” song. Each set of commenters trace out a letter, spelling “LOOK
+AT DIAGONAL”.
+5. Take each nth letter of each nth comment (the diagonal) to spell “SHE WELCOMED US TO
+THE NEW WILD WEST” (note that after this letter, the comment says to stop, and all further
+positions are longer than the comments). The answer is the artist with the lyric “Welcome to
+the new wild west”.
+
+{% endblock %}
+
+{% block author-notes-html %}
+Loki was an unintended secret theme to this puzzle. But it makes sense the god of stories would weave himself in!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+***S***OLIDCHOICESALLAROUNDBRAVO  
+T***H***REECHEERSFOREXCELLENTSONGS   
+TH***E***CREAMOFTHECROPOFTASTYTUNES   
+KNO***W***WHATITHINKTHEYREKINDAMID  
+WHER***E***DIDYOUFINDTHESEHIDDENGEMS  
+IFYOU***L***OOKHARDENOUGHYOULLFINDEM  
+WHATLU***C***KTOHAVEFOUNDTHISPLAYLIST  
+IKNOWWH***O***ILLBESHARINGTHESEWITH  
+COMEONEI***M***BEGGINGYOUFORTHESOURCE  
+WHATSTHED***E***ALWITHTHISSELECTION  
+IBETTHEYMA***D***ETHISONSOMETHING  
+WHATWOULDYO***U***RECOMMENDINSTEAD  
+ASFORMEILIKE***S***OMETHINGCHILLER  
+ONASECONDPLAY***T***HISISREALLYGOOD  
+THISISFIREYOUG***O***TAREALGIFTFORTHIS  
+SOHOTITCOULDMEL***T***APOPCICLE  
+WECOULDLISTENTOT***H***ISALLDAYLONG  
+IMGOINGTOREPOSTTH***E***FIRSTFEWSONGS  
+WHYNOTPOSTEVERYTHI***N***GTOGETHER  
+ITSOKBUTTHISISTOOOV***E***RHYPED  
+THISISFULLOFGREATEAR***W***ORMS  
+ONEISSTUCKINMYHEADFOR***W***EEKSONEND  
+THEYRESOCATCHYIMLOSING***I***THELP  
+CANEVERYONERELAXANDJUST***L***ISTEN  
+ICANTFOCUSWITHALLTHISHEA***D***ACHE  
+PLAYLISTSSHOULDNTFEELLIKE***W***ORK  
+IMNOTFEELINGTHISSONGINTHEL***E***AST  
+STICKWITHITMYFRIENDITSTHEBE***S***T  
+HMMIDONTKNOWICANTGETINTOITEI***T***HER  
+***STOP***ITIVEHADENOUGHWITHYOUALL  
+.........
+
+User |	Clue |	Artist |	A1Z26  letters |	Welcome to |	Traced Letter
+---|---|---|---|---|---
+music-lover-1301 |	President Zachary. Pokemon normal type move  |	TAYLOR SWIFT |	MA |	NEW YORK |	L
+crowd-surfer-1603	| Home for worms. Living paycheck to paycheck. Batman sidekicks	| DIRT POOR ROBBINS	| PC	| LADY HELL |	O
+beat-is-bumpin-1513	| Weapons or muscles. Also abbreviated. Flowers	| GUNS N ROSES |	OM |	JUNGLE |	O
+bangin-tunes-1305	| Word before space. Acid, for example. Love story, perhaps	| MY CHEMICAL ROMANCE	| ME	| BLACK PARADE |	K
+concert-regular-1420	| Not just “a”. Golf points	| THE STROKES	| NT	| JAPAN	| A
+hitting-high-notes-0518	| Orphan Twist. Beech or oak	| OLIVER TREE	| ER	| LA	| T
+turn-it-up-2015	Nickel or Lincoln. | Hand extension. Grim Reaper alternatively. Party drink	| FIVE FINGER DEATH PUNCH |	TO	| CIRCUS |	D
+getting-funky-2018	| Small, briefly. Sometimes blue or cloudy	| LIL SKIES	| TR	| RODEO |	I
+jammin-out-0103	| Good for the environment. Dawn till dusk	| GREEN DAY	| AC	| PARADISE	| A
+front-row-seats-1120	| Color made from red and also white. Boxer Mayweather	| PINK FLOYD	| KT	| MACHINE |	G
+breaking-it-down-0805	| Not old slangily. Goes on a biscuit	| YUNG GRAVY	| HE	| CHILIS	| O
+hard-rocker-1420	| Comes after soda or Iggy. Utilize a cigarette, maybe	| POP SMOKE	 | NT	| PARTY | 	N
+life-of-the-party-1801	| Ape species but spelled with a “Z”	| GORILLAZ	| RA	| PLASTIC BEACH	| A
+on-the-dance-floor-0305	| Crazy. Circus jester. Clique / gange	| INSANE CLOWN POSSE	| CE	| SHOW	| L
+
+{% endblock %}

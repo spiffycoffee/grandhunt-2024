@@ -379,7 +379,7 @@
     name: The Marvelous Ms Monster
     slug: the-marvelous-ms-monster
     body_template: the-marvelous-ms-monster.html
-    answer: VOYAGER
+    answer: VOYAGERS
     round: 3
     unlock_global: -1
     unlock_local: 7

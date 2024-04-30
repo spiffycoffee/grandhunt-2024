@@ -1,0 +1,51 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each member of the team has a different native script. In order to talk to each other, they
+need to write in the receiver's script
+2. Decode each script to English. Each message is cluing a letter substitution cipher
+3. As clued in the flavor text “first initially” and their birth names and aliases hidden, find the
+first letter of the first name of each character
+4. Convert their first letter from English to their native script (not the script they are writing in)
+5. Transform the native script letter (if applicable) based on the message. If successful, it
+should look like a letter that matches the substitution cipher they are describing, resulting in
+a new letter
+6. Chain the letters in a loop based on the character they are writing to. Starting with the Team
+Leader (Quiet Robe), this results in JACK THE
+7. The intruder's message is in Wingdings and can be converted to a normal font. That
+message hints that the most important part of their name is missing. A famous bad person
+that starts with JACK THE ends with RIPPER
+
+{% endblock %}
+
+{% block author-notes-html %}
+I enjoy it when media embeds secret languages into their content for viewers to find and crack. 
+While there are plenty of more complicated fake scripts out there, I decided to go simple with A-Z letter substitution languages. 
+Maybe this is my break-in to take on more complicated linguistic puzzles!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Name	| Translated message |	Sender script |	Receiver script |	First letter in sender script |	Transform |	Cipher |	Cipher letter
+--- | --- | --- | --- | --- | --- | --- |
+DALIA	| You can bet we've got their number! Remove my points, and we'll win to the letter.  |	Gerudo |	Aurebesh | <img src={% static 'puzzle_resources/solutions/r3/crack-team-1.png' %} alt="grid" width="75%"/> |		Remove top and bottom points |	A1Z26 |	H
+NIBBLER |	We shall lure them to the blackness of space! They won't be able to see, but we can feel our way through.	| Alienese |	Bill | <img src={% static 'puzzle_resources/solutions/r3/crack-team-2.png' %} alt="grid" width="75%"/> |	Center dots |	Braille |	C
+PACIFICA |	I'm too popular to die, even with my two loops on each end removed. We should dash before we go dotty!	| Bill |	Krakoan	| <img src={% static 'puzzle_resources/solutions/r3/crack-team-3.png' %} alt="grid" width="75%"/> |	Remove the circles at the end, leaving - . - |	Morse |	K
+QUIET ROBE |	I can divert their path by signaling their ship in the wrong direction. My middle part will fill them with dread!	| Chozo |	Wakandan	| <img src={% static 'puzzle_resources/solutions/r3/crack-team-4.png' %} alt="grid" width="75%"/> |	The middle “L” shape (use upward facing version, as each word starts up) |	Semaphore |	J
+TCHALLA |	By the light of the moon, I type this message. We'll catch this person, even if it takes forever!	| Wakandan |	Alienese	| <img src={% static 'puzzle_resources/solutions/r3/crack-team-5.png' %} alt="grid" width="75%"/> |	No change (all letters are lower case)	| Moon Type |	A
+WATTO |	Let's see what junk there is in this pen that can quell them. Please don't hog it all!	| Aurebesh |	Chozo	| <img src={% static 'puzzle_resources/solutions/r3/crack-team-6.png' %} alt="grid" width="75%"/> |	No change	| Pigpen |	E
+WOLVERINE |	If they aren't careful, they'll get flagged by the coast guard! Try filling my middle three things with color to make our own flag.	| Krakoan |	Gerudo	| <img src={% static 'puzzle_resources/solutions/r3/crack-team-7.png' %} alt="grid" width="75%"/> |	Middle vertical lines, which only map to one flag pattern (red, white, blue)	| Nautical Flag | 	T
+| | | | | | |
+INTRUDER |	Curses, foiled again! But you failed to identify the most important part! |	Wingdings | | | | |					
+
+{% endblock %}
