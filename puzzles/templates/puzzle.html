@@ -9,7 +9,7 @@
 
 {% block top-left-actions %}
 {% if round.slug != intro_round_slug %}
-<a href="{% url 'round' round.slug %}" class="btn">{{ round.name }}</a>
+<a href="{% url 'round' round.slug %}" class="btn">{% translate "Back to round" %}</a>
 {% endif %}
 {% if team and not hunt_is_closed %}
 <a href="{% url 'solve' puzzle.slug %}" class="btn">{% translate "Call in an answer" %}</a>
