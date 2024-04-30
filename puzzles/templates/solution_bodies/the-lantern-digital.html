@@ -1,0 +1,52 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. In each box, match up a feeder answer on the left (removing the first letter as applicable)
+with a word described by the picture on the right, to get a combined word or phrase. The
+clue on the right will confirm the word or phrase
+2. Each word or phrase references the title of a type of media (a movie, a TV show, a book, a
+video game, an album) that has a year in the title
+3. Enter the years chronologically on the timeline. Note that the starting point dot represents
+the present day
+4. The answer can be found by following the line. Each time a number is passed through,
+index the corresponding combined word or phrase by that number
+
+{% endblock %}
+
+{% block author-notes-html %}
+
+<b>In the year 3000!</b>
+<br /><br />
+
+<img src={% static 'puzzle_resources/solutions/r3/the-lantern-digital-2.png' %} alt="grid" width="50%"/>
+
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Image |	Feeder answer |	Combined term |	Title
+---|---|---|---
+BER	| JOB |	JOBBER |	2064: Read Only Memories
+DOC	| RIPPER |	RIPPERDOC |	Cyberpunk: 2077
+EA	| DULL	| DULLEA |	2001: A Space Odyssey
+INA |	JEWEL |	EWELINA |	Battlefield 2042
+INATOR	| TERM	| TERMINATOR |	2312
+NINE	| NEXUS	| NEXUS NINE	| Blade Runner 2049
+OM	| PARTY	| ARTYOM	| Metro: 2033
+RETURN	| VOYAGERS	| VOYAGERS RETURN	| Space: 1999
+THINK	| DOUBLE	| DOUBLETHINK	| 1984
+WATERFALL	| MY BELOVED	| MY BELOVED WATERFALL |	2112
+
+<img src={% static 'puzzle_resources/solutions/r3/the-lantern-digital-1.png' %} alt="grid" width="100%"/>
+
+{% endblock %}

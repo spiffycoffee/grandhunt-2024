@@ -1,0 +1,180 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson, TODO
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. This is a meta matching puzzle. The goal is to match up the right terms to the right mini-
+puzzles, and solve them. The mini-puzzle answers and the leftover terms will be used forthe meta puzzle. In each mini-puzzle, the AI chat bot misunderstands or misconstrues the
+prompt.
+
+2. **Mini-puzzle 1:** The prompt mentioning “Similarish to English” is confused for “Simlish-to-
+English”. For each question, translate the Simlish to English, answer the question in English using a matching term, and then translate the answer back to Simlish. Index by the Simlish
+word by the point value to get CHECKMAR, which is CHECKMATE in Simlish. The members associated to the word that come in the highest quantity are PAWNS
+
+3. **Mini-puzzle 2:** The prompt is misconstrued to be about latin abbreviations for clarify “ie”
+and example “eg”. Find a word associated with each set of three clarifications or examples.
+Add a corresponding “ie” or “eg” to the word, plus an extra letter, to get a matching term.
+The extra letters spell CLARIFY WNER. Perform one last “clarify” action, adding “ie” to the
+word, to get WIENER
+
+4. **Mini-puzzle 3:** The prompt believes your favorite childhood thing is dinosaurs, but it
+misconstrues the ask to change the dinosaur names by one letter. Identify each dinosaur
+and off-by-one matching term. The changed letters will spell LIZARDS
+
+5. **Mini-puzzle 4:** The prompt about the grille cipher is confused for a cryptic recipe. Each
+step is a cryptic clue, where INGREDIENT needs to be replaced by a matching term, where
+every answer is 8 letters longs. Insert the answers in an 8 x 8 grid, one answer per row.
+Overlay a “grille” where each hole is at the nth column, one for each setting number. The
+visible letters read ROTATE CW. Rotate the overlaying grille (not the letter grid) by 90
+degrees clockwise. The new visible letters read THE WORKS
+
+6. **Mini-puzzle 5:** The prompt is misconstrued to be about a maze, though it appears
+unsolvable. Find matching terms that look like crossword clues. The answers to each clue
+are in the maze. However, each word has to pass through a wall to work, losing a letter as it
+does. Read the missing letters from start to finish to get GUARDRAIL
+
+7. **Mini-puzzle 6:** The prompt is correctly identified as a word search, but the typical
+rectangular shape is missing. Since the word search grid could either be 11x17 or 17x11,
+construct both. In one grid, find matching terms that make “_____ WORD” phrases. In the
+other grid, find matching terms that make “SEARCH _____” phrases. Take the crossing
+letters from the WORD grid, with the crossing letters from the SEARCH grid, in reading
+order, to get CONVENTION
+
+8. **Mini-puzzle 7:** The prompt is confusing a counting rhyme with count the title. For each line,
+find a matching term that completes the rhyme with the capitalized number, and makes
+sense with the phrase. The phrase is cluing a fictional count across various media types.
+Index the count's name by the counting number to get another count, MONTE CRISTO
+
+9. **Meta-puzzle:** Match up the seven feeder answers with the seven leftover terms by
+increasing letter count. Note that each matching term has GPT in order, referencing the real
+ChatGPT that ChatOMG was inspired by. Take the three letters in the feeder answers that
+line up with each GPT to get ANSWER LAST WORD IN INTRO. The last word in the intro
+text is the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+I've always wanted to make a meta matching puzzle, where you are given a number of smaller puzzle shells and need to figure out how everything fits together. 
+I thought a theme around an AI chat bot that misunderstands you would be a funny theme to tie it together. I also used this as an excuse to write puzzles with a couple members of my small puzzle hunt team.
+And yes, I did run this puzzle through Chat GPT to see if it could solve it!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+####Mini-puzzle 1
+
+Question in English |	Matching term| Term in Simlish |	Index by points
+---- | ----- | ---- | ----
+What's the opposite of a dog? |	CAT| 	MINICULE |	C
+What's the perfect food when you're hungry? |	PIZZA |	CHUMCHA |	H
+What's better than paper, but worse than rock? |	SCISSORS | NERK |	E
+What do you call someone who is very funny?	| HYSTERICAL |	MORATIC	 |C
+What would be a positive outcome when you say “I think you are hot”? |	KISS |	KIK |	K
+What's mik and mak?	THREE |	MAKA |	M
+What do you say if you're feeling hot, or think to yourself, ooh, I look like a smokin' hottie in this? |	IM ON FIRE |	WABADEBADOO |	A
+What's
+
+####Mini-puzzle 2
+
+Answer |	Matching term |	EG vs IE | Extra letter
+---- | ----- | ---- | ----
+PING |	PIECING |	IE |	C
+WARMER |	LEGWARMER |	EG |	L
+BOD	| BODEGA	| EG	| A
+ELF	| RELIEF	| IE |	R
+CARVER |	CAREGIVER	| EG |	I
+SOLE |	SOLE |	EG |	F
+EARLS |	YEARLIES |	IE	| Y
+HEEL |	WHEELIE |	IE |	W
+SALT |	SALIENT	| IE |	N
+BUILD |	BEGUILED |	EG |	E
+PAIR |	PRAIRIE |	IE |	R
+
+####Mini-puzzle 3
+
+Media |	Dinosaur |	Matching term	 | One-off letter
+---- | ----- | ---- | ----
+Tekken	| ALEX	| APEX |	L
+The Land Before Time |	SPIKE |	SPINE |	I
+Dinotopia |	ZIPPO |	HIPPO |	Z
+Land of the Lost |	BIG ALICE |	BIG SLICE |	A
+Toy Story |	REX	| HEX |	R
+The Flintstones |	DINO |	WINO |	D
+Mario |	BOWSER |	BOWLER |	S
+
+####Mini-puzzle 4
+
+Answer |	Matching term |	Indexed letter |	Rotated letter
+---- | ----- | ---- | ----
+CURRANTS [anag. CRU (RANT) St]	| RANT	| R	 |T
+OAT HUSKS [OATH + tUSKS]	| OATH	 |O	 | H
+EGGPLANT [EGG + PLAN + To]	| PLAN	| T	 | E
+COLESLAW [homon. COAL + suShi + LAW]	| LAW	| A	 | W
+STOUT ALE [anag. TOfUS + TALE]	| TALE	| T	 | O
+PRIME RIB [PRIM + anag. BRIE]	| PRIM	| E	 | R
+BLACK COD [craB + LACK + ClOuDy]	| LACK	| C	 | K
+RAW PASTA [Raw + Artichoke + Wheat + PAST + Alfalfa]	| PAST | 	W |	S
+
+####Mini-puzzle 5
+
+Matching term	| Answer along path |	Missing letter through wall
+---- | ----- | ----
+XMAS VEHICLE |	SLEIGH |	G
+CRUEL PARTNER |	UNUSUAL |	U
+MINOTAUR PLACE |	LABYRINTH |	A
+FIX FIRMLY |	INGRAIN |	R
+MUSIC INTRO |	PRELUDE |	D
+MAKE BIG |	ENLARGE |	R
+SAILOR SIGNAL |	BEACON |	A
+LIKE SPOCK |	LOGICAL |	I
+MEADOW VOLES |	FIELD MICE |	L
+
+####Mini-puzzle 6
+
+_____ WORD terms (17x11 grid) |	Crossing letters |	SEARCH ____ terms (11x17 grid) |	Crossing letters
+---- | ----- | ---- | ----
+CROSS |	C	| AND DESTROY	| N
+GIVE YOUR	| O	 |AND RESCUE	| T
+LOAN	| N	| COIL	| I
+MICROSOFT	| V	| ENGINE	| O
+MUMS THE	| E	| FOR GOLD	| N
+SPOKEN		| | LIGHT |	
+VOGUE		| | MISSION	 |
+	| |	WARRANT	 |
+
+####Mini-puzzle 7
+
+Count |	Rhyming term |	Media |	Count ____ |	Indexed letter
+---- | ----- | ---- | ---- | ----
+1	| SUN	| The Sun Also Rises	| MIPPIPOPOLOUS	| M
+2	| JEDI SLEW	| Star Wars | DOOKU	| O
+3	| SESAME	| Sesame Street |	VON COUNT |	N
+4	| DC LORE	| DC Comics	| VERTIGO	| T
+2	| SPICE THROUGH	| Dune	| FENRING	| E
+3	| QUACK COMEDY |	Count Quackula |	QUACKULA |	C
+2	| NOSFERATU	| Dracula	| DRACULA |	R
+4	| JULIET MORE	| Romeo and Juliet	| PARIS	| I
+3	| SAVED ME	| Aix In Provence	| GISMOND	| S
+2	| EVIL SKEW	| Dungeons & Dragons	| STRAHD VON ZAROVICH	| T
+1	| HARPOON GUN	| Lemony Snicket	| OLAF	| O
+
+####Meta-puzzle 7
+
+Feeder answer by letter count |	Matching leftover term |	Overlapping “GPT” letters
+---- | ----- | ----
+PAWNS	| EGYPT	| ANS
+WIENER	| GOPAST	| WER
+LIZARDS	| GUNPORT	| LAS
+THEWORKS	| GUMPTION	| TWO
+GUARDRAIL	| STAGPARTY	| RDI
+CONVENTION	| THROUGHPUT |	NIN
+MONTECRISTO	| FINGERPAINT |	TRO
+
+{% endblock %}

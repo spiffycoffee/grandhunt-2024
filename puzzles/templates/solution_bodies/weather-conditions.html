@@ -1,0 +1,75 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+TODO, David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Complete each logic puzzle (Clouds, Four Winds, Moon or Sun, Skyscrapers,
+Thermometers, Water Fun)
+2. Monday: Find cells that are not part of clouds, and are part of the moon-or-sun loop, which
+forms a D
+3. Tuesday: Find cells that are part of a 5-strength wind, and are in a 1-4 level skyscraper,
+which forms a U
+4. Wednesday: Find cells that are filled with water, and are in a 1-3 level skyscraper, which
+forms an L
+5. Thursday: Find cells that are filled with water, and are in a thermometer that has nothing
+filled in, which forms an L
+6. Friday: The answer is the letters found from Monday - Thursday
+
+{% endblock %}
+
+{% block author-notes-html %}
+I'm so glad I asked my puzzle hunt teammate to contribute this puzzle! If you're newer to 2D logic puzzles, I hope it was fun discovering lesser known puzzle types.
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+#### Clouds
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-1.png' %} alt=grid width=50%/>
+
+#### Four Winds
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-2.png' %} alt=grid width=50%/>
+
+#### Moon or Sun
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-3.png' %} alt=grid width=50%/>
+
+#### Skyscrappers
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-4.png' %} alt=grid width=50%/>
+
+#### Thermometers
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-5.png' %} alt=grid width=50%/>
+
+#### Water fun
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-6.png' %} alt=grid width=50%/>
+
+#### Monday
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-7.png' %} alt=grid width=50%/>
+
+#### Tuesday
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-8.png' %} alt=grid width=50%/>
+
+#### Wednesday
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-9.png' %} alt=grid width=50%/>
+
+#### Thursday
+
+<img src={% static 'puzzle_resources/solutions/r3/weather-conditions-10.png' %} alt=grid width=50%/>
+
+
+{% endblock %}

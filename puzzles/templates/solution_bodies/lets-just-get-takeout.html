@@ -1,0 +1,57 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. This is a Printer's Devilry puzzle type. For each line item, find the deleted food items where,
+after shifting around whitespace, makes a reasonable sentence. The dollar amount is the
+food's letter count
+2. The cents amount is the index. Index into each food to get the phrase SHADE PRIMES
+3. Shade prime number boxes in the grid below to get a QR code. Pro tip: In the Google
+spreadsheet version, use “Data Validation” to quickly shade primes, or find and replace
+primes with black box Unicode. Use a phone camera or any QR code scanner to reach this
+page
+4. For each sentence, find three numbers deleted in the same way as the foods in the
+previous step. Shade those numbers to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+Printer's Devilry is a puzzle type I've always enjoyed, but knew going in was hard to construct. Now if only I could charge the same fees ordering apps do on this puzzle...
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Sentence with item inserted |	Food  |	Indexed Letter
+--- | --- | ---
+I sel[FISH]ly took it all for myself while they floundered about |	FISH |	S
+When I don't remember lyrics, I'll [HUM MUS]ic every so often. If still no luck, I'll dip |	HUMMUS |	H
+I saw so much da[TA COS]play at the Star Trek convention, it was getting a bit corny |	TACOS |	A
+Don't use a ba[SA LAD]lder, as the wood rungs would snap. At least it's a green option |	SALAD |	D
+Even if the show's a p[RICE]y reboot, it'll be a staple hit from nostalgia |	RICE |	E
+I'm [SO UP]set you didn't invite me so don't bother apologizing |	SOUP |	P
+They must have bats in their bel[FRIES] lying on the floor and acting salty |	FRIES 	R
+They surveyed our town and said we had the most diversity in cen[SUS HI]story. We're on a roll!	| SUSHI |	I
+The idea[L AMB]er is just the right color yellow, a perfect gift for Mary |	LAMB |	M
+That palate-perfect food critic, has ta[STE AK]in to a bloody genius |	STEAK |	E
+We made the worst faux [PAS TA]king out rather than dining in, mamma mia! |	PASTA |	S
+
+<img src={% static 'puzzle_resources/solutions/r3/lets-just-get-takeout-1.png' %} alt=grid width=50%/>
+
+Sentence with item inserted |	Number  |	Indexed Letter
+--- | --- | ---
+First, you'll need your sous chef Keanu, and wi[TH REE]ves you'll gather the ingredients. |	THREE |	3
+Next, you'll w[EIGH T]he nuts (a few pounds of almonds, please). |	EIGHT |	8
+Lastly, you'll make ca[NINE] noodles by mixing in their favorite treats into the dough. |	NINE |	9
+
+<img src={% static 'puzzle_resources/solutions/r3/lets-just-get-takeout-2.png' %} alt=grid width=50%/>
+
+{% endblock %}
