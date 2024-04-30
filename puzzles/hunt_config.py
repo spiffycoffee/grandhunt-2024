@@ -85,5 +85,5 @@ TEAM_AGE_BEFORE_FREE_ANSWERS = datetime.timedelta(days=3)
 # through the major milestones of the hunt (e.g. to determine how much story
 # they can view) and to classify puzzles as intro-round or not. They won't make
 # sense for every hunt.
-INTRO_ROUND_SLUG = 'the-museum-of-superb-relics'
+INTRO_ROUND_SLUG = ''
 META_META_SLUG = 'the-secret-blueprint'
