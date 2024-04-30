@@ -911,3 +911,11 @@ footer {
 	position: absolute;
 	z-index: 5;
 }
+
+.reading-the-room {
+	height: 20%; 
+	border: 5px solid red; 
+	top: 10%; 
+	left: 55%; 
+	width: 15%;
+}
