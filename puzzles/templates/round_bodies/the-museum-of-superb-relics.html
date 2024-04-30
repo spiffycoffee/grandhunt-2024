@@ -3,69 +3,24 @@
 
 
 {% block round-body %}
-<div>hello</div>
-{% for puzzle in round.puzzles %}
-{{ puzzle.puzzle.slug }}
-{% if puzzle.answer %}
-	The Answer is: {{ puzzle.answer }}
-{% endif %}
-Puzzle name: {{ puzzle.puzzle.name }}
-<div>hello</div>
-{% endfor %}
-<div>hello</div>
-{{ round.puzzles }}
-<div>hello</div>
-{{ puzzles }}
-<div>hello</div>
-<div style="position:relative; width:100%; border: 10px solid red">
+<div style="position:relative; width:100%">
+<!-- Base map image -->
 <img style="z-index: -10; width: 100%" src="{% static 'images/wip-round1-map.png' %}"/>
 
-
-<!-- TODO puzzle should only show if unlocked-->
-
+<!-- Individual puzzle map icons -->
 {% for puzzle in round.puzzles %}
 {% if puzzle.puzzle.slug in round.unlocked_slugs %}
-	<!-- TODO answer should only show if solved -->
 	<div class="map_item abs-z1 {{ puzzle.puzzle.slug }}" >
-	<a href={% url 'puzzle' puzzle.puzzle.slug %}>
-	<img class="item_img abs-z1" style="width: 100%"
-		src="{% static 'images/wip-r1-'|add:puzzle.puzzle.slug|add:'.png' %}"/>
-	{% if puzzle.answer %}
-	<div class="hide abs-z5" style="position: relative; top: 20%">{{puzzle.answer}}</div>
-	{% endif %}
-	</a>
-</div>
+		<a href={% url 'puzzle' puzzle.puzzle.slug %}>
+		<img class="item_img abs-z1" style="width: 100%"
+			src="{% static 'images/wip-r1-'|add:puzzle.puzzle.slug|add:'.png' %}"/>
+		{% if puzzle.answer %}
+		<div class="hide abs-z5" style="position: relative; top: 20%">{{puzzle.answer}}</div>
+		{% endif %}
+		</a>
+	</div>
 {% endif %}
 {% endfor %}
-
-{% if 'an-unexpected-door' in round.unlocked_slugs %}
-<div class="map_item abs-z1" style="height: 20%; border: 5px solid red; top: 60%; left: 33.5%; width: 13%" >
-	<a href="/puzzle/an-unexpected-door">
-	<img class="item_img abs-z1" style="width: 100%"
-	src="{% static 'images/wip-r1-an-unexpected-door.png' %}"/>
-	<div class="hide abs-z5" style="position: relative; top: 20%"> ANSWER </div>
-	</a>
-</div>
-{% endif %}
 
 </div>
 {% endblock %}
-
-<!--
-	<a href="/puzzle/reading-the-room">
-{% debug %}
-{{ round.unlocked_slugs }}
-<div class="map_item abs-z1" style="top: 50%; left: 10%; width: 15%;" >
-
-{% if 'reading-the-room' in round.unlocked_slugs %}
-<div class="map_item abs-z1" style="height: 20%; border: 5px solid red; top: 10%; left: 55%; width: 15%" >
-	<a href="/puzzle/reading-the-room">
-	<img class="item_img abs-z1" style="width: 100%"
-	src="{% static 'images/wip-r1-reading-the-room.png' %}"/>
-	{% if 'ISAAC' in round.puzzles.answer %}
-	<div class="hide abs-z5" style="position: relative; top: 20%"> ANSWER </div>
-	{% endif %}
-	</a>
-</div>
-{% endif %}
--->

@@ -906,16 +906,91 @@ footer {
 	z-index: 1;
 }
 
-
 .abs-z5 {
 	position: absolute;
 	z-index: 5;
 }
 
+/* visualize the map_item bounding div */
+.map_item {
+	/* border: 5px solid red; */
+}
+
+
+/* Round 1 icon positioning */
 .reading-the-room {
-	height: 20%; 
-	border: 5px solid red; 
-	top: 10%; 
-	left: 55%; 
+	height: 20%;
+	top: 10%;
+	left: 55%;
 	width: 15%;
+}
+
+.a-sour-experience {
+	height: 15%;
+	top: 13%;
+	left: 73%;
+	width: 10%;
+}
+
+.crossword-puzzle-no-1-in-black-and-white{
+	height: 20%;
+	top: 8%;
+	left: 85%;
+	width: 11%;
+}
+
+.tickets-please{
+	height: 18%;
+	top: 12%;
+	left: 39%;
+	width: 11%;
+}
+
+.pinching-pig-pennies{
+	height: 20%;
+	top: 30%;
+	left: 35%;
+	width: 15%;
+}
+
+.have-your-say{
+	height: 20%;
+	top: 59%;
+	left: 33%;
+	width: 14%;
+}
+
+.under-pollock-and-key {
+	height: 17%;
+	top: 37%;
+	left: 55%;
+	width: 12%;
+}
+
+.choosy-collectors {
+	height: 17%;
+	top: 58%;
+	left: 56%;
+	width: 11%;
+}
+
+.meet-the-museum-staff {
+	height: 18%;
+	top: 32%;
+	left: 77%;
+	width: 14%;
+}
+
+.reconnaissance {
+	height: 17%;
+	top: 51%;
+	left: 75%;
+	width: 15%;
+}
+
+.in-the-jungle {
+	height: 20%;
+	top: 72%;
+	left: 75%;
+	width: 8%;
 }
