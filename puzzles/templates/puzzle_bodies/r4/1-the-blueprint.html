@@ -1,16 +1,75 @@
 {% extends "puzzle.html" %}
 {% load static %}
-{% block puzzle-body-html %}
+{% block puzzle-body-md %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
+####Where is **The Lantern**?
 
-<object data={% static 'puzzle_resources/r4/p1/the-blueprint.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+{% for key in milestones %}
 
-<p><a href={% static 'puzzle_resources/r4/p1/the-blueprint.pdf' %}>Download PDF</a></p>
+{% if key == 'meta1_done' %}
+You've found the first blueprint!  
+
+<img src={% static 'puzzle_resources/r4/p1/blueprint-1.png' %} alt=blueprint1 width=50%/>
+
+{% endif %}
+
+{% if key == 'meta2_done' %}
+You've found the second blueprint!  
+
+<img src={% static 'puzzle_resources/r4/p1/blueprint-2.png' %} alt=blueprint2 width=50%/>
+{% endif %}
+
+{% if key == 'meta3_done' %}
+You've found the third blueprint!  
+
+<img src={% static 'puzzle_resources/r4/p1/blueprint-3.png' %} alt=blueprint3 width=50%/>
+
+####🎨🪨💾  
+_Apologies for the runaround. I know I put you through many trials, and even dished out a few **quips** along the way, but I had to see if you're ready. Prove me right, and I'll shine a light on how to activate **The Lantern**._  
+
+---
+
+*Things I overheard during your heist...* 
+
+
+“This monochrome painting is a bit too abstract for my taste. And why did they go with this piece over the other versions?”  
+
+“Ugh, crypto bros and their rocket emojis. Why do they always use this number of them in their sayings?”  
+
+“We should pay our respects to those before us. Remind me, how many flags have five letters?”  
+
+“I'm so hungry I could pig out. But who's that weird customer that prefers ziti?”  
+
+“I'm ready to take down any legendary monster coming my way! How many arms did that statue I defeated have again?”  
+
+“My car's algorithm seems to be on the fritz. Does it even register how many rows or columns the stop sign has?”  
+
+“Sold! Wait, who just snagged The Lonely Bookkeeper?”  
+
+“'I'm loving this ancient dance! But what do you think that Aztec warrior is going to do with that number of arrows?”  
+
+“This bot could use a better training model. If it did, maybe it would know how many points mik and mak are worth?”  
+
+"I can't wait to get in! But what's with the last digit on my ticket number?"  
+
+“This stream seems to go on forever. I wonder how many temples I'll be able to visit around here?”  
+
+“This is such a friendly group of employees. Why would this many of them be considered marks?”  
+
+“Does anyone need this many keys? Why not just use The Cool Key for everything?”  
+
+“Nothing like going on a safari from the comfort of a bench! Do you think that many polar bears and elephants would cause an uproar?”  
+
+“Ick, I can't stand the way they slither in this nest! If I stay on the spot three rows down on the left, can they still reach me?”  
+
+“I just wanted a convenient meal, but this order total is massive! What was the amount in the top right corner again?”  
+
+“Try not to get buried underneath all these cubes! Should we pull the bottom left one out first?”  
+
+“I don't understand a word this team is saying to each other. Maybe it's due to the hour they sent their messages out?”  
+
+{% endif %}
+
+{% endfor %}
 
 {% endblock %}

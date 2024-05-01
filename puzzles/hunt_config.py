@@ -90,3 +90,6 @@ META_META_SLUG = 'the-secret-blueprint'
 
 # Used for unlocking the meta meta round after the first meta is solved
 META_META_ROUND = 4
+
+# Used for custom logic needed for the runaround puzzle
+RUNAROUND_SLUG = 'the-blueprint'

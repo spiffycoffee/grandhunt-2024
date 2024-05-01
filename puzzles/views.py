@@ -68,6 +68,7 @@ from puzzles.hunt_config import (
     ONE_HINT_AT_A_TIME,
     INTRO_ROUND_SLUG,
     META_META_SLUG,
+    RUNAROUND_SLUG,
 )
 
 from puzzles.messaging import send_mail_wrapper, dispatch_victory_alert, show_victory_notification
@@ -143,6 +144,21 @@ def require_before_hunt_closed_or_admin(request):
         messages.error(request, _('Sorry, the hunt is over.'))
         return redirect('index')
 
+# Moved the key milestones to check for into it's own function
+def milestones(request):
+    key_points = OrderedDict((
+        ('round1_open', False), ('meta1_done', False),
+        ('meta2_done', False), ('meta3_done', False), ('meta4_done', False)
+    ))
+    if request.context.hunt_has_started:
+        for puzzle in request.context.unlocks:
+            key_points['round%d_open' % puzzle.round.order] = True
+        if request.context.team:
+            for puzzle in request.context.team.solves.values():
+                if puzzle.is_meta:
+                    key_points['meta%d_done' % puzzle.round.order] = True
+    key_points = [key for (key, visible) in key_points.items() if visible]
+    return key_points
 
 # These are basically static pages:
 
@@ -575,6 +591,10 @@ def puzzle(request):
                 team.num_hints_remaining > 0 or
                 team.num_free_answers_remaining > 0
             ),
+        'is_runaround':
+            team and request.context.puzzle.slug == RUNAROUND_SLUG,
+        'milestones':
+            team and milestones(request),
     }
     try:
         return render(request, template_name, data)
@@ -592,8 +612,15 @@ def solve(request):
 
     puzzle = request.context.puzzle
     team = request.context.team
+    is_runaround = puzzle.slug == RUNAROUND_SLUG
+    did_finish_metas = 'meta3_done' in milestones(request)
     form = None
     survey = None
+
+    #Checking here is the puzzle is the runaround puzzle and the last round's meta wasn't complete 
+    #If so, don't allow users to solve this puzzle
+    if is_runaround and not did_finish_metas:
+        raise Http404
 
     if request.method == 'POST' and 'answer' in request.POST:
         if request.context.puzzle_answer:
@@ -1116,26 +1143,8 @@ def solution_static(request, path):
 @require_GET
 def story(request):
     '''View your team's story page based on your current progress.'''
-
-    # FIXME: This will depend a lot on your hunt. It might not make any sense
-    # at all.
-    if not STORY_PAGE_VISIBLE and not request.context.is_superuser:
-        raise Http404
-    story_points = OrderedDict((
-        ('round1_open', False), ('meta1_done', False),
-        ('meta2_done', False), ('meta3_done', False), ('meta4_done', False)
-    ))
-    if request.context.hunt_has_started:
-        for puzzle in request.context.unlocks:
-            story_points['round%d_open' % puzzle.round.order] = True
-        if request.context.team:
-            for puzzle in request.context.team.solves.values():
-                if puzzle.is_meta:
-                    story_points['meta%d_done' % puzzle.round.order] = True
-    story_points = [key for (key, visible) in story_points.items() if visible]
-    #This reverse was here last year, but it's messing with the ordering of the story
-    #if request.context.team:
-    #    story_points.reverse()
+    
+    story_points = milestones(request)
     return render(request, 'story.html', {'story_points': story_points})
 
 
