@@ -45,6 +45,7 @@ from puzzles.hunt_config import (
     TEAM_AGE_BEFORE_FREE_ANSWERS,
     INTRO_ROUND_SLUG,
     META_META_SLUG,
+    META_META_ROUND,
 )
 
 
@@ -475,8 +476,9 @@ class Team(models.Model):
                 # if puzzle.slug == META_META_SLUG and all(metas_solved):
                 #     puzzle_logger.info(_(str(metas_solved)))
                 #     unlocked_at = context.now
-                if puzzle.unlock_global < -1 and metas_solved[puzzle.round.order - 2]:
-                    unlocked_at = context.now
+                if puzzle.unlock_global < -1:
+                    if metas_solved[puzzle.round.order - 2] or (puzzle.round.order == META_META_ROUND and metas_solved[0]) :
+                        unlocked_at = context.now
                 if puzzle.is_meta:
                     metas_solved.append(puzzle.id in context.team.solves)
                 if puzzle.id in context.team.db_unlocks:

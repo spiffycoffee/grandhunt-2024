@@ -87,3 +87,6 @@ TEAM_AGE_BEFORE_FREE_ANSWERS = datetime.timedelta(days=3)
 # sense for every hunt.
 INTRO_ROUND_SLUG = ''
 META_META_SLUG = 'the-secret-blueprint'
+
+# Used for unlocking the meta meta round after the first meta is solved
+META_META_ROUND = 4
