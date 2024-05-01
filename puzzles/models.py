@@ -457,7 +457,17 @@ class Team(models.Model):
         for puzzle in context.all_puzzles:
             unlocked_at = None
 
+            # Prerelease / Post-hunt - all puzzles are shown, PuzzleUnlock are not generated
+            if context.hunt_is_prereleased or context.hunt_is_over:
+                puzzles_unlocked[puzzle] = context.start_time
+                continue
+            # If puzzle already has a PuzzleUnlock, retrieve
+            if puzzle.id in context.team.db_unlocks:
+                puzzles_unlocked[puzzle] = context.team.db_unlocks[puzzle.id].unlock_datetime
+                continue
+
             # Time Unlocks
+            # TODO move this into the team if?
             if 0 <= puzzle.unlock_hours and (puzzle.unlock_hours == 0 or
                                             not context.team or
                                             context.team.allow_time_unlocks):
@@ -465,11 +475,7 @@ class Team(models.Model):
                 if unlock_time <= context.now:
                     unlocked_at = unlock_time
 
-            # Prerelease / Post-hunt - all puzzles are shown, PuzzleUnlock are not generated
-            # TODO(spiffycoffee): move this up and early exit
-            if context.hunt_is_prereleased or context.hunt_is_over:
-                unlocked_at = context.start_time
-            elif context.team:
+            if context.team:
                 if puzzle.is_meta:
                     # array of booleans, puzzles are ordered so index can be a proxy for Round #
                     metas_solved.append(puzzle.id in context.team.solves)
@@ -490,11 +496,7 @@ class Team(models.Model):
                 if puzzle.unlock_global < -1 and puzzle.round.order == META_META_ROUND and metas_solved[0]:
                     unlocked_at = context.now
 
-                # TODO(spiffycoffee): move this up and early exit
-                if puzzle.id in context.team.db_unlocks:
-                    # if previously unlocked, retrieve
-                    unlocked_at = context.team.db_unlocks[puzzle.id].unlock_datetime
-                elif unlocked_at:
+                if unlocked_at:
                     # new unlock, batch it for later bulk PuzzleUnlock generation
                     unlocks.append(Team.unlock_puzzle(context, puzzle, unlocked_at))
             if unlocked_at:
