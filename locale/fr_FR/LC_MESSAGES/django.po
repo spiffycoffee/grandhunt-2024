@@ -1853,7 +1853,7 @@ msgstr "Amicalement,"
 
 #: puzzles/templates/post_hunt_solve.html:5 puzzles/templates/solve.html:5
 #, python-format
-msgid "Call in: %(puzzle_name)s"
+msgid "Guess: %(puzzle_name)s"
 msgstr "Envoyer : %(puzzle_name)s"
 
 #: puzzles/templates/post_hunt_solve.html:14
@@ -1866,7 +1866,7 @@ msgid "Incorrect!"
 msgstr "Incorrect !"
 
 #: puzzles/templates/puzzle.html:15
-msgid "Call in an answer"
+msgid "Submit a guess"
 msgstr "Envoyer une réponse"
 
 #: puzzles/templates/puzzle.html:17
@@ -2244,7 +2244,7 @@ msgid "Appendix"
 msgstr "Appendice"
 
 #: puzzles/templates/solve.html:14
-msgid "Call in an answer for"
+msgid "Submit a guess for"
 msgstr "Envoyer une réponse pour"
 
 #: puzzles/templates/solve.html:20
