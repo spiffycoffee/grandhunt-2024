@@ -427,15 +427,13 @@ class Team(models.Model):
     def solves(self):
         return {
             submission.puzzle_id: submission.puzzle
-            for submission in self.submissions
-            if submission.is_correct
+            for submission in self.submissions if submission.is_correct
         }
 
     def db_unlocks(self):
         return {
             unlock.puzzle_id: unlock
-            for unlock in self.puzzleunlock_set
-            .select_related('puzzle', 'puzzle__round')
+            for unlock in self.puzzleunlock_set.select_related('puzzle', 'puzzle__round')
         }
 
     def main_round_solves(self):
@@ -455,40 +453,52 @@ class Team(models.Model):
         puzzle_logger = logging.getLogger('puzzles.puzzle')
         metas_solved = []
         puzzles_unlocked = collections.OrderedDict()
-        unlocks = []
+        new_unlocks = []
         for puzzle in context.all_puzzles:
             unlocked_at = None
-            if 0 <= puzzle.unlock_hours and (
-                puzzle.unlock_hours == 0 or
-                not context.team or
-                context.team.allow_time_unlocks):
-                unlock_time = context.start_time + datetime.timedelta(hours=puzzle.unlock_hours)
-                if unlock_time <= context.now:
-                    unlocked_at = unlock_time
+            if puzzle.is_meta:
+                # array of booleans, puzzles are ordered so index can be a proxy for Round #
+                metas_solved.append(puzzle.id in context.team.solves)
+
+            # Prerelease / Post-hunt - all puzzles are shown, PuzzleUnlock are not generated
             if context.hunt_is_prereleased or context.hunt_is_over:
-                unlocked_at = context.start_time
-            elif context.team:
+                puzzles_unlocked[puzzle] = context.start_time
+                continue
+            # If puzzle already has a PuzzleUnlock, retrieve it
+            if puzzle.id in context.team.db_unlocks:
+                puzzles_unlocked[puzzle] = context.team.db_unlocks[puzzle.id].unlock_datetime
+                continue
+
+            if context.team:
+                # Time Unlocks
+                if 0 <= puzzle.unlock_hours and (puzzle.unlock_hours == 0 or
+                                                 context.team.allow_time_unlocks):
+                    unlock_time = context.start_time + datetime.timedelta(hours=puzzle.unlock_hours)
+                    if unlock_time <= context.now:
+                        unlocked_at = unlock_time
+
+                # Global / Local Puzzle Solve Unlocks
                 (global_solves, local_solves) = context.team.main_round_solves
                 if 0 <= puzzle.unlock_global <= global_solves and (global_solves or any(metas_solved)):
                     unlocked_at = context.now
                 if 0 <= puzzle.unlock_local <= local_solves[puzzle.round.slug]:
                     unlocked_at = context.now
-                # if puzzle.slug == META_META_SLUG and all(metas_solved):
-                #     puzzle_logger.info(_(str(metas_solved)))
-                #     unlocked_at = context.now
-                if puzzle.unlock_global < -1:
-                    if metas_solved[puzzle.round.order - 2] or (puzzle.round.order == META_META_ROUND and metas_solved[0]) :
-                        unlocked_at = context.now
-                if puzzle.is_meta:
-                    metas_solved.append(puzzle.id in context.team.solves)
-                if puzzle.id in context.team.db_unlocks:
-                    unlocked_at = context.team.db_unlocks[puzzle.id].unlock_datetime
-                elif unlocked_at:
-                    unlocks.append(Team.unlock_puzzle(context, puzzle, unlocked_at))
-            if unlocked_at:
-                puzzles_unlocked[puzzle] = unlocked_at
-        if unlocks:
-            PuzzleUnlock.objects.bulk_create(unlocks, ignore_conflicts=True)
+
+                # Hack to allow gating puzzles behind solving the Meta of the previous round
+                # To use: Set puzzle's Global Unlock to -2, Local Unlock to -1
+                if puzzle.unlock_global < -1 and metas_solved[puzzle.round.order - 2]:
+                    unlocked_at = context.now
+
+                # djack did this, there are no gods anymore
+                if puzzle.unlock_global < -1 and puzzle.round.order == META_META_ROUND and metas_solved[0]:
+                    unlocked_at = context.now
+
+                if unlocked_at:
+                    # new unlock, batch it for later bulk PuzzleUnlock generation
+                    new_unlocks.append(Team.unlock_puzzle(context, puzzle, unlocked_at))
+                    puzzles_unlocked[puzzle] = unlocked_at
+        if new_unlocks:
+            PuzzleUnlock.objects.bulk_create(new_unlocks, ignore_conflicts=True)
         return puzzles_unlocked
 
     @staticmethod
