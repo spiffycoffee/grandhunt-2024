@@ -145,19 +145,23 @@ def require_before_hunt_closed_or_admin(request):
         return redirect('index')
 
 # Moved the key milestones to check for into it's own function
+# Updated the logic to be a dictionary that contains the relavent puzzle answers, if applicable
 def milestones(request):
     key_points = OrderedDict((
-        ('round1_open', False), ('meta1_done', False),
-        ('meta2_done', False), ('meta3_done', False), ('meta4_done', False)
+        ('round1_open', ''), ('meta1_done', ''),
+        ('meta2_done', ''), ('meta3_done', ''), 
+        ('runaround_done', ''), ('meta4_done', ''),
     ))
     if request.context.hunt_has_started:
         for puzzle in request.context.unlocks:
-            key_points['round%d_open' % puzzle.round.order] = True
+            key_points['round%d_open' % puzzle.round.order] = 'true'
         if request.context.team:
             for puzzle in request.context.team.solves.values():
-                if puzzle.is_meta:
-                    key_points['meta%d_done' % puzzle.round.order] = True
-    key_points = [key for (key, visible) in key_points.items() if visible]
+                if puzzle.slug == RUNAROUND_SLUG:
+                    key_points['runaround_done'] = puzzle.answer
+                elif puzzle.is_meta:
+                    key_points['meta%d_done' % puzzle.round.order] = puzzle.answer
+    key_points = {k: v for k, v in key_points.items() if v}
     return key_points
 
 # These are basically static pages:
@@ -462,7 +466,8 @@ def main_map(request):
     '''Main map page (interactive map that leads to the sub-rounds)'''
 
     if request.context.hunt_has_started:
-        return render(request, 'main_map.html')
+        print(milestones(request))
+        return render(request, 'main_map.html', {'milestones': milestones(request)})
     elif request.context.hunt_has_almost_started:
         return render(request, 'countdown.html', {'start': request.context.start_time})
     else:
@@ -613,7 +618,7 @@ def solve(request):
     puzzle = request.context.puzzle
     team = request.context.team
     is_runaround = puzzle.slug == RUNAROUND_SLUG
-    did_finish_metas = 'meta3_done' in milestones(request)
+    did_finish_metas = milestones(request)['meta3_done']
     form = None
     survey = None
 
