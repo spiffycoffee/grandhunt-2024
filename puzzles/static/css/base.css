@@ -883,15 +883,26 @@ footer {
 }
 
 /* TODO(spiffycoffee): move these to own CSS file */
+
+/* debug: visualize the map_item bounding div */
+.map_item {
+	/*
+	border: 5px solid red;
+	*/
+}
+
 .map_item .hide {
 	visibility: hidden;
 
 	color: black;
 	background-color: white;
-    opacity: 0.8;
+	opacity: 0.8;
 	text-align: center;
 	padding: 5px 5px;
 	border-radius: 6px;
+
+	position: relative;
+	top: 20%;
 }
 
 .map_item:hover .hide {
@@ -910,11 +921,6 @@ footer {
 .abs-z5 {
 	position: absolute;
 	z-index: 5;
-}
-
-/* visualize the map_item bounding div */
-.map_item {
-	/* border: 5px solid red; */
 }
 
 

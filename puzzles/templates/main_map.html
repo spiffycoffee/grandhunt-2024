@@ -9,9 +9,10 @@
 </h3>
 {% endif %}
 
-<div style="position:relative; width:100%, height:100%">
+<!-- Containing div, relative pos. allows absolute positioning of icons over base image -->
+<div style="position:relative; width:100%">
+<!-- Base map image -->
 <img style="z-index: -10; width: 100%" src="{% static 'map_resources/main/wip-main-map.png' %}"/>
-</div>
 
 {% for key, value in milestones.items %}
 
@@ -27,7 +28,7 @@
 	<a href="/round/the-museum-of-superb-relics">
 	<img class="item_img abs-z1" style="width: 100%" src="{% static 'map_resources/main/wip-museum-relics.png' %}"/>
 	{% if 'meta1_done' in milestones.keys %}
-	<div class="hide abs-z5" style="top: 50%; left: 5%"> {{ milestones.meta1_done }} </div>
+	<div class="hide abs-z5"> {{ milestones.meta1_done }} </div>
 	{% endif %}
 	</a>
 </div>
@@ -45,7 +46,7 @@
 	<a href="/round/the-lost-temple">
 	<img class="item_img abs-z1" style="width: 100%" src="{% static 'map_resources/main/wip-lost-temple.png' %}"/>
 	{% if 'meta2_done' in milestones.keys %}
-	<div class="hide abs-z5" style="top: 40%; left: 5%"> {{ milestones.meta2_done }} </div>
+	<div class="hide abs-z5"> {{ milestones.meta2_done }} </div>
 	{% endif %}
 	</a>
 </div>
@@ -63,7 +64,7 @@
 	<a href="/round/the-hack">
 	<img class="item_img abs-z1" style="width: 100%" src="{% static 'map_resources/main/wip-the-hack.png' %}"/>
 	{% if 'meta3_done' in milestones.keys %}
-	<div class="hide abs-z5" style="top: 40%; left: 5%"> {{ milestones.meta3_done }} </div>
+	<div class="hide abs-z5"> {{ milestones.meta3_done }} </div>
 	{% endif %}
 	</a>
 </div>
@@ -82,7 +83,7 @@
 	<img class="item_img abs-z1" style="width: 100%"
 	src="{% static 'map_resources/main/wip-the-blueprint.png' %}"/>
 	{% if 'runaround_done' in milestones.keys %}
-	<div class="hide abs-z5" style="top: 40%; left: 5%"> {{ milestones.runaround_done }} </div>
+	<div class="hide abs-z5"> {{ milestones.runaround_done }} </div>
 	{% endif %}
 	</a>
 </div>
@@ -94,7 +95,7 @@
 	<img class="item_img abs-z1" style="width: 100%"
 	src="{% static 'map_resources/main/wip-the-secret-blueprint.png' %}"/>
 	{% if 'meta4_done' in milestones.keys %}
-	<div class="hide abs-z5" style="top: 40%; left: 5%"> {{ milestones.meta4_done }} </div>
+	<div class="hide abs-z5"> {{ milestones.meta4_done }} </div>
 	{% endif %}
 	</a>
 </div>
@@ -111,9 +112,5 @@
 
 {% endfor %}
 
+</div>
 {% endblock %}
-
-<!--
-    <a href="{% url 'round' round.slug %}">
-	style="position: absolute; z-index: 5; top: 50%; left: 10%; width: 10%" >
--->

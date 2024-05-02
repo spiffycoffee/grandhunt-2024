@@ -3,6 +3,7 @@
 
 
 {% block round-body %}
+<!-- Containing div, relative pos. allows absolute positioning of icons over base image -->
 <div style="position:relative; width:100%">
 <!-- Base map image -->
 <img style="z-index: -10; width: 100%" src="{% static 'map_resources/r1/wip-round1-map.png' %}"/>
@@ -16,7 +17,7 @@
 		<img class="item_img abs-z1" style="width: 100%"
 			src="{% static 'map_resources/r1/wip-r1-'|add:puzzle.puzzle.slug|add:'.png' %}"/>
 		{% if puzzle.answer %}
-		<div class="hide abs-z5" style="position: relative; top: 20%">{{puzzle.answer}}</div>
+		<div class="hide abs-z5">{{puzzle.answer}}</div>
 		{% endif %}
 		</a>
 	</div>
