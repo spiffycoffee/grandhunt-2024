@@ -589,6 +589,36 @@ figcaption {
     width: 100%;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+}
+
+.box {
+    text-align: center;
+    border: 3px solid var(--accent-color);
+    padding: 10px;
+    margin: auto;
+    height: 700px;
+}
+
+.box img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.box p.bio {
+    font-size: 1.4rem;
+}
+
+.box .highlight {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
 .submitted-text {
     margin: 0;
     white-space: pre-wrap;

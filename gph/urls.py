@@ -93,6 +93,7 @@ urlpatterns = [
         name='interactive_demo_submit'),
 
     path('story', views.story, name='story'),
+    path('meet-team', views.meet_team, name='meet-team'),
     path('victory', views.victory, name='victory'),
     path('errata', views.errata, name='errata'),
     path('wrapup', views.wrapup, name='wrapup'),
