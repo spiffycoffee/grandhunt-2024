@@ -84,9 +84,11 @@
                     {% translate "Wrap-Up" %}
                 </a>
                 {% endif %}
-                <a href="https://www.thegrandhunt.com/meet-the-team">
-                    Meet the Team
+                {% if meet_team_page_visible %}
+                <a{% if request.path == '/meet-team' %} class="selected-tab"{% endif %} href="{% url 'meet-team' %}">
+                    {% translate "Meet the Team" %}
                 </a>
+                {% endif %}
             </div>
             <div class="top-left-actions">
                 {% block top-left-actions %}{% endblock %}

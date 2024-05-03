@@ -58,6 +58,7 @@ from puzzles.forms import (
 
 from puzzles.hunt_config import (
     STORY_PAGE_VISIBLE,
+    MEET_TEAM_PAGE_VISIBLE,
     WRAPUP_PAGE_VISIBLE,
     INITIAL_STATS_AVAILABLE,
     SURVEYS_AVAILABLE,
@@ -1151,6 +1152,12 @@ def story(request):
     story_points = milestones(request)
     return render(request, 'story.html', {'story_points': story_points})
 
+@require_GET
+def meet_team(request):
+    '''Meet the Team'''
+    if not MEET_TEAM_PAGE_VISIBLE and not request.context.is_superuser:
+        raise Http404
+    return render(request, 'meet_team.html')
 
 @require_GET
 def victory(request):

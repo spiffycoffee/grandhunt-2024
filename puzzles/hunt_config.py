@@ -16,6 +16,8 @@ MESSAGING_SENDER_EMAIL = 'noreply@grandhuntdigital.com'
 
 # Change this to True to reveal the story page to everyone.
 STORY_PAGE_VISIBLE = False
+# Change this to True to reveal the meet the team page to everyone.
+MEET_TEAM_PAGE_VISIBLE = False
 # Change this to True when the wrapup exists.
 WRAPUP_PAGE_VISIBLE = False
 # Change this to True to start showing solve and guess counts on each puzzle.
