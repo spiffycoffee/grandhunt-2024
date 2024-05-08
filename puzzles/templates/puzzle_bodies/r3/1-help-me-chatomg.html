@@ -1,5 +1,7 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-html %}
 
 <style>
@@ -8,11 +10,16 @@
     }
 </style>
 
+<div class="window">
+    <img src="{% static 'puzzle_resources/r3/p1/wip.png' %}"/>
+</div>
+
 <object data={% static 'puzzle_resources/r3/p1/help-me-chatomg.pdf' %} type="application/pdf" width="100%" height="640">
 </object>
 
 <p><a href={% static 'puzzle_resources/r3/p1/help-me-chatomg.pdf' %}>Download PDF</a></p>
 <p><a href=https://docs.google.com/spreadsheets/d/18baZvdJsiwwcew1K9yxNLVOoWe-r0c5ku7P5NAVYW08/edit?usp=sharing>Copyable Spreadsheet</a></p>
+
 
 
 {% endblock %}

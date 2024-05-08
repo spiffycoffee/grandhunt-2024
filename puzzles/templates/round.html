@@ -12,9 +12,11 @@
 
 {% block content %}
 
-{% block round-title-override %}
+<!-- Removing title as the round maps already include the title
+ {% block round-title-override %}
 <h1>{{ round.round.name }}</h1>
 {% endblock %}
+-->
 
 {% if hunt_is_prereleased %}
 <h3 style="text-align: center">
@@ -26,7 +28,8 @@
 <p style="text-align: center">{% translate "Imagine some cool art goes here." %}</p>
 {% endblock %}
 
-<!-- TODO should we keep this or no -->
-{% include 'puzzles_list.html' with round=round %}
+<table class="puzzles-list">
+    {% include 'puzzles_list.html' with round=round %}
+</table>
 
 {% endblock %}
