@@ -1,28 +1,43 @@
 html {
+    /*
     --page-bg-rgb: 35, 24, 50;
     --accent-rgb: 210, 164, 70;
+    */
+
+    --page-bg-rgb: 20, 20, 20;
+    --accent-rgb: 134, 86, 185;
+
 
     --white-color: white;
     --neutral-color: #bbb;
     --accent-color: rgb(var(--accent-rgb));
     --accent-bg-color: rgba(var(--accent-rgb), 0.4);
-    --accent-hover-color: rgba(var(--accent-rgb), 0.6);
+    --accent-hover-color: rgba(var(--accent-rgb), 1.0);
 
     --page-bg-color: rgb(var(--page-bg-rgb));
     --sticky-bg-color: rgba(var(--page-bg-rgb), 0.9);
+    /*
     --heading-text-color: var(--accent-color);
+    */
+    --heading-text-color: var(--white-color);
 
     --border-color: var(--accent-color);
     --print-border-color: #111;
 
+    /*
     --link-text-color: var(--accent-color);
+    */
+    --link-text-color: var(--white-color);
     --link-hover-color: var(--accent-hover-color);
 
     --btn-text-color: var(--white-color);
     --btn-bg-color: var(--accent-bg-color);
     --btn-hover-color: var(--accent-hover-color);
 
+    /*
     --tray-text-color: var(--accent-color);
+    */
+    --tray-text-color: var(--white-color);
     --tray-bg-color: rgba(var(--page-bg-rgb), 0.9);
 
     --text-font: 'Helvetica neue';;
