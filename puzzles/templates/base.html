@@ -4,7 +4,7 @@
 {% load static %}
 
 <!doctype html>
-<html>
+<html class="{% block html_class %}{% endblock %}">
 <head>
     <meta charset="utf-8">
     {% block page-title %}
