@@ -376,7 +376,7 @@
   pk: 32
   fields:
     order: 10
-    name: The Marvelous Ms Monster
+    name: The Marvelous MsMonster
     slug: the-marvelous-ms-monster
     body_template: the-marvelous-ms-monster.html
     answer: VOYAGERS

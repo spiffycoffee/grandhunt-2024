@@ -1,16 +1,205 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-md %}
 
 <style>
-    img {
-        max-width: 100%;
-    }
+
+.grid {
+    grid-template-columns: repeat(2, 1fr);
+ }
+
+.box {
+    position: relative;
+    height: 260px;
+}
+
+.avatar {
+    position: absolute;
+    flex: 0 0 40px;
+    background-image: url("{% static 'puzzle_resources/r3/p3/avatar.png' %}");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    color: var(--white-color);
+    padding: 20px;
+}
+
+.bio {
+    text-align: left;
+    margin-left: 85px;
+    overflow-wrap: break-word;
+    word-wrap:break-word; 
+    display:inline-block;
+    width: 300px;
+}  
+
+.profile {
+    display: flex;
+    align-items: left;
+    justify-content: start;
+    padding: 10px;
+}
+
+.enum {
+    position: relative;
+    top: 30px;
+    font-size: 0.6em;
+}
+
+.hotness {
+    position: absolute;
+    bottom: 0px;
+    text-align: left;
+}
 </style>
 
-<object data={% static 'puzzle_resources/r3/p3/missed-connections.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
-<p><a href={% static 'puzzle_resources/r3/p3/missed-connections.pdf' %}>Download PDF</a></p>
-<p><a href=https://docs.google.com/spreadsheets/d/1bwOu-_0anO29qBVEn14jFKsbKdEZhvZnD9ygkETIsYI/edit?usp=sharing>Copyable Spreadsheet</a></p>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">Online dating can be a twisted mess at times, but will love conquer all?</p>
+    <p><a href=https://docs.google.com/spreadsheets/d/1bwOu-_0anO29qBVEn14jFKsbKdEZhvZnD9ygkETIsYI/edit?usp=sharing>Copyable Spreadsheet</a></p>
+</div>
+
+<div class="window">
+    <div class="name">profiles.love</div>
+    <div class="grid">
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(3)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">ELPMAXESERUTAEFEDULCNIADNEGELRONAXOTKRAMEHTTOPS</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(7)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">AMERICANQHOTRWAXSACTORTORUILLEGALVWAYWTOXWALKY</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(5)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">WITJHITUSNESVTAPNILLUSORAYHOAZXANFDCOMPLEZXMUDDLGE</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(6)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">SIXTEENAFTERBRAVOORSIXEARLIERTHANXRAY</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(5)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">SIFEEUNDEJOIWHICCLIENTELEXITHIEXISTANCANSEETHNEX</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(7)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">GRRPAGGAINSTFOOXFUURFAACTORYFAARMINGANNDMOONKEYEXXPERIMENTS</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(9)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">FLGRAINEXIBLEWOSCRUPLERDBEDRAMFORETACARATKERSQUOUNCEESTIONSORPOUNDLUKILOCK</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(6)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">POPYDLARBOARDGAMETHATINCLYDDESSIXWEAPONSANDSIXSYDSPECTS</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(4)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">GJSFDSBDLFSUIBUGBJMTUPFYQMPEFGPSFYBNQMF</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(4 3)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">INTAYYONOMYACIUURUSDETTCRIBINGACASSTHBBTNEFFDSEXUUREMEFIYYING</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(8)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">TEXAKFAMILKIKGIANKOKSMAUKVOICKIKAKUNEXPECTEKJOURNEK</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(4)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">RTHROBBINGLREXTENDEDLRPAINLRPOSSIBLYLROVERLRANLREXL</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(6)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">MILKOBJECTYOGURTCONTAININGCHEESEAGHEERELAXINGCREAMMIXEDCURDDRINKWHEYTHATSCASEINEXACTLYPUDDINGHALFCUSTARDPINT</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(6)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">BLANGBORBXTREMELYBHENBAIREDBITHBOODBNDBERFORMEDBYBWENBTEFANI</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥</p>
+        </div>
+        <div class="box rounded">
+            <div class="profile">
+                <div class="avatar">
+                    <p class="enum">(4)</p>
+                </div>
+                <div class="bio">I'm looking for:<br /><br /><span style="letter-spacing: .3rem;">EXECUTVEPRODUCEDBYDRSELBAANDEADLNESMAXASMARSASBOYFRENDOFARREL</span></div>
+            </div>
+            <p class="hotness">Profile hotness: 🔥🔥🔥</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

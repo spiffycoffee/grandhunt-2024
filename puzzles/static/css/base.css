@@ -620,6 +620,10 @@ figcaption {
     height: 700px;
 }
 
+.rounded {
+    border-radius: 5px;
+}
+
 .box img {
     width: 100%;
     object-fit: contain;

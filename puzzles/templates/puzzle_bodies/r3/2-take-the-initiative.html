@@ -1,17 +1,89 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-md %}
 
 <style>
-    img {
-        max-width: 100%;
-    }
+.left {
+    text-align: left;
+}
+.small {
+    font-size: 0.8em;
+}
 </style>
 
-<object data={% static 'puzzle_resources/r3/p2/take-the-initiative.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">Autonomous vehicles need to look at the big picture when they arrive at a stop sign.</p>
+    <p><a href=https://docs.google.com/spreadsheets/d/1pp2X3NKzfpEwA_ZubUSPEhBcywtpSq6j4WL03ZGXlj8/edit?usp=sharing>Copyable Spreadsheet</a></p>
+</div>
 
-<p><a href={% static 'puzzle_resources/r3/p2/take-the-initiative.pdf' %}>Download PDF</a></p>
-<p><a href=https://docs.google.com/spreadsheets/d/1pp2X3NKzfpEwA_ZubUSPEhBcywtpSq6j4WL03ZGXlj8/edit?usp=sharing>Copyable Spreadsheet</a></p>
+<div class="window" markdown="1">
+    <div class="name">stop_sign.grid</div>
+    <img src="{% static 'puzzle_resources/r3/p2/stop.png' %}"/>
+</div>
+
+<div class="window" markdown="1">
+    <div class="name">clues.info</div>
+    <div class="left" markdown="1">
+*Clues in the same row or column are in order*  
+
+**Across**  
+    </div>
+    <div class="left small" markdown="1">
+**A.**&nbsp;Prisoners or innovators can have one  
+**B.**&nbsp;Streaming service that sounds like it can shake its hips? ⏺ Letter openers?   
+**C.**&nbsp;See the last clue in this row ⏺ A modern cartoon character's exclamation ⏺ With the first clue in this row, a way to end up on your butt  
+**D.**&nbsp;Unwanted mail, often ⏺ Court ⏺ Tango requirement ⏺ What you could form with the previous clue in this row  
+**E.**&nbsp;Candy found at the boardwalk ⏺ Pasta shape ⏺ Start of an ancient cartoon character's exclamation  
+**F.**&nbsp;French states? ⏺ Printer resolution units (abbr.) ⏺ Cookware item ⏺ Shape of a rainbow  
+**G.**&nbsp;Common language suffix ⏺ Elated (or faded) ⏺ Like sitcoms  
+**H.**&nbsp;One Piece bull ⏺ Yale student ⏺ Kanban software that sounds supportive of plants? ⏺ It can be electric  
+**I.**&nbsp;Response to Ramsay: "Yes, \_\_\_\_!" ⏺ Beach in Florida ⏺ Magic: The Gathering free-to-play game  
+**J.**&nbsp;Like some hair ⏺ Rival to the next clue in this row ⏺ Rival to the previous clue in this row  
+**K.**&nbsp;Iron man? ⏺ What saplings or children do ⏺ Place to ask questions online  
+**L.**&nbsp;Coolers (abbr.) ⏺ Old hospital that specialized in specific ailments  
+**M.**&nbsp;Poke option ⏺ It can help you determine when two trains will collide ⏺ Showed (up)  
+**N.**&nbsp;Response to accidentally hammering your finger ⏺ Bring two friends together for a blind date (2 wds)  
+**O.**&nbsp;Nun, to their nun friends ⏺ Like the Sahara  
+    </div>
+    <div class="left" markdown="1">
+**Down**  
+    </div>
+    <div class="left small" markdown="1">
+
+**1.**&nbsp;&nbsp;\_\_\_\_ time, a sporting event not to be confused with the last clue in the next column ⏺ Bay Area college (abbr.)  	
+**2.**&nbsp;&nbsp;August, an authority on mushrooms ⏺ \_\_\_\_ time  	
+**3.**&nbsp;&nbsp;Long-running video game series (abbr.) ⏺ Palindromic body part ⏺ Where the boys hang, in song (abbr.)  
+**4.**&nbsp;&nbsp;\_\_\_\_ calories, all the taste! (2 wds) ⏺ Like a male peacock  
+**5.**&nbsp;&nbsp;In a manner most unlike the last clue in the previous column ⏺ Small herring ⏺ Cow mascots  
+**6.**&nbsp;&nbsp;Cool, in slang (otherwise, not cool) ⏺ Possible outcome of a bully encounter ⏺ Org. featured in Breaking Bad (abbr.) ⏺ "Je t'accuse" response  
+**7.**&nbsp;&nbsp;Mathematician with pi on their gravestone ⏺ Somewhere you may see a cake boss? ⏺ Emulates a beaver  
+**8.**&nbsp;&nbsp;Old name of a world capital ⏺ Accessory found in the previous clue in this column ⏺ 404, for example ⏺ \_\_\_\_ girl! (2 wds)  
+**9.**&nbsp;&nbsp;"Whatever" ⏺ So \_\_\_\_ (2 wds) ⏺ Questionnaire option (or a thematically relevant inhabitant)  
+**10.**&nbsp;Common higher-order-function ⏺ Start and end of an Israeli URL (2 wds) ⏺ Tree that sounds like a letter ⏺ Broadway opening? (2 wds)  
+**11.**&nbsp;Steep-sided gully ⏺ Emulate Will Smith? ⏺ Madoff's charge  
+**12.**&nbsp;Ringu ghost ⏺ Crosswordy cookie ⏺ Dennis the Menace, for example  
+**13.**&nbsp;Bobo's instrument ⏺ With "The", a member of The Seven ⏺ Zendaya character  
+**14.**&nbsp;Late night ginger? ⏺ Total  
+**15.**&nbsp;Critical \_\_\_\_ 
+    </div>
+</div>
+
+<div class="window" markdown="1">
+    <div class="name">initative.swift</div>
+    <p class="left small">
+        <span style="color:darkslateblue; font-weight: bold">func</span> takeInitiative(numStops: <span style="color:darkolivegreen; font-weight: bold">Int</span> = <span style="color:darksalmon; font-weight: bold">5</span>) -> <span style="color:darkolivegreen; font-weight: bold"> Resolution</span> {<br /><br />
+
+            &emsp;&emsp;&emsp;<span style="color:darkslateblue; font-weight: bold">let</span> reference = coordinates([<span style="color:darksalmon; font-weight: bold">D2</span>,<span style="color:darksalmon; font-weight: bold">E7</span>,<span style="color:darksalmon; font-weight: bold">F13</span>,<span style="color:darksalmon; font-weight: bold">G11</span>,<span style="color:darksalmon; font-weight: bold">H7</span>,<span style="color:darksalmon; font-weight: bold">I5</span>,<span style="color:darksalmon; font-weight: bold">J8</span>,<span style="color:darksalmon; font-weight: bold">K9</span>,<span style="color:darksalmon; font-weight: bold">K13</span>,<span style="color:darksalmon; font-weight: bold">L14</span>,<span style="color:darksalmon; font-weight: bold">M3</span>,<span style="color:darksalmon; font-weight: bold">N12</span>]).<span style="color:darkolivegreen; font-weight: bold">joined</span>()<br />
+            &emsp;&emsp;&emsp;print(reference)<br /><br />
+        
+            &emsp;&emsp;&emsp;<span style="color:darkslateblue; font-weight: bold">let</span> stops = locate([↗️, 🧙‍, ⚪, 🐦, 👨‍🚒], includeArticles: <span style="color:darksalmon; font-weight: bold">true</span>).<span style="color:darkolivegreen; font-weight: bold">joined</span>() <br />
+            &emsp;&emsp;&emsp;print(stops)<br /><br />
+        
+            &emsp;&emsp;&emsp;return 🎉<br />
+        }
+    </p>
 
 {% endblock %}
