@@ -213,22 +213,36 @@
 
 .r3 .window {
     border-image: url("/static/map_resources/r3/window.png");
-	border-image-slice:  1 fill;
+	border-image-slice:  120 60 60 40;
 	border-image-repeat: round;
-    padding: 50px 19px 16px 14px;
-    margin: auto;
+	border-image-width: 37px 15px 15px 10px;
+	border-image-outset: 7px;
+	background-color: var(--white-color);
+    padding: 40px 19px 20px 14px;
+    margin: 0px 0px 20px 0px;
+	font-size: 1.1em;
 }
 
 .r3 .window .name {
-	font-size: 2.4rem;
+	font-weight: bold;
+	color: #444444;
 	position: relative;
-	top: -35px;
+	top: -40px;
 	height: 0px
+}
+
+.r3 .flavortext {
+	font-style: italic;
 }
 
 .r3 .window img {
     width: 100%;
     object-fit: contain;
 }
+
+.r3 .window a {
+	--link-text-color: var(--accent-color);
+}
+
 
 

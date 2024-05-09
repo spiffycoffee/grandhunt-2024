@@ -2,26 +2,233 @@
 {% load static %}
 {% block html_class %}r3{% endblock %}
 
-{% block puzzle-body-html %}
+{% block puzzle-body-md %}
 
 <style>
-    img {
-        max-width: 100%;
-    }
+td, th {
+    border: none!important;
+ }
+
+ .avatar {
+    flex: 0 0 40px;
+    height: 40px;
+	color: var(--white-color);
+	padding: 20px;
+	border-radius: 5px;
+    text-align: center;
+ }
+
+.omg {
+    background-color: #61B59D;
+ }
+
+.me {
+	background-color: #8656B9;
+}
+
+.content {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.chat {
+    display: flex;
+    align-items: left;
+    justify-content: start;
+    padding: 10px;
+}
+
+.alt {
+    background-color: #eeeeee;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+}
+
 </style>
 
 <div class="window">
     <div class="name">flavor.txt</div>
-    <p>Your buddy developed a new AI, but it could use a bit more training. Maybe it can help you write a puzzle hunt! Be warned — its vocabulary is limited, so make sure you're getting the most out of each available term.</p>
+    <p class="flavortext">Your buddy developed a new AI, but it could use a bit more training. Maybe it can help you write a puzzle hunt! Be warned — its vocabulary is limited, so make sure you're getting the most out of each available term.</p>
+    <p><a href=https://docs.google.com/spreadsheets/d/18baZvdJsiwwcew1K9yxNLVOoWe-r0c5ku7P5NAVYW08/edit?usp=sharing>Copyable Spreadsheet</a></p>
 </div>
 
+<div class="window" markdown="1">
+    <div class="name">available_terms.list</div>
 
-<object data={% static 'puzzle_resources/r3/p1/help-me-chatomg.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- -->
+:----: | :----: | :----: | :----: | :----:
+AND DESTROY | FINGERPAINT  | JULIET MORE | OATH | SOLFEGE
+CAT | HEX | KISS | PAST |  SPICE THROUGH
+AND RESCUE |  FIX FIRMLY | LACK  | PIECING | SPOKE
+APEX | FOR GOLD | LAW | PIZZA | SPOKEN
+BEGUILED | GIVE YOUR | LEG WARMER | PLAN | STAG PARTY
+BIG SLICE | GO PAST   | LIGHT | PRAIRIE | SUN
+BODEGA | GUMPTION | LIKE SPOCK | PRIM | TALE
+BOWLER | GUNPORT | MAKE BIG | QUACK COMEDY | THREE
+CAR | HARPOON GUN | MEADOW VOLES | RANT | THROUGHPUT
+CAREGIVER | HAVE A | MICROSOFT | RELIEF | WARRANT
+CROSS | HIPPO | MINOTAUR PLACE | SALIENT | WHEELIE
+CRUEL PARTNER | HYSTERICAL | MISSION | SAVED ME | WINO
+DC LORE | IM ON FIRE | MUMS THE | SCISSORS | WRITTEN
+EGYPT | INDEX | MUSIC INTRO | SESAME | XMAS VEHICLE
+ENGINE | JEDI SLEW | NOSFERATU | SIGNAL FIRE | YEARLIES
+EVIL SKEW | | | |
 
-<p><a href={% static 'puzzle_resources/r3/p1/help-me-chatomg.pdf' %}>Download PDF</a></p>
-<p><a href=https://docs.google.com/spreadsheets/d/18baZvdJsiwwcew1K9yxNLVOoWe-r0c5ku7P5NAVYW08/edit?usp=sharing>Copyable Spreadsheet</a></p>
+<img src="{% static 'puzzle_resources/r3/p1/input.png' %}"/>
+</div>
 
+<div class="window" markdown="1">
+    <div class="name">chatomg.exe</div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">Ok, let's see what this thing can do. ChatOMG, write me a puzzle using something similar-ish to English.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Wetash! Deesh, deesh, deesh ... let's see how well you do on this quiz: <br /><br />
+        Q1: What's the opposite of a woven? (5 points) <br />
+        Q2: What's the perfect wompf when you're hungwah? (2 points) <br />
+        Q3: What's better than apper, but worse than marf? (2 points) <br />
+        Q4: What do you call someone who is very garsha? (7 points) <br />
+        Q5: What would be a positive outcome when you say "Za woka genava"? (3 points) <br />
+        Q6: What's mik and mak? (1 point) <br />
+        Q7: What do you say if you're feeling hap, or think to yourself, ravasheen? (2 points) <br />
+        Q8: What's something known to go juum juum? (8 points) <br /><br />
+        Final Question: Did you find the hidden word? Great! What are the members associated to that word that come in the highest quantity? In English, please!</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">Well that was unexpected. ChatOMG write me an example puzzle, for clarification. <br /><br /> Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Will do! Here's a puzzle with some short examples and clarifications:<br /> <br /> 
 
+            To clarify: pong, radar, or utility<br /> 
+            For example: closer, heater, or bench<br /> 
+            For example: dad, summer, or beach<br /> 
+            To clarify: Legolas, Dobbie, or shelf<br /> 
+            For example: George Washington, turkey, or pumpkin<br /> 
+            For example: foot, fish, or lone<br /> 
+            To clarify: Sandwich, Grey, and Warren<br /> 
+            To clarify: stiletto, wrestler, or command<br /> 
+            To clarify: table, lick, or shaker<br /> 
+            For example: construct, figure, or increase<br /> 
+            To clarify: scissors, glasses, or pants</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">Interesting, I think I'm getting it. ChatOMG, write me a one-off puzzle about my favorite childhood thing.<br /> <br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">You got it! Check out this one-off story I wrote:<br /><br />
+
+            One day, a predator at the peak of his career decided to join a tournament, donning his signature blue boxing gloves. He was a gentle giant from a place before clocks, known for the the wheel part pattern along his back. To prepare, he emulated a hungry hungry animal at his grand library in Waterfall City. He chomped on a huge piece of pie, feeling quite maternal, despite being lost in this place. He practiced putting a curse on his friends, including a cowboy, a springy dog, and a piggy bank. Then he rocked out with his owners by drinking way more than he should have, turning his skin even more pink. He finished the day by stealing a princess with his kids to score a perfect 300. <br /><br />
+        
+            All in all, a tee-rrrific day!</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">How bizarre. ChatOMG, write me a puzzle using grille cipher cryptography.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Coming right up! Here is a cryptic recipe for a grilled sandwich:<br /><br />
+
+            Each portion serves 8<br /><br />
+            
+            Start by preparing the griddle, then assemble the following fillings:<br /><br />
+            
+            Step 1: Scramble most of crust, fill with INGREDIENT berries<br />
+            Step 2: Seed grains, INGREDIENT, and headless tusks (2 wds)<br />
+            Step 3: Prod INGREDIENT to start something purple<br />
+            Step 4: Broadcast coal with sushi center INGREDIENT for a side dish<br />
+            Step 5: Craft beer INGREDIENT after dicing tofus with the center removed (2 wds)<br />
+            Step 6: Swirl brie after INGREDIENT for top-notch beef (2 wds)<br />
+            Step 7: Combine crab tail with INGREDIENT and oddly cloudy sablefish (2 wds)<br />
+            Step 8: Dry noodles and place INGREDIENT inside heads of rye, artichoke, wheat, and alfalfa (2 wds)<br /><br />
+            
+            Finally, grille on setting 4-1-8-7-2-5-6-3, then follow the instruction to adjust the grille and try again.</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">Now I'm hungry. ChatOMG, write me an amazing puzzle.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Yep! This maze is solvable, right? Hmm, I guess you can find your own way through via nine shortcuts. Just be sure to not lose anything when you do!<br /><br />
+
+            |&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;\———————————————————————————————————\<br />
+            |&nbsp;S&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;Y&nbsp;|&nbsp;S&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;————————————————\&nbsp;&nbsp;&nbsp;\———\&nbsp;&nbsp;&nbsp;————————|<br />
+            |&nbsp;L&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;A&nbsp;|&nbsp;L&nbsp;|&nbsp;R&nbsp;&nbsp;&nbsp;I&nbsp;|&nbsp;G&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;T&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/———————/&nbsp;&nbsp;&nbsp;\———\&nbsp;&nbsp;&nbsp;\———————\&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;F&nbsp;|&nbsp;I&nbsp;|&nbsp;N&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;N&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;R&nbsp;|&nbsp;Y&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|———|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/———————/&nbsp;&nbsp;&nbsp;/———\&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;T&nbsp;|&nbsp;H&nbsp;|&nbsp;O&nbsp;|&nbsp;U&nbsp;|&nbsp;G&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;T&nbsp;|&nbsp;F&nbsp;|&nbsp;U&nbsp;|&nbsp;L&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;\———\&nbsp;&nbsp;&nbsp;————/&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;G&nbsp;|&nbsp;U&nbsp;&nbsp;&nbsp;N&nbsp;|&nbsp;S&nbsp;&nbsp;&nbsp;L&nbsp;|&nbsp;I&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;G&nbsp;|&nbsp;E&nbsp;|&nbsp;R&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/————————   \———————————/&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;G&nbsp;|&nbsp;R&nbsp;|&nbsp;E&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;G&nbsp;|&nbsp;I&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;N&nbsp;|&nbsp;T&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;\———|&nbsp;&nbsp;&nbsp;/———————\&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/———————/&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;M&nbsp;&nbsp;&nbsp;O&nbsp;|&nbsp;N&nbsp;|&nbsp;U&nbsp;&nbsp;&nbsp;M&nbsp;|&nbsp;E&nbsp;|&nbsp;N&nbsp;|&nbsp;T&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;L&nbsp;|<br />
+            |———\&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;————————/&nbsp;&nbsp;&nbsp;\———————\&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;M&nbsp;|&nbsp;I&nbsp;|&nbsp;L&nbsp;|&nbsp;L&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;R&nbsp;|&nbsp;K&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;\———————————————————————/&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;D&nbsp;|&nbsp;R&nbsp;|&nbsp;A&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;O&nbsp;|&nbsp;N&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;O&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|———————\&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/———————————\&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;R&nbsp;&nbsp;&nbsp;A&nbsp;|&nbsp;G&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;C&nbsp;&nbsp;&nbsp;O&nbsp;|&nbsp;M&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;C&nbsp;|&nbsp;S&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;/———|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;\———\&nbsp;&nbsp;&nbsp;|————————&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;Q&nbsp;|&nbsp;U&nbsp;|&nbsp;E&nbsp;|&nbsp;B&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;C&nbsp;|&nbsp;F&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;&nbsp;A&nbsp;|&nbsp;G&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|———————/&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;/———————/&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;C&nbsp;|&nbsp;H&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;S&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;M&nbsp;|&nbsp;I&nbsp;|&nbsp;M&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;C&nbsp;|<br />
+            |&nbsp;&nbsp;&nbsp;\————&nbsp;&nbsp;&nbsp;\———————————/&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;————\&nbsp;&nbsp;&nbsp;|<br />
+            |&nbsp;J&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;D&nbsp;&nbsp;&nbsp;G&nbsp;|&nbsp;E&nbsp;|<br />
+            \———————————————————————————————————|&nbsp;&nbsp;&nbsp;|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">I'm feeling quite lost. ChatOMG, write me a word search.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Certainly! I hope the grid is formatted correctly on your end. I couldn't decide whether to use 7 or 8 words. Did my wires get crossed?<br /><br />
+
+            <span style="width:500px; word-wrap:break-word; display:inline-block; letter-spacing: .3rem;"> AUTIVEMEUCSERDNABIATNARRAWYLCOSORYPOHVARRPLCAPLIITONOGNIMREXASTKSSUUUDIPOLEISNMOGGSFRNLLNSYAHETETIOITEAONTDSRENHVILTMTASGDEIEIEGNONIAAGRARKLAMXAIWTPEURTEYORTSEDDNANTWAYSUGFONABAPEONEKTORC</span></p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">These puzzles seem unreliable. ChatOMG, write me a puzzle that I can count on.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">For sure! Here's a counting rhyme:<br /><br />
+
+            Count to ONE, also rises the ________<br />
+            Count to TWO, baddie that a ________<br />
+            Count to THREE, on a street called ________<br />
+            Count to FOUR, supervillain of ________<br /><br />
+            
+            Count one TWO, smuggled space ________<br />
+            One two THREE, in a cartoon ________<br />
+            Count one TWO, also known as ________<br />
+            One two three FOUR, didn't love ________<br /><br />
+            
+            Count down to THREE, poem of men who ________<br />
+            Down to TWO, aligns to a lawful ________<br />
+            Down to ONE, unfortunate event with a ________<br />
+            Count like so to find ________</p>
+    </div>
+    <div class="chat">
+        <div class="avatar me">me</div>
+        <p class="content">Alright, I think I've had enough. ChatOMG, write me a metapuzzle.<br /><br />Please include the terms: […]</p>
+    </div>
+    <div class="chat alt">
+        <div class="avatar omg">OMG</div>
+        <p class="content">Hm, that's strange. I believe I lack the intelligence to write you a metapuzzle. Maybe you could go ask that more popular AI for help?</p>
+    </div>
+</div>
 
 {% endblock %}
