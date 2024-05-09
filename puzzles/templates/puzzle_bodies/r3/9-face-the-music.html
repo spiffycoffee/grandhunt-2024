@@ -1,24 +1,32 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-md %}
 
 <style>
     img {
-        max-width: 100%;
+        width: 560px;
+        object-fit: none;
     }
 </style>
 
-These users appear to prefer anonymity when critiquing each others's music tastes
+<div class="window" markdown="1">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">These users appear to prefer anonymity when critiquing each others's music tastes.</p>
+    <p style="color:grey" markdown="1">
+**ⓘ** *Playing music is not required for this puzzle* 
+    </p>
+</div>
 
----
+<div class="window" markdown="1">
+    <div class="name">landing_page.music</div>
+    <img src={% static 'puzzle_resources/r3/p9/grid.png' %} alt=clip1>
+</div>
 
-**ⓘ** *Playing music is not required for this puzzle*  
-
-<img src={% static 'puzzle_resources/r3/p9/grid.png' %} alt=clip1 width=100%/>
-
-#### Playlists of the people you follow
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5YYa8QgZNl4jHta253fS3R?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<div class="window" markdown="1">
+    <div class="name">friends.playlists</div>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5YYa8QgZNl4jHta253fS3R?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **turn-it-up-2015:** Solid choices all around! Bravo!  
 **crowd-surfer-1603:** Three cheers for excellent songs!  
@@ -26,7 +34,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **getting-funky-2018:** Know what I think? They're kinda mid...  
 &nbsp;  
   
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0La6R2QsXPN0tNTSRbjplU?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0La6R2QsXPN0tNTSRbjplU?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **beat-is-bumpin-1513:** Where did you find these hidden gems?  
 **crowd-surfer-1603:** If you look hard enough you'll find 'em!  
@@ -35,7 +43,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **cbeat-is-bumpin-1513:**c Come on, I'm begging you for the source!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/33MOXj5fSpf9JgPbwSFsSr?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/33MOXj5fSpf9JgPbwSFsSr?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **hitting-high-notes-0518:** What's the deal with this selection?  
 **ife-of-the-party-1801:** I bet they made this on something...  
@@ -44,7 +52,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **hitting-high-notes-0518:** On a second play this is really good!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/71B3pubzHSdqdFBYo70qFU?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/71B3pubzHSdqdFBYo70qFU?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **getting-funky-2018:** This is fire! You got a real gift for this!  
 **crowd-surfer-1603:** So hot it could melt a popsicle!  
@@ -54,7 +62,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **front-row-seats-1120:** It's OK, but this is too overhyped...  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53UiLIKdNuITgy3XQiXlJn?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53UiLIKdNuITgy3XQiXlJn?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **breaking-it-down-0805:** This is full of great ear worms!  
 **turn-it-up-2015:** One is stuck in my head for weeks on end!  
@@ -64,7 +72,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **crowd-surfer-1603:** Playlists shouldn't feel like work...  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0uoZspkIIwDc8624nER2od?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0uoZspkIIwDc8624nER2od?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **turn-it-up-2015:** I'm not feeling this song in the least...  
 **on-the-dance-floor-0305:** Stick with it my friend! It's the best!  
@@ -72,7 +80,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **getting-funky-2018:** Stop it! I've had enough with you all!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2IXhUQPmLExaqQHzYtv1oK?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2IXhUQPmLExaqQHzYtv1oK?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **hard-rocker-1420:** This selection is A-one perfection!  
 **hitting-high-notes-0518:** Totally agree! It's the bees knees!  
@@ -80,7 +88,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **hard-rocker-1420: Nonsense!** this is good rock and roll!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3CxBMytBWTMKQPxUFzDPHN?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3CxBMytBWTMKQPxUFzDPHN?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **bangin-tunes-1305:** I love the rhythm of these tracks!  
 **front-row-seats-1120:** I'm totally vibing with this mood!  
@@ -90,7 +98,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **getting-funky-2018:** I need something a bit more energetic...  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2yZDC2606lWofKj3df8BKp?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2yZDC2606lWofKj3df8BKp?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **breaking-it-down-0805:** What a great arrangement of pieces!  
 **turn-it-up-2015:** You know what would be better? Cohesion!  
@@ -100,7 +108,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **crowd-surfer-1603:** Nonsense! It's a beautiful explosion!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2oDkdJwaoCajcsNqKMVGxz?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2oDkdJwaoCajcsNqKMVGxz?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **jammin-out-0103:** Wow this sequence is truly the GOAT!  
 **front-row-seats-1120:** Maybe top five, but certainly not first...  
@@ -110,7 +118,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **life-of-the-party-1801:** How about we go with top one hundred?  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0Y880BBiiO9FMfpYT0xHfA?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0Y880BBiiO9FMfpYT0xHfA?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **jammin-out-0103:** By the gods, what is this? My poor ears!  
 **concert-regular-1420:** You wouldn't know good music if it hit you!  
@@ -119,7 +127,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **jammin-out-0103:** Fine, you all win! I'll give it another shot...  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DBefYR0VzLlzmJRtbQCNY?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DBefYR0VzLlzmJRtbQCNY?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **turn-it-up-2015:** I'll give it a two out of five stars!  
 **crowd-surfer-1603:** Only two? That seems a little harsh...  
@@ -127,7 +135,7 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **beat-is-bumpin-1513:** This is a five out of five if I have a say!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3lWGQh52TiAf8im0DcN11h?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3lWGQh52TiAf8im0DcN11h?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **hard-rocker-1420:** Can we all agree this could be better?  
 **on-the-dance-floor-0305:** Agreed, maybe they should try harder!  
@@ -137,12 +145,13 @@ These users appear to prefer anonymity when critiquing each others's music taste
 **life-of-the-party-1801:** Thanks everyone for the feedback!  
 &nbsp;  
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/06hZK8voJ8U1YcBAfbs5jJ?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/06hZK8voJ8U1YcBAfbs5jJ?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **on-the-dance-floor-0305:** This was my best attempt be gentle!  
 **life-of-the-party-1801:** You totally nailed it! This is amazing!  
 **hard-rocker-1420:** Hard agree, this is a masterpiece!  
 **concert-regular-1420:** Who said playlists can't be a form of art?  
 &nbsp;  
+</div>
 
 {% endblock %}
