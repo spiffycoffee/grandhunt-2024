@@ -1,14 +1,25 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-html %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">Multi-lingual cryptologist agents need to first initially hide their identities to take down bad guys. Can they communicate together to identify the intruder?</p>
+</div>
 
-<object data={% static 'puzzle_resources/r3/p4/crack-team.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
-<p><a href={% static 'puzzle_resources/r3/p4/crack-team.pdf' %}>Download PDF</a></p>
+<div class="window">
+    <div class="name">covert.chat</div>
+    <img src="{% static 'puzzle_resources/r3/p4/chat1.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat2.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat3.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat4.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat5.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat6.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat7.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/chat8.png' %}"/><br /><br /><br />
+    <img src="{% static 'puzzle_resources/r3/p4/message.png' %}"/>
+</div>
+
 {% endblock %}

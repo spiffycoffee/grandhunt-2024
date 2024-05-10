@@ -1,16 +1,135 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-md %}
 
 <style>
-    img {
-        max-width: 100%;
-    }
+
+.receipt {
+    width: 80%;
+    border: 1px solid black;
+    box-shadow: black 5px 5px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.first {
+  float:left;
+  text-align: left;
+  margin-right:1em;
+}
+
+.price {
+  float:right;
+  margin-left:1em;
+}
+
+.list:after {
+  content:'';
+  border-bottom:dotted;
+  display:block;
+  overflow:hidden;
+  height:0.6em;
+}
+
+.total {
+    border: 1px solid black;
+    font-size: 0.8em;
+}
+
 </style>
 
-<object data={% static 'puzzle_resources/r3/p5/lets-just-get-takeout.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
-<p><a href={% static 'puzzle_resources/r3/p5/lets-just-get-takeout.pdf' %}>Download PDF</a></p>
-<p><a href="https://docs.google.com/spreadsheets/d/1f9wkpzITsy95DQ1EZ5ykJ2MJ22w5DGF5B3AKzuQYV3k/edit?usp=sharing>Copyable Spreadsheet</a></p>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">These ordering apps are quite convenient. But there must be some devilry in my printer, as all I'm getting is nonsense. I knew I should have gone digital.</p>
+    <p><a href=https://docs.google.com/spreadsheets/d/1f9wkpzITsy95DQ1EZ5ykJ2MJ22w5DGF5B3AKzuQYV3k/edit?usp=sharing>Copyable Spreadsheet</a></p>
+</div>
+
+<div class="window">
+    <div class="name">receipt.thx</div>
+    <div class="receipt">
+        <p>THANK YOU FOR ORDERING WITH US!<br />HERE'S YOUR ORDER DETAILS</p>
+        <p class="list">
+            <i class='first'>I, Selly, took it all for myself<br /> while they floundered about</i>
+            <i class="price">$4.03</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>When I don't remember lyrics, I'll ice very <br /> so often. If still no luck, I'll dip</i>
+            <i class="price">$6.01</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>I saw so much da' play at the Star Trek <br />convention, it was getting a bit corny</i>
+            <i class="price">$5.02</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>Don't use a balder, as the wood rungs <br />would snap. At least it's a green option</i>
+            <i class="price">$5.05</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>Even if the show's a pyre boot, it'll be <br /> a staple hit from nostalgia</i>
+            <i class="price">$4.04</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>I'm set you didn't invite me so don't <br />bother apologizing</i>
+            <i class="price">$5.02</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>They surveyed our town and said we had <br />the most diversity in cen story. We're <br />on a roll!</i>
+            <i class="price">$5.05</i> 
+        </p>
+        <br /><br /><br />
+        <p class="list">
+            <i class='first'>The idea, er, is just the right color <br /> yellow, a perfect gift for Mary</i>
+            <i class="price">$4.03</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>That palate-perfect food critic, <br /> ha, stain to a bloody genius</i>
+            <i class="price">$5.03</i> 
+        </p>
+        <br /><br />
+        <p class="list">
+            <i class='first'>We made the worst faux king out rather <br /> than dining in, mamma mia!</i>
+            <i class="price">$5.03</i> 
+        </p>
+        <br /><br />
+        <p>HERE'S YOUR TOTAL<br />WE ACCEPT ALL FORMS OF PAYMENT</p>
+        <div class="total">
+            5&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;9&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;7<br />
+            3&emsp;&emsp;4&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;9&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;1&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;4&emsp;&emsp;9&emsp;&emsp;2&emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;4&emsp;&emsp;4&emsp;&emsp;7<br />
+            2&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;8&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;5<br />
+            5&emsp;&emsp;8&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;9&emsp;&emsp;7<br />
+            7&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;8&emsp;&emsp;5&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;2<br />
+            2&emsp;&emsp;9&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;0&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;4&emsp;&emsp;3<br />
+            2&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;8&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;9&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;7<br />
+            8&emsp;&emsp;6&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;1&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;6<br />
+            3&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;9&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;0&emsp;&emsp;5<br />
+            7&emsp;&emsp;7&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;4&emsp;&emsp;3&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;8&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;6<br />
+            8&emsp;&emsp;8&emsp;&emsp;6&emsp;&emsp;9&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;8&emsp;&emsp;3&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;9&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;4&emsp;&emsp;1&emsp;&emsp;1<br />
+            8&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;1&emsp;&emsp;6&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;4&emsp;&emsp;9&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;4&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;9<br />
+            2&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;0&emsp;&emsp;4&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;4&emsp;&emsp;9&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;3<br />
+            0&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;8&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;9&emsp;&emsp;9&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;9&emsp;&emsp;7<br />
+            0&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;0&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;2&emsp;&emsp;9&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;1&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;6<br />
+            5&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;4&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;4&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;4&emsp;&emsp;8&emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;0&emsp;&emsp;8&emsp;&emsp;0&emsp;&emsp;3<br />
+            0&emsp;&emsp;9&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;5&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;2<br />
+            8&emsp;&emsp;9&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;8&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;4&emsp;&emsp;8&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;7<br />
+            5&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;4&emsp;&emsp;8&emsp;&emsp;0&emsp;&emsp;1&emsp;&emsp;9&emsp;&emsp;6&emsp;&emsp;4&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;2<br />
+            3&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;6&emsp;&emsp;5&emsp;&emsp;9&emsp;&emsp;8&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;4&emsp;&emsp;7&emsp;&emsp;8&emsp;&emsp;4&emsp;&emsp;2&emsp;&emsp;9<br />
+            2&emsp;&emsp;4&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;0&emsp;&emsp;6&emsp;&emsp;3&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;3&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;2<br />
+            5&emsp;&emsp;9&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;6&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;2&emsp;&emsp;9&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;1&emsp;&emsp;5&emsp;&emsp;5&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3<br />
+            5&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;1&emsp;&emsp;1&emsp;&emsp;5&emsp;&emsp;8&emsp;&emsp;1&emsp;&emsp;0&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;0<br />
+            2&emsp;&emsp;9&emsp;&emsp;1&emsp;&emsp;6&emsp;&emsp;6&emsp;&emsp;6&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;8&emsp;&emsp;8&emsp;&emsp;7&emsp;&emsp;1&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;0&emsp;&emsp;7&emsp;&emsp;6&emsp;&emsp;1&emsp;&emsp;8&emsp;&emsp;3&emsp;&emsp;1&emsp;&emsp;6<br />
+            5&emsp;&emsp;3&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;0&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;9&emsp;&emsp;3&emsp;&emsp;7&emsp;&emsp;4&emsp;&emsp;0&emsp;&emsp;5&emsp;&emsp;2&emsp;&emsp;3&emsp;&emsp;3&emsp;&emsp;5&emsp;&emsp;7&emsp;&emsp;7&emsp;&emsp;5<br />
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
