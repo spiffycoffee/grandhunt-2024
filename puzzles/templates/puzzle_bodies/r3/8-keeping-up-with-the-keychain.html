@@ -1,16 +1,46 @@
 {% extends "puzzle.html" %}
 {% load static %}
-{% block puzzle-body-html %}
+{% block html_class %}r3{% endblock %}
+
+{% block puzzle-body-md %}
 
 <style>
-    img {
-        max-width: 100%;
-    }
+
+td, th {
+    border: none!important;
+}
+
 </style>
 
-<object data={% static 'puzzle_resources/r3/p8/keeping-up-with-the-keychain.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">So many passwords stored in the keychain —  ripe for the decrypting! It sounds like we'll need to add a key bit of info to password hints to figure them out. But watch out for any mischief!</p>
+</div>
 
-<p><a href={% static 'puzzle_resources/r3/p8/keeping-up-with-the-keychain.pdf' %}>Download PDF</a></p>
+<div class="window" markdown="1">
+    <div class="name">password.hints</div>
+
+<!-- --> | <!-- -->
+---- | ---- 
+Before gravity or matter, perhaps (4) | Sun. follower (3)
+Similar, like (2) | Jot down (4)
+Guevara nickname (3) | Exaggerate or dwelling, informally (3)
+King or Corleone (3) | It's needed at an ATM (3)
+Amusement, or a type of house (3) | Fictional big bird (not Big Bird) (3)
+Present or a state, briefly (2) | La follower (2)
+Behold partner (2) | Got gold, say (3)
+Disfigure or spoil (3) |
+
+</div>
+
+<div class="window" markdown="1">
+    <div class="name">sample.keys</div>
+    <div><img src="{% static 'puzzle_resources/r3/p8/samples.png' %}"/></div>
+</div>
+
+<div class="window" markdown="1">
+    <div class="name">production.keys</div>
+    <div><img src="{% static 'puzzle_resources/r3/p8/keys.png' %}"/></div>
+</div>
 
 {% endblock %}
