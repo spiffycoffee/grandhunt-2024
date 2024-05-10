@@ -1,16 +1,30 @@
 {% extends "puzzle.html" %}
 {% load static %}
-{% block puzzle-body-html %}
+{% block html_class %}r3{% endblock %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
+{% block puzzle-body-md %}
 
-<object data={% static 'puzzle_resources/r3/p6/firewallstreetbets.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">You know what we always say: “To the moon 🚀🚀🚀!”</p>
+</div>
 
-<p><a href={% static 'puzzle_resources/r3/p6/firewallstreetbets.pdf' %}>Download PDF</a></p>
+<div class="window">
+    <div class="name">nfts.scammy</div>
+    <p>Step 1: Look for the hottest NFTs</p>
+    <div><img src="{% static 'puzzle_resources/r3/p6/set1.png' %}"/></div>
+</div>
+
+<div class="window">
+    <div class="name">funds.sketchy</div>
+    <p>Step 2: Purchase with appropriate funds</p>
+    <div><img src="{% static 'puzzle_resources/r3/p6/set2.png' %}"/></div>
+</div>
+
+<div class="window">
+    <div class="name">$$$.hopefully</div>
+    <p>Step 3: Profit?</p>
+    <div><img src="{% static 'puzzle_resources/r3/p6/chart.png' %}"/></div>
+</div>
 
 {% endblock %}

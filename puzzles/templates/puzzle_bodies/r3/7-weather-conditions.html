@@ -1,18 +1,33 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r3{% endblock %}
+
 {% block puzzle-body-md %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
+<div class="window">
+    <div class="name">flavor.txt</div>
+    <p class="flavortext">This puzzle is available come rain or shine.</p>
+    <p><a href=https://docs.google.com/spreadsheets/d/1B49Tx-mOTXyYLgIjrCcTp2JOHOARZAbgFxMtgGfk9YM/edit?usp=sharing>Copyable Spreadsheet</a></p>
+</div>
 
-<object data={% static 'puzzle_resources/r3/p7/weather-conditions.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="window" markdown="1">
+    <div class="name">five_day.forecast</div>
+    <div><img src="{% static 'puzzle_resources/r3/p7/forecast.png' %}"/></div>
+    
 
-<p><a href={% static 'puzzle_resources/r3/p7/weather-conditions.pdf' %}>Download PDF</a></p>
-<p><a href=https://docs.google.com/spreadsheets/d/16JODadPTeeE6g1tSzJ9MwqvabcvC9DF4a4wFEwlbGy0/edit?usp=sharing>Copyable Spreadsheet</a></p>
+| <!-- --> | <!-- --> |
+| ---- | ---- |
+**Monday:** | Expect a calm evening with good visibility. Observe where the light of the moon or sun shines through the scattered clouds.  
+**Tuesday:** | Watch out for the strongest four winds. These are expected to tear through the city, blocked only by the tallest skyscrapers.  
+**Wednesday:** | Torrential rain will flood the city. Look out for water funneling into the lower regions. Those living in skyscrapers on the third storey or below are advised to evacuate.  
+**Thursday:** | Opportunity for frozen water fun as temperatures drop. Ice will form where flooding occurs in regions where thermometers read zero.  
+**Friday:** | Conditions unclear. Perhaps observing how the week went will help with a prediction.  
 
+</div>
 
+<div class="window" markdown="1">
+    <div class="name">satellite.maps</div>
+    <div><img src="{% static 'puzzle_resources/r3/p7/grids.png' %}"/></div>
+</div>
+    
 {% endblock %}
