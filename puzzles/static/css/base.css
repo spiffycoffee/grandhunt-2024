@@ -594,6 +594,28 @@ figcaption {
         flex-grow: 1;
         flex-basis: 0;
     }
+
+    .three-col {
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    .three-col > div {
+        width: 30%;
+        flex-basis: auto;
+        margin-bottom: 2.4rem;
+    }
+
+    .two-col {
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+    
+    .two-col > div {
+        width: 36%;
+        flex-basis: auto;
+        margin-bottom: 2.4rem;
+    }
 }
 
 .no-break {
@@ -629,11 +651,11 @@ figcaption {
     object-fit: contain;
 }
 
-.box p.bio {
-    font-size: 1.4rem;
+.bio {
+    font-size: 1.6rem;
 }
 
-.box .highlight {
+.highlight {
     font-weight: bold;
     color: var(--accent-color);
 }
