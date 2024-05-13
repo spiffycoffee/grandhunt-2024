@@ -17,7 +17,7 @@ html {
 
     --page-bg-color: rgb(var(--page-bg-rgb));
     --sticky-bg-color: rgba(var(--page-bg-rgb), 0.9);
-    
+
     /* 2023 site's values
     --heading-text-color: var(--accent-color);
     */
@@ -626,31 +626,6 @@ figcaption {
     break-inside: avoid;                /* IE 11 */
     display: table;                     /* Actually FF 20+ */
     width: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
-    grid-auto-rows: max-content;
-    row-gap: 10px;
-}
-
-.box {
-    text-align: center;
-    border: 3px solid var(--accent-color);
-    padding: 10px;
-    margin: auto;
-    height: 700px;
-}
-
-.rounded {
-    border-radius: 5px;
-}
-
-.box img {
-    width: 100%;
-    object-fit: contain;
 }
 
 .bio {

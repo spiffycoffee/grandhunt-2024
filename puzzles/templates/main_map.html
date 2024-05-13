@@ -113,7 +113,11 @@
 {% endfor %}
 
 </div>
-<br /><br />
+<br />
+{% if 'round1_open' in milestones.keys %}
+<h3><a href="/story#1">Story: The Job</a></h3>
+{% endif %}
+
 <table class="puzzles-list">
 	{% for round in rounds.values %}
 		<tbody>
