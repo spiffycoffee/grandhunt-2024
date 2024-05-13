@@ -1,5 +1,6 @@
 html {
-    /*
+    
+    /* 2023 site's values
     --page-bg-rgb: 35, 24, 50;
     --accent-rgb: 210, 164, 70;
     */
@@ -16,7 +17,8 @@ html {
 
     --page-bg-color: rgb(var(--page-bg-rgb));
     --sticky-bg-color: rgba(var(--page-bg-rgb), 0.9);
-    /*
+    
+    /* 2023 site's values
     --heading-text-color: var(--accent-color);
     */
     --heading-text-color: var(--white-color);
@@ -24,7 +26,7 @@ html {
     --border-color: var(--accent-color);
     --print-border-color: #111;
 
-    /*
+    /* 2023 site's values
     --link-text-color: var(--accent-color);
     */
     --link-text-color: var(--white-color);
@@ -34,7 +36,7 @@ html {
     --btn-bg-color: var(--accent-bg-color);
     --btn-hover-color: var(--accent-hover-color);
 
-    /*
+    /* 2023 site's values
     --tray-text-color: var(--accent-color);
     */
     --tray-text-color: var(--white-color);

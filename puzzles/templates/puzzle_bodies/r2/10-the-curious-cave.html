@@ -1,12 +1,8 @@
 {% extends "puzzle.html" %}
 {% load static %}
-{% block puzzle-body-md %}
+{% block html_class %}r2{% endblock %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
+{% block puzzle-body-md %}
 
 <object data={% static 'puzzle_resources/r2/p10/the-curious-cave.pdf' %} type="application/pdf" width="100%" height="640">
 </object>

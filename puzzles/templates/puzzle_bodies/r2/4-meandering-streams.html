@@ -1,12 +1,9 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r2{% endblock %}
+
 {% block puzzle-body-html %}
 
-<style>
-    img {
-        max-width: 100%;
-    }
-</style>
 
 <object data={% static 'puzzle_resources/r2/p4/meandering-streams.pdf' %} type="application/pdf" width="100%" height="640">
 </object>

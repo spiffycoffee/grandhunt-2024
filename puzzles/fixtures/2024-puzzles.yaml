@@ -166,7 +166,7 @@
   fields:
     order: 2
     name: Burial Flags
-    slug: burial-flag
+    slug: burial-flags
     body_template: burial-flags.html
     answer: DEATH WARDS
     round: 2
