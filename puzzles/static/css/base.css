@@ -217,8 +217,10 @@ figcaption {
     }
 
     .puzzle-main {
+		/*
         background-color: var(--accent-bg-color);
         padding: 20px 30px;
+		*/
     }
 
     .puzzle-main h1, .puzzle-main h2, .puzzle-main h3, .puzzle-main h4 {
