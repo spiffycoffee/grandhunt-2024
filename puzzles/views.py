@@ -466,7 +466,7 @@ def main_map(request):
     '''Main map page (interactive map that leads to the sub-rounds)'''
 
     if request.context.hunt_has_started:
-        return render(request, 'main_map.html', {'milestones': milestones(request)})
+        return render(request, 'main_map.html', {'milestones': milestones(request), 'rounds': render_puzzles(request)})
     elif request.context.hunt_has_almost_started:
         return render(request, 'countdown.html', {'start': request.context.start_time})
     else:
