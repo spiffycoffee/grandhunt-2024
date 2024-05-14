@@ -218,21 +218,21 @@
 
 .crack-team {
 	height: 15%;
-	top: 27%;
+	top: 28%;
 	left: 12%;
 	width: 15%;
 }
 
 .lets-just-get-takeout {
 	height: 15%;
-	top: 27%;
+	top: 28%;
 	left: 29%;
 	width: 15%;
 }
 
 .firewallstreetbets {
 	height: 15%;
-	top: 27%;
+	top: 28%;
 	left: 46%;
 	width: 15%;
 }
@@ -294,12 +294,12 @@
 .r1 .window {
 	position: relative;
 	border-image: url("/static/map_resources/r1/frame.png");
-	border-image-slice: 700;
+	border-image-slice: 15.5% 20%;
 	border-image-repeat: round;
-	border-image-width: 100px;
+	border-image-width: 25px 40px;
 	border-image-outset: 7px;
 	background-color: var(--white-color);
-    padding: 25px;
+    padding: 25px 25px 30px 25px;
     margin: 0px 0px 30px 0px;
 	font-size: 1.1em;
 }
