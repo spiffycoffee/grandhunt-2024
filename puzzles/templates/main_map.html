@@ -117,6 +117,18 @@
 {% if 'round1_open' in milestones.keys %}
 <h3><a href="/story#1">Story: The Job</a></h3>
 {% endif %}
+{% if 'meta1_done' in milestones.keys %}
+<h3><a href="/story#2">Story: The Chase</a></h3>
+{% endif %}
+{% if 'meta2_done' in milestones.keys %}
+<h3><a href="/story#3">Story: The Escape</a></h3>
+{% endif %}
+{% if 'meta3_done' in milestones.keys %}
+<h3><a href="/story#4">Story: The Rendezvous</a></h3>
+{% endif %}
+{% if 'meta4_done' in milestones.keys %}
+<h3><a href="/story#5">Story: The Rekindling</a></h3>
+{% endif %}
 
 <table class="puzzles-list">
 	{% for round in rounds.values %}
