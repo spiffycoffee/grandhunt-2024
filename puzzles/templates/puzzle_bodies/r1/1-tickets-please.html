@@ -4,10 +4,9 @@
 
 {% block puzzle-body-html %}
 
-
-<object data={% static 'puzzle_resources/r1/p1/tickets-please.pdf' %} type="application/pdf" width="100%" height="300">
-</object>
-
-<p><a href={% static 'puzzle_resources/r1/p1/tickets-please.pdf' %}>Download PDF</a></p>
+<div class="window">
+    <div class="name">The Ticket Booth, 2024</div>
+    <img src="{% static 'puzzle_resources/r1/p1/ticket.png' %}"/>
+</div>
 
 {% endblock %}

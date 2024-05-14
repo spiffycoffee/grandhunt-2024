@@ -221,6 +221,8 @@ figcaption {
     .puzzle-main {
         background-color: var(--accent-bg-color);
         padding: 20px 30px;
+        text-align: center;
+        color: black;
     }
 
     .puzzle-main h1, .puzzle-main h2, .puzzle-main h3, .puzzle-main h4 {
@@ -923,7 +925,6 @@ footer {
         display: none;
     }
 }
-
 
 /* BEGIN NEWLY ADDED STYLES */
 .mono {

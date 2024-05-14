@@ -271,14 +271,61 @@
 	left: 37%;
 	width: 16%;
 }
+/* Common round styling */
+
+.flavortext {
+	font-style: italic;
+}
+
+.window img {
+    width: 100%;
+    object-fit: contain;
+}
 
 /* Round 1-specifc styling */
 .r1 {
 	--page-bg-rgb: var(--white-color);
-    --accent-rgb: 107, 22, 34;
+    --accent-rgb: 144, 42, 62;
 	--heading-text-color: var(--accent-color);
 	--link-text-color: var(--accent-color);
 	--tray-text-color: var(--accent-color);
+}
+
+.r1 .window {
+	position: relative;
+	border-image: url("/static/map_resources/r1/frame.png");
+	border-image-slice: 700;
+	border-image-repeat: round;
+	border-image-width: 100px;
+	border-image-outset: 7px;
+	background-color: var(--white-color);
+    padding: 25px;
+    margin: 0px 0px 30px 0px;
+	font-size: 1.1em;
+}
+
+.r1 .window .name {
+	font-family: Apple Chancery, cursive;
+	background-color: rgb(var(--accent-rgb));
+	border-radius: 10px;
+	border: 3px solid rgb(169, 179, 95);
+	position: absolute;
+	max-width: fit-content;
+	left: 0; 
+  	right: 0; 
+  	margin: auto;  
+	padding: 6px;
+	bottom: -15px;
+	color: var(--white-color);
+}
+
+.r1 .endnote {
+	background-image: url("/static/map_resources/r1/footer.png");
+	background-size: contain;       
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 50px;
 }
 
 /* Round 2-specifc styling */
@@ -298,8 +345,6 @@
 	background-repeat: repeat;
 	background-size: 15px 15px;
 	font-family: monospace;
-	color: black;
-	text-align: center;
 }
 
 .r3 .window {
@@ -320,15 +365,6 @@
 	position: relative;
 	top: -40px;
 	height: 0px
-}
-
-.r3 .flavortext {
-	font-style: italic;
-}
-
-.r3 .window img {
-    width: 100%;
-    object-fit: contain;
 }
 
 .r3 .window a {
