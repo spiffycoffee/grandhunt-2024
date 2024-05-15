@@ -64,10 +64,10 @@
   pk: 4
   fields:
     order: 4
-    name: Crossword Puzzle No. 1 in Black and White
-    slug: crossword-puzzle-no-1-in-black-and-white
-    body_template: crossword-puzzle-no-1-in-black-and-white.html
-    answer: COME AND GO
+    name: Meet the Museum Staff
+    slug: meet-the-museum-staff
+    body_template: meet-the-museum-staff.html
+    answer: ROAD BLOCK
     round: 1
     unlock_global: -1
     unlock_local: 1
@@ -86,10 +86,10 @@
   pk: 6
   fields:
     order: 6
-    name: In the Jungle
-    slug: in-the-jungle
-    body_template: in-the-jungle.html
-    answer: RANT AND RAVE
+    name: Have Your Say
+    slug: have-your-say
+    body_template: have-your-say.html
+    answer: UNDER PRESSURE
     round: 1
     unlock_global: -1
     unlock_local: 3
@@ -97,10 +97,10 @@
   pk: 7
   fields:
     order: 7
-    name: Meet the Museum Staff
-    slug: meet-the-museum-staff
-    body_template: meet-the-museum-staff.html
-    answer: ROAD BLOCK
+    name: In the Jungle
+    slug: in-the-jungle
+    body_template: in-the-jungle.html
+    answer: RANT AND RAVE
     round: 1
     unlock_global: -1
     unlock_local: 4
@@ -119,10 +119,10 @@
   pk: 9
   fields:
     order: 9
-    name: Have Your Say
-    slug: have-your-say
-    body_template: have-your-say.html
-    answer: UNDER PRESSURE
+    name: Choosy Collectors
+    slug: choosy-collectors
+    body_template: choosy-collectors.html
+    answer: WOULD YOU RATHER
     round: 1
     unlock_global: -1
     unlock_local: 6
@@ -130,10 +130,10 @@
   pk: 10
   fields:
     order: 10
-    name: Choosy Collectors
-    slug: choosy-collectors
-    body_template: choosy-collectors.html
-    answer: WOULD YOU RATHER
+    name: Crossword Puzzle No. 1 in Black and White
+    slug: crossword-puzzle-no-1-in-black-and-white
+    body_template: crossword-puzzle-no-1-in-black-and-white.html
+    answer: COME AND GO
     round: 1
     unlock_global: -1
     unlock_local: 7
