@@ -1,0 +1,18 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block html_class %}r1{% endblock %}
+
+{% block puzzle-body-html %}
+
+<div class="window">
+    <div class="name">Flavor Text</div>
+    <p class="flavortext">The museum appreciates all feedback. They will see to it they get addressed!</p>
+</div>
+
+<div class="window">
+    <div class="name">Feedback Welcome, 2024</div>
+    <img src="{% static 'puzzle_resources/r1/p9/feedback.png' %}"/>
+</div>
+<a href="/round/the-museum-of-superb-relics"><div class="endnote"></div></a>
+
+{% endblock %}

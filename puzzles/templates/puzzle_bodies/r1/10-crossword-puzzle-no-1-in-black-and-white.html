@@ -1,0 +1,47 @@
+{% extends "puzzle.html" %}
+{% load static %}
+{% block html_class %}r1{% endblock %}
+
+{% block puzzle-body-html %}
+
+<div class="window">
+    <div class="name">Flavor Text</div>
+    <p class="flavortext">
+        You've been sneaking around the restricted area of the museum for a while now, and you're getting tired of solving a puzzle every time you need to open a door. Time to snoop around for a master keycard. <br /><br />
+        Your search brings you to the Restoration Room, where it appears an employee has been hard at work restoring this… strange-looking painting with damaged plaques. You decide to give it a closer look. <br /><br />
+        As you begin to drift off, you see a keycard just sitting out on a desk - perfect! Now, instead of solving puzzles to open doors, you can simply…
+    </p>
+    <p><a href=https://docs.google.com/spreadsheets/d/1mL4TWr7KN5A7DK5Xaf2cLG3BSfHYrvM1P8TNXlvJPI4/edit?usp=sharing>Copyable Spreadsheet</a></p>
+</div>
+
+<div class="window">
+    <div class="name">Crossword Puzzle No. 1 in Black and White, 1899</div>
+    <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/grid.png' %}"/>
+</div>
+
+<div class="window">
+    <div class="name">Plaques, Near-Mint on Steel, 1944</div>
+    <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/across.png' %}"/>
+    <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/down.png' %}"/>
+</div>
+
+<div class="window">
+    <div class="name">Restoration Notes, 2024</div>
+    <p>
+    <span style="font-family:Bradley Hand, cursive">Identified artist as Victor Romeo. Apparently, he used to be a NATO officer.</span><br /><br />
+    <span style="font-family:Bradley Hand, cursive">We're supposed to restore these things, but I can only find half of each...</span>.<br /><br />
+    A sitcom actor (? 5)<br />
+    A food company (? 5)<br />
+    A boxer (? 5)<br />
+    Something a bat might do (? 6)<br />
+    A label (? 4)<br />
+    A Guns N' Roses song (? 4)<br />
+    A transportation company (? 8)<br />
+    A piece of sports equipment (? 4)<br />
+    A "Star Wars" actor (? 5)<br />
+    </p>
+</div>
+
+<a href="/round/the-museum-of-superb-relics"><div class="endnote"></div></a>
+
+{% endblock %}
