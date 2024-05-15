@@ -291,6 +291,14 @@
 	--tray-text-color: var(--accent-color);
 }
 
+.r1 td {
+	color: var(--accent-color);
+}
+
+.r1 .current-stat {
+	color: var(--accent-color);
+}
+
 .r1 .window {
 	position: relative;
 	border-image: url("/static/map_resources/r1/frame.png");
@@ -317,6 +325,11 @@
 	padding: 6px;
 	bottom: -15px;
 	color: var(--white-color);
+}
+
+.r1 .portrait {
+    width: 45%;
+    display: inline-table;
 }
 
 .r1 .endnote {
