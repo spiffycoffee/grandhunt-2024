@@ -2,11 +2,36 @@
 {% load static %}
 {% block html_class %}r2{% endblock %}
 
-{% block puzzle-body-md %}
+{% block puzzle-body-html %}
 
-<object data={% static 'puzzle_resources/r2/p2/burial-flags.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<img style="max-width: 100%" src={% static 'map_resources/r2/heads.png' %}>
+<img style="max-width: 100%; margin-bottom: 40px" src={% static 'map_resources/r2/dotted-line.png' %}>
 
-<p><a href={% static 'puzzle_resources/r2/p2/burial-flags.pdf' %}>Download PDF</a></p>
+<div class="text">
+Heading deeper into the temple, you come to a room that appears to contain a crypt. On the floor is space for
+three side-by-side stacks of banners - and there are twelve banners here, but they’ve scattered about and are
+somewhat moth-eaten (see below, bottom). On the wall of the crypt, you notice a strange carving (see below,
+top). With some study you can stack the banners correctly, You peer down at the banners - and luckily, you’ve
+brought a pair of scissors.
+</div>
 
+<div class="text" style="text-align:center; font-weight: bold">
+What were these banners used for?
+</div>
+
+<img style="max-width: 50%" src={% static 'puzzle_resources/r2/p2/grid.png' %}>
+<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p2/flags.png' %}>
+
+<div class="text" style="margin:60px 60px 0px 60px">
+First: _ _ _ _ _ _ _&nbsp;&nbsp;_ _ _ _'_&nbsp;&nbsp;_ _ _ _ _ _
+</div>
+<div class="text" style="margin:30px 60px 30px 60px">
+Second: _ _ _&nbsp;&nbsp;_ _ _ _ _ _
+</div>
+<div class="text" style="margin:0px 60px 60px 60px">
+Finally (Answer): _ _ _ _ _&nbsp;&nbsp;_ _ _ _ _
+</div>
+
+<img style="max-width: 100%" src={% static 'map_resources/r2/dotted-line.png' %}>
+<img style="max-width: 100%" src={% static 'map_resources/r2/arrows.png' %}>
 {% endblock %}
