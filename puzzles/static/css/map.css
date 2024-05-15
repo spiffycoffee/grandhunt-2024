@@ -347,6 +347,43 @@
     --accent-rgb: 51, 48, 55;
 }
 
+.r2 .puzzle-main {
+	background-image: url("/static/map_resources/r2/background-tile.png");
+	background-repeat: repeat;
+	background-size: 1000px 2000px;
+	font-family: monospace;
+    color: white;
+}
+
+.r2 .text {
+    margin: 0px 60px 20px 60px;
+	font-size: 1.1em;
+    text-align: left;
+}
+
+.r2 .frame-blue {
+    border-image: url("/static/map_resources/r2/frame-empty.png");
+	border-image-slice: 95 65 70 80;
+	border-image-repeat: round;
+	border-image-width: 3rem;
+    padding: 80px;
+}
+
+.r2 .crack1 {
+	background-image: url("/static/map_resources/r2/crack1.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: calc(100% - 50px) calc(100% - 40px);
+	/*
+	background-position: calc(100% - 200px);
+	background-size: calc(100%-200px) calc(100%-200px);
+	background-position: center;
+	background-size: 96% 88%;
+	background-size: 100% 100%;
+	background-size: 50% 50%;
+	*/
+}
+
 /* Round 3-specifc styling */
 .r3 {
 	--page-bg-rgb: 26, 25, 19;

@@ -2,12 +2,39 @@
 {% load static %}
 {% block html_class %}r2{% endblock %}
 
-{% block puzzle-body-md %}
+{% block puzzle-body-html %}
 
+<img style="max-width: 100%" src={% static 'map_resources/r2/heads.png' %}>
+<img style="max-width: 100%; margin-bottom: 40px" src={% static 'map_resources/r2/dotted-line.png' %}>
 
-<object data={% static 'puzzle_resources/r2/p7/the-river.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="text">
+Outside the temple complex stands eleven monuments. The monuments display unusual carvings, though
+some are too faded to read. They are separated by deep gullies which can only be crossed by rope bridges;
+each bridge connects a pair of monuments in a sensible manner. A river winds its way through the gullies,
+under the bridges.
+</div>
+<div class="text">
+Another expedition has been here before, and left some notes, though they seem pretty baffling:
+</div>
 
-<p><a href={% static 'puzzle_resources/r2/p7/the-river.pdf' %}>Download PDF</a></p>
+<div class="text frame-blue crack1">
+Mr. Finch had the right idea. First find a cobbler for a decent pair of boots. Then hire the right scout.
+The guy’s been in a scrape or two. He could wrap up this problem in a bow. He also recommended I go
+see Dale. Supposedly he’s a chip off the old block. Yeah, I know that’s a bit hard to swallow.. But he’s
+not one to mince words. Really, it’s not 3-D chess.
+</div>
+
+<div class="text" style="margin:60px">
+For obvious reasons, you’d better be careful crossing those bridges!
+</div>
+
+<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p7/river-puzzle.png' %}>
+
+<div class="text" style="margin:60px">
+Answer: _ _ _ _ _ _ _ _ _ _
+</div>
+
+<img style="max-width: 100%" src={% static 'map_resources/r2/dotted-line.png' %}>
+<img style="max-width: 100%" src={% static 'map_resources/r2/arrows.png' %}>
 
 {% endblock %}
