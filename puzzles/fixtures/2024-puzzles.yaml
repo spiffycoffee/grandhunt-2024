@@ -140,7 +140,7 @@
 - model: puzzles.Puzzle
   pk: 11
   fields:
-    order: 11
+    order: 11 
     name: Under Pollock And Key
     slug: under-pollock-and-key
     body_template: under-pollock-and-key.html
