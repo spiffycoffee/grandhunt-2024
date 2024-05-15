@@ -2,11 +2,90 @@
 {% load static %}
 {% block html_class %}r2{% endblock %}
 
-{% block puzzle-body-md %}
+{% block puzzle-body-html %}
+<style>
+	td {
+		padding: 0px;
+		padding-left: 20px;
+		border-bottom: none;
+		/* preventing text wrap seems to prevent puzzle resize, not worth it?
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		*/
+	}
+</style>
 
+<img style="max-width: 100%" src={% static 'map_resources/r2/heads.png' %}>
+<img style="max-width: 100%; margin-bottom: 40px" src={% static 'map_resources/r2/dotted-line.png' %}>
+
+<div class="text">
+Continuing on, you come to a large hall that looks like it might have been used for some sort of ritual. One wall
+displays a mysterious carving.
+</div>
+<div class="text">
+A prior expedition has explored this chamber. You take a look at their records - and with a bit of rearrangement,
+you get back on the right track.
+</div>
+
+<img style="max-width: 100%" src={% static 'puzzle_resources/r2/p3/plaque.png' %}>
+
+<div class="text" style="text-align:center; font-weight: bold">
+TODO: Records with numbers
+</div>
+
+<table style="margin: 40px">
+	<tr>
+		<td>Might be done after rising:</td><td> _ _ _ _[_]_</td>
+	</tr>
+	<tr>
+		<td>Just released:</td> <td> _ _ _ _[_]&nbsp;&nbsp; _ _ _</td>
+	</tr>
+	<tr>
+		<td>Bothersome Blattodea buzz:</td> <td> _ _ _ _[_]_ _ _ _&nbsp;&nbsp; _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Virgo, or Helen Gurley Brown:</td> <td> [_][_]_ _ _ _&nbsp;&nbsp; _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Hickok (as compared to Tutt):</td> <td> _ _ _ _[_]_&nbsp;&nbsp; _ _ _</td>
+	</tr>
+	<tr>
+		<td>Possible actual last words:</td> <td> _ _ _ _[_][_]_&nbsp;&nbsp; _ _</td>
+	</tr>
+	<tr>
+		<td>Dodgson’s portal:</td> <td> _[_]_ _ _ _ _&nbsp;&nbsp; _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Advice to Keanu, when driving a bus:</td> <td> [_]_ _ _ _ &nbsp;&nbsp;_ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Non-alocoholic, but found behind bars:</td> <td> _ _ _ _ _[_]_ _</td>
+	</tr>
+	<tr>
+		<td>Puzzles, to their authors:</td> <td> [_][_]&nbsp;&nbsp; _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>They might be perfect:</td> <td> _ _ _ _ _[_]_ _ _</td>
+	</tr>
+	<tr>
+		<td>A particular heretic:</td> <td> [_][_]_ &nbsp;&nbsp;_ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Tacky picture of the King:</td> <td> _[_]_ _ _ _ &nbsp;&nbsp;_ _ _ _ _</td>
+	<tr>
+	</tr>
+		<td>Skill required if there is no bridge:</td> <td> _ _ _ _ _ _ _&nbsp;&nbsp; _ _&nbsp;&nbsp; _ _[_]</td>
+	</tr>
+</table>
 
 <object data={% static 'puzzle_resources/r2/p3/sound-and-movement.pdf' %} type="application/pdf" width="100%" height="640">
 </object>
-<p><a href={% static 'puzzle_resources/r2/p3/sound-and-movement.pdf' %}>Download PDF</a></p>
 
+<div class="text" style="margin:60px">
+Answer: _ _ _ _ _ _ _&nbsp;&nbsp;_ _ _
+</div>
+
+<img style="max-width: 100%" src={% static 'map_resources/r2/dotted-line.png' %}>
+<img style="max-width: 100%" src={% static 'map_resources/r2/arrows.png' %}>
 {% endblock %}
