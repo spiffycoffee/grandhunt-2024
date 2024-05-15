@@ -231,6 +231,11 @@ figcaption {
         padding: 0;
     }
 
+    .puzzle-solution {
+        color: var(--white-color);
+        text-align: left;
+    }
+
     .btn {
         transition: background-color 0.3s;
         color: var(--btn-text-color);
