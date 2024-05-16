@@ -1,0 +1,29 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+TBD Miss Joules
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Find a continuous path through the floor map that goes through each tile once
+2. As clued in the recon notes, Caesar shift each letter back 4 places in the alphabet. Reading the tiles in path order gets "I thought my heart and I agreed we wouldn't cry anymore,
+but I guess the peace treaty was broken and"
+3. The next words in the poem by Jade Leven, and the title of the poem, is the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+<img src={% static 'puzzle_resources/solutions/r1/reconnaissance.png' %} alt=map width=75%/>
+
+{% endblock %}

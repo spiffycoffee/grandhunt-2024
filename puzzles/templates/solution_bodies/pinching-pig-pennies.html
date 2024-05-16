@@ -1,0 +1,48 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Noah Steele
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Solve the logic puzzle using the menu, observations and orders to determine which customer ordered what item
+2. Convert the orders to letters using the pigpen cipher, adding dots if the orders had substitutions, to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+#### Logical deductions
+
+- The most popular item is pizza
+- Grilled cheese, hot dog, and tofu burger were never ordered
+- The only $12 item ordered is the fried chicken
+- Cheese substitution is associated to hamburger, ziti sustitution is associated to mac and cheese, and no anchovy sauce substitution is associated to caesar salad
+
+Customer | Item ordered | Substitution (dot) | Pigpen
+--- | --- | --- | --- 
+1 | Reuben sandwich | Yes | J
+2 | Pizza | No | E
+3 | Hamburger | Yes | L
+4 | Hamburger | Yes | L
+5 | Mac and Cheese | Yes | O
+6 | Fried chicken | No | D
+7 | Pizza | No | E
+8 | Kids pizza | No | S
+9 | Kids pizza | No | S
+10 | Pizza | No | E
+11 | Caesar salad | Yes | R
+12 | Kids hamburger | No | T
+
+
+{% endblock %}

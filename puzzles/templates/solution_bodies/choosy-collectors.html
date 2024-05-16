@@ -1,0 +1,51 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Noah Steele
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Determine the rule each buyer uses to pick art, from the descriptions and examples
+2. Map the rules for each buyer to each piece up for aution, forming five-digit binary ("yes buy" = 1 or "no buy" = 0)
+3. Convert the five-digit binary to letters to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Buyer | Rule
+--- | ---
+1 | Contains a color
+2 | Contains a double letter
+3 | Starts with a vowel
+4 | Contains a Q
+5 | Has two or more words
+
+Painting | Buyer 1 | Buyer 2 | Buyer 3 | Buyer 4 | Buyer 5 | 5-digit binary
+--- | --- | --- | --- | --- | --- | ---
+Emerald Quest | Y | N | Y | Y | Y | W
+A Quick Meeting | N | Y | Y | Y | Y | O
+Indigo Sunset | Y | N | Y | N | Y | U
+Interruption | N | Y | Y | N | N | L 
+Untitled | N | N | Y | N | N | D
+Green Grass | Y | Y | N | N | Y | Y
+A Sequined Pillow | N | Y | Y | Y | Y | O
+Orange Bushes | Y | N | Y | N | Y | U
+Turquoise | Y | N | N | Y | N | R
+Blank Frames | N | N | N | N | Y | A
+Amber | Y |  N | Y | N | N | T
+Hello! | N | Y | N | N | N | H
+End of an Era | N | N | Y | N | Y | E
+Quartz | Y | N | N | Y | N | R
+
+{% endblock %}
