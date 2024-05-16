@@ -1,0 +1,45 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+This puzzle is a direct walkthrough of arguably the most common (and most unfortunately-named) puzzle hunt technique: ISIS  
+  
+1. Identify: each thing seen is a collective noun of an animal in the painting  
+2. Sort: The location in the painting, in reading order, is the order we want  
+3. Index: The number of each animal is how much we index into each collective noun  
+4. Solve: Read the letters in order to solve!  
+
+{% endblock %}
+
+{% block author-notes-html %}
+I felt like something missing in our intro round last year was some of the most basic puzzle hunting principles for newbie solvers to add to their tool belt. Since we decided this year should be equallly introductory, we slotted it in.
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Collective Noun |	Animal |	Number of Animals |	Indexed Letter
+--- | --- | --- | ---
+CARAVAN	| CAMEL |	4 |	A
+CAULDRON |	BAT |	5 |	D
+CELEBRATION	| POLAR BEAR |	8 |	T
+MURDER |	CROW |	3 |	R
+PANDEMONIUM	| PARROT	| 3	| N
+PARADE	| ELEPHANT	| 6	| E
+QUIVER	| COBRA	| 4	| V
+SHADOW |	JAGUAR |	3 |	A
+THUNDER	| HIPPO	| 4	| N
+TOWER	| GIRAFFE	| 5	| R
+ZEAL	| ZEBRA	| 3	| A
+
+<img src={% static 'puzzle_resources/solutions/r1/in-the-jungle.png' %} alt=painting width=80%/>
+
+{% endblock %}

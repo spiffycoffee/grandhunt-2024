@@ -1,0 +1,44 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each piece of art is covered by an Emoji that maps to a museum puzzle answer
+2. The blanks don't quite match the answers. If the artist's name is swapped in a punny way, they'll fit
+3. The plaques under each piece of art use the puzzle hunt technique in the corresponding puzzle. These map to the numbers 1-10
+4. Enter the pun phrases into the abstract key, in the 1-10 order
+5. The grey boxes will now show “READ RED, ORANGE and BLUE”
+6. The answer can be found by reading the red boxes first (in left to right, top to bottom reading order), then orange, and finally blue
+
+{% endblock %}
+
+{% block author-notes-html %}
+We thought keeping the first round basic, even repetitive at times, served the purpose of welcoming band new solvers into the puzzle hunt world. For more experienced solvers, I hope it was a quick Rodin Block on your Grand Heist journey!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Emoji	| Feeder Answer	| Pun | Technique	| Order
+--- | --- | --- | --- | ---
+BANK	| BANK TRANSFER	| BANKSY TRANSFER	| Morse code	| THREE
+DOLL	| BARBIE DOLL	| BARBIE DALI	| Elian script	| NINE
+FRIDAY	| CASUAL FRIDAY	| CASUAL FRIDA	| Off by one	| TWO
+GO	| COME AND GO	| COME AND VAN GOGH	| NATO alphabet	| SIX
+JELLO	| JELLO DESSERT	| MICHELANGELO DESSET	| Pigpen	| EIGHT
+PRESSURE	| UNDER PRESSURE	| UNDER ESCHER	| Braille	| ONE
+RANT	| RANT AND RAVE	| REMBRANDT AND RAVE	| ISIS count	| FIVE
+ROAD	| ROAD BLOCK	| RODIN BLOCK	| Semaphore	| FOUR
+WAR	| THIS MEANS WAR	| THIS MEANS WARHOL	| Shift back 4 	| SEVEN
+WOULD	| WOULD YOU RATHER | WOOD YOU RATHER	| 5-digit binary	| TEN
+
+<img src={% static 'puzzle_resources/solutions/r1/under-pollock-and-key.png' %} alt=painting width=80%/>
+
+{% endblock %}

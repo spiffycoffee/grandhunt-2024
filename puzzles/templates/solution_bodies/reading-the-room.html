@@ -1,0 +1,38 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+TBD Yamen
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Googling C. C. Elian will lead to the Elian script
+2. Convert the artwork from Elian script to letters. Group by the colors of the letters to get "BAR BEAD ALL"
+3. Say the words out loud in a "Mad Gab" style to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+####Code
+
+<img src={% static 'puzzle_resources/solutions/r1/reading-the-room-1.png' %} alt=code width=50%/>
+
+####Painting
+
+Symbols | Letters 
+--- | --- 
+<img src={% static 'puzzle_resources/solutions/r1/reading-the-room-2.png' %} alt="clip" width="100px"/>| BAR
+<img src={% static 'puzzle_resources/solutions/r1/reading-the-room-3.png' %} alt="clip" width="100px"/>| BEAD
+<img src={% static 'puzzle_resources/solutions/r1/reading-the-room-4.png' %} alt="clip" width="100px"/>| ALL
+
+{% endblock %}

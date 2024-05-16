@@ -1,0 +1,40 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Noah Steele
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each quote is referencing a painting, if one letter was changed from the title
+2. Take the letter that was changed, in order, to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Painting | Incorrect title | Changed letter
+--- | --- | ---
+The Gleaners | The Cleaners | C
+The Night Watch | The Aight Watch | A
+Venus de Milo | Venus de Silo | S
+Saturn Devouring His Son | Saturn Devouring His Sun | U
+Mona Lisa | Mana Lisa | A
+The Tower of Babel | The Towel of Babel | L
+Nighthawks | Fighthawks | F
+The Great Wave | The Great Rave | R
+The Last Supper | The Last Sipper | I
+The Kiss | The Diss | D
+The Foxes | The Faxes | A
+The Son of Man | The Soy of Man | Y
+
+{% endblock %}

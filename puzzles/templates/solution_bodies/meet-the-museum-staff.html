@@ -1,0 +1,39 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+David Jackson
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Either from the title itself or other context clues in the puzzle, the first step is to identify you'll need to use the <a href="{% url 'meet-team' %}">Meet The Team</a> page on the Grand Hunt website
+2. Nine bios on the Meet the Team page have three highlighted phrases. Each phrase matches one of the question topics
+3. The second phrase always relates to the middle question: "If you could teach one cipher to new museum-goers, what would it be?" All of the bio phrases have to do with the semaphore cipher (subjectively the most-used cipher to extract letters)
+4. Each set of three questions make a semaphore. Map the synonyms of the Constructed Adventure monikers to "The Marks" order, to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+We wanted to have a semaphore puzzle be a bit of a joke on semaphore puzzles, while still introducing the cipher to new solvers. Hope you enjoyed our eclectic bios in the process!
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Mark | Bio moniker | Question positions | Semaphore
+--- | --- | --- | ---
+The Constructor | The Architect | Middle Left, Middle, Midde Right | R
+The Chronicler | The Archivist | Middle Left, Middle, Top Left | O
+The Jigsaw-maker | The Puzzlesmith | Bottom Left, Middle, Bottom Middle | A
+The Professor | The Teacher | Bottom Midde, Middle, Top Middle | D
+The Magician | The Wizard | Middle Left, Middle, Bottom Middle | B
+The Baffler | The Confounder | Top Right, Middle, Bottom Left | L
+The Expert | The Maven | Middle Left, Middle, Top Left | O
+The Locksmith | The Keymaker | Bottom Middle, Middle, Top Left | C
+The Wayfinder | The Navigator | Top Middle, Middle, Bottom Left | K
+
+{% endblock %}
