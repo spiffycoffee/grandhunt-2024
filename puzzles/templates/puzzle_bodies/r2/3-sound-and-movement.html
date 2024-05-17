@@ -14,6 +14,11 @@
 		text-overflow: ellipsis;
 		*/
 	}
+
+	.records {
+		width: 50%; 
+		display: inline-table;
+	}
 </style>
 
 <img style="max-width: 100%" src={% static 'map_resources/r2/heads.png' %}>
@@ -29,10 +34,6 @@ you get back on the right track.
 </div>
 
 <img style="max-width: 100%" src={% static 'puzzle_resources/r2/p3/plaque.png' %}>
-
-<div class="text" style="text-align:center; font-weight: bold">
-TODO: Records with numbers
-</div>
 
 <table style="margin: 40px">
 	<tr>
@@ -79,8 +80,9 @@ TODO: Records with numbers
 	</tr>
 </table>
 
-<object data={% static 'puzzle_resources/r2/p3/sound-and-movement.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<div class="frame-blue crack1 records">
+	<img style="width: 100%" src={% static 'puzzle_resources/r2/p3/records.png' %}>
+</div>
 
 <div class="text" style="margin:60px">
 Answer: _ _ _ _ _ _ _&nbsp;&nbsp;_ _ _
