@@ -2,7 +2,13 @@
 {% load static %}
 {% block html_class %}r1{% endblock %}
 
-{% block puzzle-body-html %}
+{% block puzzle-body-md %}
+
+<style> 
+.plaque td {
+	color: black;
+}
+</style>
 
 <div class="window">
     <div class="name">Flavor Text</div>
@@ -19,10 +25,54 @@
     <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/grid.png' %}"/>
 </div>
 
-<div class="window">
-    <div class="name">Plaques, Near-Mint on Steel, 1944</div>
-    <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/across.png' %}"/>
-    <img style="border: 2px solid darkgray;" src="{% static 'puzzle_resources/r1/p4/down.png' %}"/>
+<div class="window" markdown="1">
+    <div class="name">Plaque, Near-Mint on Steel, 1944</div>
+    <div class="plaque" style="border: 2px solid darkgray; padding: 5px;" markdown="1">
+| ACROSS | <!-- --> | DOWN |  <!-- -->  |    
+| --- | ---  | --- | --- |
+1 . | Rock involved in fracking | 1. |  <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/> 
+6. | Furry red monster | 2. | A large group, perhaps of goblins or zombies
+10. | Competent | 3. | Model and singer Appiah
+14. | Homeless people | 4. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/> 
+15. | Knight's drink of choice, perhaps | 5. | Time zone for DC and NYC 
+16. | Belmont Stakes 2022 winning jockey | 6. | Actress Stone 
+18. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/> | 7. | Shakespeare's tragic king 
+17. | Construct | 8. | Shopping centers frequented by teens 
+19. | What the event mentioned in 16-Across was | 9. | May be written to joy or to Billie Joe
+20. | Cape-hating designer Mode | 10. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/>
+21. | English nobleman | 11. | Janet's bumbling fiancé in The Rocky Horror Picture Show
+22. | With "Ring", 2022 video game | 12. | Tie (one's shoes) 
+23. | Less messy | 13. | Paradise
+25. | Indian dress | 21. | A long time ago, poetically 
+27. | Salt named for an English town | 22. | An age or epoch 
+30. | Exactly correct | 24. | Fencing weapon
+34. | Animal's winter coat | 26. | Assassinated Japanese Prime Minister Shinzo
+37. | Gas used to make fuel | 28. | Electrical resistance units
+39. | Money in Spain or Germany (but not England) | 31. | Blast of wind
+40. | Furious | 32. | Cookie with a name great for crossword making
+42. | Fear of Flying singer | 33. | Might be musical or post-it 
+43. | A useful quality | 34. | Italian luxury car brand
+44. | Exchange fee | 36. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/>
+45. | Completely emptied | 35. | Insist
+47. | Can be big or pinky | 38. | Nothing, en español 
+48. | Type of bowling | 41. | The best of the best 
+50. | Even more uncommon | 43. | Copied 
+52. | A beginner, slangily | 45. | One more than 38-down
+54. | An extremely handsome man | 46. | Russia's ____ Mountains 
+58. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/> | 49. | Charged particle 
+61. | Payment for Charon, perhaps | 51. | One-piece outfit 
+64. | A wooden box designed for holding sake | 53. | Space Oddity singer David 
+65. | A terrified and hasty retreat | 55. | Nigerian currency
+66. | Used butterfly or breaststroke | 56. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/>
+67. | Beelike | 57. | Omori protagonist 
+68. | Guitarist Clapton | 58. | Two more than 45-down 
+69. | They can be found underground or clogging your pores | 59. | Of olden days
+70. | Played again (especially on TV) | 60. | A club, diamond, heart, or spade
+71. | Comedian Meyers | 62. | <img src={% static 'puzzle_resources/r1/p4/scratch.png' %} height="40px"/>
+72. | Department store chain founded in 1888 | 63. | Russian city 
+73. | Singer Chapman | 66. | Cry forcefully
+ | <!-- --> | <!-- --> | 67. | What this crossword puzzle is themed around |
+    </div>
 </div>
 
 <div class="window">
