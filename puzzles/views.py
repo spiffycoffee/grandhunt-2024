@@ -617,7 +617,7 @@ def solve(request):
     puzzle = request.context.puzzle
     team = request.context.team
     is_runaround = puzzle.slug == RUNAROUND_SLUG
-    did_finish_metas = milestones(request)['meta3_done']
+    did_finish_metas = 'meta3_done' in milestones(request)
     form = None
     survey = None
 

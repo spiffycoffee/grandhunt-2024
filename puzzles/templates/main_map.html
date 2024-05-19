@@ -50,6 +50,16 @@
 	{% endif %}
 	</a>
 </div>
+
+<div class="map_item abs-z1" style="top: 60%; left: 30%; width: 15%" >
+	<a href="/puzzle/the-blueprint">
+	<img class="item_img abs-z1" style="width: 100%"
+	src="{% static 'map_resources/main/wip-the-blueprint.png' %}"/>
+	{% if 'runaround_done' in milestones.keys %}
+	<div class="hide abs-z5"> {{ milestones.runaround_done }} </div>
+	{% endif %}
+	</a>
+</div>
 {% endif %}
 
 {% if key == 'meta2_done' %}
@@ -75,16 +85,6 @@
 	<a href="/story#4">
 	<img class="item_img abs-z1" style="width: 100%"
 	src="{% static 'map_resources/main/wip-the-rendezvous.png' %}"/>
-	</a>
-</div>
-
-<div class="map_item abs-z1" style="top: 60%; left: 30%; width: 15%" >
-	<a href="/puzzle/the-blueprint">
-	<img class="item_img abs-z1" style="width: 100%"
-	src="{% static 'map_resources/main/wip-the-blueprint.png' %}"/>
-	{% if 'runaround_done' in milestones.keys %}
-	<div class="hide abs-z5"> {{ milestones.runaround_done }} </div>
-	{% endif %}
 	</a>
 </div>
 {% endif %}

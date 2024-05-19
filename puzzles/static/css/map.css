@@ -352,7 +352,7 @@
 	background-repeat: repeat;
 	background-size: 1000px 2000px;
 	font-family: monospace;
-    color: white;
+    color: var(--white-color);
 }
 
 .r2 .text {
@@ -421,5 +421,19 @@
 	--link-text-color: var(--accent-color);
 }
 
+/* Round 4-specifc styling */
+.r4 .puzzle-main {
+	color: var(--white-color);
+	text-align: left;
+}
+
+.r4 .emojis {
+    font-size: 1.2em;
+    line-height: 2em;
+    font-family: monospace;
+    color: rgb(253, 98, 255);
+	word-break: break-word;
+    overflow-wrap: anywhere;
+}
 
 

@@ -1,30 +1,24 @@
 {% extends "puzzle.html" %}
 {% load static %}
+{% block html_class %}r4{% endblock %}
+
 {% block puzzle-body-md %}
 
 ####Where is **The Lantern**?
 
-{% for key, value  in milestones.items %}
+{% if 'meta3_done' in milestones.keys %}
 
-{% if key == 'meta1_done' %}
-You've found the first blueprint!  
+<img src={% static 'puzzle_resources/r4/p1/blueprint-3.png' %} alt=blueprint3 width=100%/>
 
-<img src={% static 'puzzle_resources/r4/p1/blueprint-1.png' %} alt=blueprint1 width=50%/>
+<div class="emojis" markdown="1">
+####
+&nbsp;&nbsp;&nbsp;🪨  
+&nbsp;&nbsp;&nbsp;💾  
+&nbsp;&nbsp;&nbsp;🎨
+####
+</div>
 
-{% endif %}
-
-{% if key == 'meta2_done' %}
-You've found the second blueprint!  
-
-<img src={% static 'puzzle_resources/r4/p1/blueprint-2.png' %} alt=blueprint2 width=50%/>
-{% endif %}
-
-{% if key == 'meta3_done' %}
-You've found the third blueprint!  
-
-<img src={% static 'puzzle_resources/r4/p1/blueprint-3.png' %} alt=blueprint3 width=50%/>
-
-####🎨🪨💾  
+<div markdown="1">
 _Apologies for the runaround. I know I put you through many trials, and even dished out a few **quips** along the way, but I had to see if you're ready. Prove me right, and I'll shine a light on how to activate **The Lantern**._  
 
 ---
@@ -66,10 +60,17 @@ _Apologies for the runaround. I know I put you through many trials, and even dis
 
 “Try not to get buried underneath all these cubes! Should we pull the bottom left one out first?”  
 
-“I don't understand a word this team is saying to each other. Maybe it's due to the hour they sent their messages out?”  
+“I don't understand a word this team is saying to each other. Maybe it's due to the hour they sent their messages out?”
+</div>
+
+{% elif 'meta2_done' in milestones.keys %}
+
+<img src={% static 'puzzle_resources/r4/p1/blueprint-2.png' %} alt=blueprint2 width=100%/>
+
+{% elif 'meta1_done' in milestones.keys %}
+
+<img src={% static 'puzzle_resources/r4/p1/blueprint-1.png' %} alt=blueprint1 width=100%/>
 
 {% endif %}
-
-{% endfor %}
 
 {% endblock %}
