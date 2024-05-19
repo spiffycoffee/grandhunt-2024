@@ -32,6 +32,11 @@
 	z-index: 1;
 }
 
+.abs-z3 {
+	position: absolute;
+	z-index: 3;
+}
+
 .abs-z5 {
 	position: absolute;
 	z-index: 5;
