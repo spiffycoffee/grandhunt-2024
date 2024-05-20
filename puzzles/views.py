@@ -491,6 +491,7 @@ def puzzles(request):
 @require_GET
 def round(request, slug):
     round = Round.objects.filter(slug=slug).first()
+    print(round)
     if round:
         rounds = render_puzzles(request)
         if slug in rounds:
@@ -501,9 +502,13 @@ def round(request, slug):
             except (TemplateDoesNotExist, IsADirectoryError):
                 # A plausible cause of it being a directory is that the slug
                 # is blank.
-                return redirect('puzzles')
+                return redirect('the-grand-heist')
+
+                # Instead will fall back to the main map
+                # return redirect('puzzles')
+    # removed the invalid round name check and instead will fall back to the main map
     messages.error(request, _('Invalid round name.'))
-    return redirect('puzzles')
+    return redirect('the-grand-heist')
 
 
 def render_puzzles(request):
