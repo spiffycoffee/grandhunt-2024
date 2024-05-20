@@ -11,7 +11,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
-    height: 700px;
+    height: 750px;
     position: relative;
 }
 
@@ -23,6 +23,53 @@
     left: 20%;
     right: 20%;
     bottom: 15%;
+}
+
+.phone {
+    background-image: url("/static/story_resources/phone.png");
+	background-size: contain;       
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+    height: 900px;
+    position: relative;
+}
+
+.phone-text {
+    font-family: monospace;
+    position: absolute;
+    top: 15%;
+    left: 22%;
+    right: 20%;
+    bottom: 15%; 
+    font-size: 0.7em;
+}
+
+.phone-receive {
+    background: var(--white-color);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    color: black;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.phone-send {
+    background: var(--accent-color);
+    border-radius: 20px;
+    color: var(--white-color);
+    padding: 10px;
+    width: 30%;
+    position: relative;
+    right: -55%;
+    margin-bottom: 10px;
+}
+
+.dotdotdot {
+    top: -50px;
 }
 
 .rival {
@@ -109,7 +156,24 @@
     <p>You dive headfirst through the temple entrance, right as the boulder crashes behind you. Unfortunately, you couldn't rescue your fedora in time — RIP. But you notice another piece of a <em>blueprint</em> wedged between the stone tiles.</p> 
     <p><span class ="highlight">The Rival</span> is nowhere to be seen. And <span class ="highlight">The Lantern</span> is nowhere to be found. Dejected, you're about to book a flight home when the not-lantern you stole vibrates. It's a burner phone!</p>
     <p>You're skeptical your art thief skills will extend to cybercrime. But you don your three-wolf-moon shirt, dust off your leather duster, and get hacking!</p>
+    
+    <div class="phone">
+        <div class="phone-text">
+            <div class="phone-receive">Hello <span class ="highlight">The Solver</span></div> 
+            <div class="phone-send">Who is this?</div> 
+            <div class="phone-receive">Now now, don’t go and <span class ="highlight">THROW A TEMPLE TANTRUM</span></div> 
+            <div class="phone-send">Very funny</div> 
+            <div class="phone-receive">I’m glad you’re not pancaked. Gives me more opportunities to best you. So <span class ="highlight">The Lantern</span> wasn’t there, huh?</div> 
+            <div class="phone-send">Nope</div>
+            <div class="phone-receive">It’s almost like I led you on a fun-filled adventure so I could steal it for myself? Well, I learned that <span class ="highlight">The Lantern</span> isn’t physical. Check this out: ssh admin@192.168.1.1, pw=plzNoHax</div>  
+            <p style="color: darkgray"><i>Sent by <span class ="highlight">The Rival</span></i></p>
+            <div class="phone-send dotdotdot">...</div>
+        </div>
+    </div>
+    
     <img src="{% static 'story_resources/the-escape.png' %}" alt="A mysterious text" width="100%">
+
+
     <br /><br />
     <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
 </div>
