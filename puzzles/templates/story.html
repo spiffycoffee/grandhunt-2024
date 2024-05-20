@@ -25,6 +25,32 @@
     bottom: 15%;
 }
 
+.postcard {
+    background-image: url("/static/story_resources/postcard.png");
+	background-size: contain;       
+	background-repeat: no-repeat;
+	background-position: center center;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.postcard-text {
+    color: black;
+    font-family: Bradley Hand, cursive;
+    position: absolute;
+    top: 57%;
+    left: 3%;
+    right: 3%;
+    bottom: 15%;
+    font-size: 1em;
+    line-height: 1.05em;
+}
+
+.r2 .frame-blue {
+    padding: 0px;
+}
+
 .phone {
     background-image: url("/static/story_resources/phone.png");
 	background-size: contain;       
@@ -54,7 +80,7 @@
     color: black;
     padding: 10px;
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .phone-send {
@@ -65,7 +91,7 @@
     width: 30%;
     position: relative;
     right: -55%;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .dotdotdot {
@@ -141,9 +167,22 @@
     <p>Someone got to the safe first! Not just anyone, but master thief <span class ="highlight">The Rival</span>. You've clashed with them during high-stakes heists for most of your professional life.</p>
     <img class="rival" src="{% static 'story_resources/rival.png' %}" alt="The Rival" width="50%">
     <p>It seems they were one step ahead, but all is not <em>lost</em>.</p>
+    <div class="r1">
+        <div class="window">
+            <div class="name">A breadcrumb, on postcard, 2024</div>
+            <div class="postcard">
+                <div class="postcard-text">
+                    <span class ="highlight">The Solver</span>,<br /><br />
+                    I do love when our paths cross. But when you <span class ="highlight" style="font-family:monospace;">WORK HARD FOR THE MONET</span>, it never pays off.<br /><br />
+                    I’m down for a challenge, so I’ll let you in on a secret. <span class ="highlight">The Lantern</span> wasn’t here. Can your big brain guess where I’m exploring next?<br /><br />
+                    Worst wishes,<br />
+                    <span class ="highlight">The Rival</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <p>You don your fedora, dust off your whip, and get cracking!</p>
-    <img src="{% static 'story_resources/the-chase.png' %}" alt="A mysterious postcard" width="100%">
-    <br /><br />
+    <br />
     <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
 </div>
 {% endif %}
@@ -155,26 +194,25 @@
     <h4>The Escape</h4>
     <p>You dive headfirst through the temple entrance, right as the boulder crashes behind you. Unfortunately, you couldn't rescue your fedora in time — RIP. But you notice another piece of a <em>blueprint</em> wedged between the stone tiles.</p> 
     <p><span class ="highlight">The Rival</span> is nowhere to be seen. And <span class ="highlight">The Lantern</span> is nowhere to be found. Dejected, you're about to book a flight home when the not-lantern you stole vibrates. It's a burner phone!</p>
-    <p>You're skeptical your art thief skills will extend to cybercrime. But you don your three-wolf-moon shirt, dust off your leather duster, and get hacking!</p>
-    
-    <div class="phone">
-        <div class="phone-text">
-            <div class="phone-receive">Hello <span class ="highlight">The Solver</span></div> 
-            <div class="phone-send">Who is this?</div> 
-            <div class="phone-receive">Now now, don’t go and <span class ="highlight">THROW A TEMPLE TANTRUM</span></div> 
-            <div class="phone-send">Very funny</div> 
-            <div class="phone-receive">I’m glad you’re not pancaked. Gives me more opportunities to best you. So <span class ="highlight">The Lantern</span> wasn’t there, huh?</div> 
-            <div class="phone-send">Nope</div>
-            <div class="phone-receive">It’s almost like I led you on a fun-filled adventure so I could steal it for myself? Well, I learned that <span class ="highlight">The Lantern</span> isn’t physical. Check this out: ssh admin@192.168.1.1, pw=plzNoHax</div>  
-            <p style="color: darkgray"><i>Sent by <span class ="highlight">The Rival</span></i></p>
-            <div class="phone-send dotdotdot">...</div>
+    <div class="r2">
+        <div class="frame-blue crack1">
+            <div class="phone">
+                <div class="phone-text">
+                    <div class="phone-receive">Hello <span class ="highlight">The Solver</span></div> 
+                    <div class="phone-send">Who is this?</div> 
+                    <div class="phone-receive">Now now, don’t go and <span class ="highlight">THROW A TEMPLE TANTRUM</span></div> 
+                    <div class="phone-send">Very funny</div> 
+                    <div class="phone-receive">I’m glad you’re not pancaked. Gives me more opportunities to best you. So <span class ="highlight">The Lantern</span> wasn’t there, huh?</div> 
+                    <div class="phone-send">Nope</div>
+                    <div class="phone-receive">It’s almost like I led you on a fun-filled adventure so I could steal it for myself? Well, I learned that <span class ="highlight">The Lantern</span> isn’t physical. Check this out: ssh admin@192.168.1.1, pw=plzNoHax</div>  
+                    <p style="color: darkgray"><i>Sent by <span class ="highlight">The Rival</span></i></p>
+                    <div class="phone-send dotdotdot">...</div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <img src="{% static 'story_resources/the-escape.png' %}" alt="A mysterious text" width="100%">
-
-
-    <br /><br />
+    <p>You're skeptical your art thief skills will extend to cybercrime. But you don your three-wolf-moon shirt, dust off your leather duster, and get hacking!</p>
+    <br />
     <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
 </div>
 {% endif %}
@@ -206,6 +244,7 @@
     <p>“I apologize for the runaround,” they say. “I stole <span class ="highlight">The Lantern</span> months ago, then soon realized in order to activate it, I would need someone that rivaled my skills.</p>
     <p>“So I played <span class ="highlight">The Fixer</span> and sent you down this path. To see if you were still up to the task. To see...,” they hesitate, “if I could trust you”.</p>
     <p>“Along your way, I've left you blueprint pieces. So where is <span class ="highlight">The Lantern</span>?” They slide you one final note. You pull out the completed blueprint, place the note next to it, and look down at the artifact you've worked so hard to find. “The answer is right in front of you. No slacking!”</p>
+    <br />
     <h5><a href="{% url 'the-grand-heist' %}">Continue your heist</a></h5>
 </div>
 {% endif %}
