@@ -45,6 +45,10 @@ td, th {
     border-bottom: 1px solid #666666;
 }
 
+.terms {
+    font-size: 0.9em;
+}
+
 </style>
 
 <div class="window">
@@ -52,9 +56,9 @@ td, th {
     <p class="flavortext">Your buddy developed a new AI, but it could use a bit more training. Maybe it can help you write a puzzle hunt! Be warned — its vocabulary is limited, so make sure you're getting the most out of each available term.</p>
     <p><a href=https://docs.google.com/spreadsheets/d/18baZvdJsiwwcew1K9yxNLVOoWe-r0c5ku7P5NAVYW08/edit?usp=sharing>Copyable Spreadsheet</a></p>
 </div>
-
 <div class="window" markdown="1">
     <div class="name">available_terms.list</div>
+    <div class="terms" markdown="1">
 
 <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- -->
 :----: | :----: | :----: | :----: | :----:
@@ -74,11 +78,10 @@ DC LORE | IM ON FIRE | MUMS THE | SCISSORS | WRITTEN
 EGYPT | INDEX | MUSIC INTRO | SESAME | XMAS VEHICLE
 ENGINE | JEDI SLEW | NOSFERATU | SIGNAL FIRE | YEARLIES
 EVIL SKEW | | | |
-
+    </div>
 <img src="{% static 'puzzle_resources/r3/p1/input.png' %}"/>
 </div>
-
-<div class="window" markdown="1">
+<div class="window">
     <div class="name">chatomg.exe</div>
     <div class="chat">
         <div class="avatar me">me</div>
@@ -159,7 +162,7 @@ EVIL SKEW | | | |
     <div class="chat alt">
         <div class="avatar omg">OMG</div>
         <p class="content">Yep! This maze is solvable, right? Hmm, I guess you can find your own way through via nine shortcuts. Just be sure to not lose anything when you do!<br /><br />
-
+        <span style="max-width: 500px; word-wrap:break-all; white-space: normal;">
             |&nbsp;&nbsp;&nbsp;|<br />
             |&nbsp;&nbsp;&nbsp;\———————————————————————————————————\<br />
             |&nbsp;S&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;Y&nbsp;|&nbsp;S&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;|<br />
@@ -188,6 +191,7 @@ EVIL SKEW | | | |
             |&nbsp;&nbsp;&nbsp;\————&nbsp;&nbsp;&nbsp;\———————————/&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;————\&nbsp;&nbsp;&nbsp;|<br />
             |&nbsp;J&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;E&nbsp;|&nbsp;D&nbsp;&nbsp;&nbsp;G&nbsp;|&nbsp;E&nbsp;|<br />
             \———————————————————————————————————|&nbsp;&nbsp;&nbsp;|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|</p>
+        </span>
     </div>
     <div class="chat">
         <div class="avatar me">me</div>
@@ -197,7 +201,7 @@ EVIL SKEW | | | |
         <div class="avatar omg">OMG</div>
         <p class="content">Certainly! I hope the grid is formatted correctly on your end. I couldn't decide whether to use 7 or 8 words. Did my wires get crossed?<br /><br />
 
-            <span style="width:500px; word-wrap:break-word; display:inline-block; letter-spacing: .3rem;"> AUTIVEMEUCSERDNABIATNARRAWYLCOSORYPOHVARRPLCAPLIITONOGNIMREXASTKSSUUUDIPOLEISNMOGGSFRNLLNSYAHETETIOITEAONTDSRENHVILTMTASGDEIEIEGNONIAAGRARKLAMXAIWTPEURTEYORTSEDDNANTWAYSUGFONABAPEONEKTORC</span></p>
+            <span style="max-width: 500px; word-wrap:break-all; white-space: normal; display:inline-block; letter-spacing: .3rem;"> AUTIVEMEUCSERDNABIATNARRAWYLCOSORYPOHVARRPLCAPLIITONOGNIMREXASTKSSUUUDIPOLEISNMOGGSFRNLLNSYAHETETIOITEAONTDSRENHVILTMTASGDEIEIEGNONIAAGRARKLAMXAIWTPEURTEYORTSEDDNANTWAYSUGFONABAPEONEKTORC</span></p>
     </div>
     <div class="chat">
         <div class="avatar me">me</div>
