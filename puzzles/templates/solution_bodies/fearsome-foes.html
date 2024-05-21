@@ -1,0 +1,42 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Noah Steele
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each monster faced is a boss in a different Legend of Zelda game. Identify those bosses in alphabetical order  
+2. Each item found in the bag is a key item used in each boss fight. Map items to bosses
+3. Each monster description includes an 8-directional up/left/down/right keyword. As clued in the flavor text, take the letter in that direction next to the first letter of the matching item in the bag  
+4. Sort the letters chronologically by the release dates of each game to get the answer
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Zelda boss | Direction | Key item | Neighboring letter | Game | Chronological order
+--- | --- | --- | --- | --- | ---
+Big Green Chuchu | left | Gust Jar |  I | The Minish Cap | 6
+Eox | upright | Hammer | I | Phantom Hourglass | 8
+Goht | left | Goron Mask | P | Majora's Mask | 3
+Kalle Demos | up | Boomerang | D | The Wind Waker | 5
+Koloktos | up | Whip | O | Skyward Sword | 9
+Morpha | up | Longshot | X | Ocarina of Time | 2
+Shadow Hag | downright | Seed Shooter | E | Oracle of Ages | 4
+Slime Eye | up | Pegasus Boots | E | Link's Awakening | 1
+Stallord | left up | Spinner | T | Twilight Princess | 7
+Zaganaga | up | Sand Rod | N | A Link Between Worlds | 10
+
+<img src={% static 'puzzle_resources/solutions/r2/fearsome-foes.png' %} alt=grid width=50%/>
+
+{% endblock %}
