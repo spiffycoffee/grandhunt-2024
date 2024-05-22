@@ -29,14 +29,14 @@ SURVEYS_AVAILABLE = False
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
     year=2024,
-    month=6,
+    month=12,
     day=1,
     hour=12,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
     year=2024,
-    month=6,
+    month=12,
     day=6,
     hour=12,
     minute=0,
