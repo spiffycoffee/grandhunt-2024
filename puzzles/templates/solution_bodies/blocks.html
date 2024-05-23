@@ -1,0 +1,64 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Solve the 27 clues, which are all 3 letters and in alphabetical order. A few of them are puns  few puns and even one or two cryptics. Note that each trigram is chosen from a set of nine letters (A, E, I,  L, N, O, R, S, T)
+2. Each picture icon corresponds to one of the intermediate answers: EAR, AIR, SEA, and TON respectively. 
+3. Each of the 27 blocks corresponds to one of the 27 intermediate answers.Each cube is oriented to have three visible sides: upper, left, and right. The cubes are arranged along three orthogonal axes. Each axis defines three “slices” of nine cubes each. Each slice of nine cubes is assigned a particular letter. Some letters have been prefilled to get started. Notably, three of the large cubes have their left face marked with ‘A’. This implies that every left hand face of the nine large cubes should contain an ‘A’. Similarly, note the three ‘E’s on the right face of the middle slice of the right-to-left slices. Next, add the remaining six ‘E’s.
+4. Now the icons come into play. The light blue icon represents the intermediate answer SEA. This should be entered into the light blue cube. A and E are already entered in the left and right faces, leaving only the top face for the ‘S’. This letter should be entered in the top faces of the middle slice (from top to bottom; e.g. including the face marked with 6). 
+5. Following a process of elimination, the slices can be identified and all faces can be filled in. One important note: the ordering of the letters in a given answer does NOT indicate the distribution of the letters among the upper, left, and right faces of the corresponding cube. Instead, determine the letter assigned to each slice, and fill in the faces as appropriate. E.g. whether a clue was written for ENT, NET, or TEN,, the ‘N’ would be placed on the upper face once the bottommost slice has been determined to be assigned to ‘N’
+6. Read the letters in the numbered faces to yield the final answer: ALTARSTONE (or ALTAR STONE)
+
+{% endblock %}
+
+{% block author-notes-md %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Clue | Answer
+--- | ---
+Unseen, but present and necessary | AIR
+Given B??K??P?R on a game show, you might want to buy this (2 words) | AN E (on Jeopardy)
+“Sorry, that would be ___  ___” (2 words) | A NO
+Seen in field or on head | EAR
+One’s associated with a wizard; another, with a spy | IAN (McKellen, and Fleming)
+OMG, it’s not online??? | IRL
+Indicates one thing is identical to another (2 words) | IS A
+What dislocated Carlisle Islanders have in common | ISL
+A dimension, briefly | LEN
+Only half a lesson for the French | LES (cryptic: LESson, and “the” in French)
+UN precursor | LON (League of Nations)
+Robot currently circling the moon | LRO (Lunar Reconnaissance Orbiter)
+Used for fishing or phishing | NET
+Nada or zip | NIL
+Useful if you’re planning a row | OAR
+Kin, for short | REL
+Might be seen on a compact keyboard | RET
+Old stuff may do this | ROT
+Paulo leader, in Brazil | SAN
+Classically, it is wine dark | SEA
+Something very relevant to this puzzle | SET (of three letters)
+A request that might precede a stay | SIT (to a dog)
+The sun | SOL
+Dipsomaniac, unkindly | SOT
+Element - repeat for cartoon character | TIN (Tintin)
+It’s not not heavy | TON (cyptic: not not implies rearrangement of NOT)
+Quantity prefix | TRI
+
+
+#### Completed blocks
+<img src={% static 'puzzle_resources/solutions/r2/blocks.png' %} alt=grid width=75%/>
+
+
+{% endblock %}

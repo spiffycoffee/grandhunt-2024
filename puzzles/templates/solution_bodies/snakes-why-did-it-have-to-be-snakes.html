@@ -1,0 +1,39 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. The diagram (and title!) should suggest a classic slitherlink puzzle, with the number of snakes indicating the number of borders for a square. Determine the path; there is a unique solution with no ambiguities. See <a href="https://www.puzzlemix.com/Slitherlink">here</a> and other references. The path cannot cross itself, so only numbers 0-3 are possible (one space contains a zero; that’s a good place to start determining the path). Unmarked spaces have an unknown number of borders. Solvers should keep in mind that a corner (shown as plus signs) can have exactly zero or two lines entering and exiting
+2. Note the red circled “U” with a arrow pointing to the right. Start reading the letters on the path from there. You will get USERESISTORCODENYMVRIDN... (more garbage). The relevant part is USE RESISTOR CODE
+3. The colored bands on the snakes represent the standard resistor code (see <a href="https://www.te.com/usa-en/products/passive-components/resistors/intersection/resistor-color-codes.html">here</a>). The bands should be read head to tail. The first two bands are digits; the last black band at the snakes’ tail is black, representing a multiplier of one, and can be ignored
+4. Reading from top left to bottom right (ignoring the path), the 1-3 snakes in the each square yield the following digits: 18 05; 22 05 18; 19 05; 16 01; 20 08; 01 14 04; 21 19 05; 18 15; 20 06 09; 22 05; 19; 20; 15; 16; 08 05 18; 05 23; 05 18; 05 04; 15 14 05
+5. Using standard A1/A26 encoding that represents R E; V E R; S E; P A; T H; A N D; U S E; R O; T F I; V E; S; T; O; P; H E R; E W; E R; E D; O N E, or REVERSE PATH AND USE ROT FIVE STOP HERE WE’RE DONE
+6. The reversal of the path, starting prior to the circled “U” and working backwards, is KGVXZNJGJNIVFZNJPONDYZIZNOZSOZIYOCZCZVYNDIRVMYNEDOCROTSISERESU
+7. “ROT 5” either means add or subtract five from each letter (e.g. B -> G or W); it could be interpreted either way. The are online tools to apply the rotation; one is <a href="https://www.dcode.fr/rot-cipher">here</a>. One interpretation yields FBQSUIEBEIDQAUIEKJIYTUDUIJUNJUDTJXUXUQTIYDMQHTIZYJXMJONDNZMZNP; the other yields PLACESOLOSNAKESOUTSIDENESTEXTENDTHEHEADSINWARDSJITHWTYXNXJWJXZ. The second interpretation is correct (that is, the message was encoded with ROT5 and needed to be decoded; the relevant part is:PLACE SOLO SNAKES OUTSIDE NEST EXTEND THE HEADS INWARDS
+8. The “solo snakes” are the ones that appear alone in their squares. There are 4 altogether; 3 in the 4th row from the top and one more in the next row. Their numbers were 19, 20, 15, and 16; their letters were S, T, O, and P
+9. Now for the second grid, We place the snakes in the boxes with their matching number, and draw lines from each snake’s tail, though its head, and extending into the nest
+10. This yields 4 lines that cross three words: IRON, SPEAR and HEAD. Google for "snake" "iron" "spear" "head" and you should get a top hit for Bothrops asper in <a href="(https://en.wikipedia.org/wiki/Bothrops_asper">Wikipedia</a>). One of this snake’s common names is FER DE LANCE, which is the answer (note the enumeration is given). The name is French and can be translated as “spearhead” or “iron spear”. Note the French flavor text “a  quoi t'attendais-tu” (“what were you expecting”)
+
+{% endblock %}
+
+{% block author-notes-html %}
+TBD
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+#### Solved Slitherlink
+<img src={% static 'puzzle_resources/solutions/r2/snakes-why-did-it-have-to-be-snakes-1.png' %} alt=grid width=75%/>
+
+#### Grid
+<img src={% static 'puzzle_resources/solutions/r2/snakes-why-did-it-have-to-be-snakes-2.png' %} alt=grid width=75%/>
+
+{% endblock %}
