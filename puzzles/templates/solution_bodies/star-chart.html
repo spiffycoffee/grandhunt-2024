@@ -1,0 +1,40 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Similar to a  “drop quote”, words are dropped into the boxes in order to create a plausible 5-word clue that defines the “star” named in the rightmost column. For example, “DEBUTED ON 1924 VAUDEVILLE CIRCUIT” for BOB HOPE
+2. Note the symbols following the names - four dashes and a star, with the star in varying positions. There are five words to each clue; highlight the one corresponding to the star’s position
+3. The stars in boxes (12 total) should hint at the 12 starred words. These are: CIRCUIT, CLASSIC, ROUGH, OFF, RIDER, SOUND, MEDITATION, ELEMENT, OPPOSITE, LEADER, POISON, INTEGRATED. Each group yields a two-letter answer, which works nicely with the 10-letter final answer enumeration. Anagram the 5 two-letter pairs to get the answer
+
+{% endblock %}
+
+{% block author-notes-md %}
+
+* I wanted to make a drop quote puzzle, but with words instead of letters in the columns.  
+* I also wanted to do a “rinse and repeat” at the end, with the subset of words creating a final definition that would yield the final answer. But I wanted the first part of the puzzle to contain more than 5 quotes to solve, so I settled for 10 answers, dividing them into shorter phrases (“OFF OPPOSITE”) to yield letter pairs and the final answer.
+
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+#### Completed grid
+<img src={% static 'puzzle_resources/solutions/r2/star-chart.png' %} alt=grid width=75%/>
+
+Phrase | Two-letter answer
+--- | ---
+CLASSIC POISON ELEMENT | AS (Arsenic)
+ROUGH RIDER LEADER | TR (Teddy Roosevelt)
+OFF OPPOSITE | ON
+MEDITATION SOUND | OM
+INTEGRATED CIRCUIT | IC
+
+{% endblock %}

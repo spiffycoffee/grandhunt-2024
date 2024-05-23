@@ -1,0 +1,39 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Assemble the pieces into a 9x12 floor plan. Although the column/row dimensions are not identified, if the pieces are not rotated, the only way to build the floor plan is with 3 columns and 3 rows of pieces. The relevant info in the flavor text is “each lizard peers at exactly one other lizard, forming a complete loop”. This requires a bit of trial and error, but the direction a lizard faces excludes the piece from certain rows and/or columns. For example, the lizard on piece #2 faces to the left, so the piece can’t be in the leftmost column. Lizards are facing in the 8 regular directions (N, NE, E, SE, etc.) and this is the direction of their gaze. The plus signs in the empty spaces should help extend the sight lines properly
+2. The lizards can now be ignored (except as a sanity check). The glyphs in the grid match the glyphs used as decorations from the puzzles in the round. The heads are the same for each puzzle, but a different oval is used for each puzzle. Since there are 10 glyphs in each puzzle, and every feeder answer is 10 letters, each unique glyph matches to a specific letter in a feeder answer
+3. The glyphs with arrows at the bottom can be replaced by the corresponding full-size arrows on each puzzle page (which are all in the same order). These heads are flipped horizontally. Replace the glyphs in the grid with the corresponding letters and arrows
+4. Per the flavor text, three boulders will enter in a specific corner and roll in three different directions; they follow the rune markers on the floor. This means they roll right over letters, but change directions at the arrows as indicated. There are three plausible directions leading away from each corner. With some experimentation, determine that the lower left-hand corner is the only one that will allow three different paths to be traced. Boulders should be assumed to “roll off the floor” or vanish at the end of their paths
+5. Tracing the paths and collecting the letters will yield TANTRUM, TEMPLE, AND THROWA in no determined order. Solvers will have to determine the sensible order: THROW A TEMPLE TANTRUM
+
+{% endblock %}
+
+{% block author-notes-md %}
+
+* Very early on, I decided the meta had to match the theme of the round, and what better than Indiana Jones being chased around by rolling boulders? 
+* I also wanted to thematically decorate the ten round puzzles with icons, but include some subtle difference that fed into the meta. This drove the decision to have all round 2 puzzle answers be ten letters long, to allow for a consistent indexing scheme.
+* Finding three paths that would reuse some of the answer letters and fit on a reasonable grid (using a reasonable number of “redirection” icons as shown above) was not trivial.
+
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+#### Completed lizards
+<img src={% static 'puzzle_resources/solutions/r2/rolling-boulders-1.png' %} alt=grid width=75%/>
+
+#### Completed boulders
+<img src={% static 'puzzle_resources/solutions/r2/rolling-boulders-2.png' %} alt=grid width=75%/>
+
+
+{% endblock %}

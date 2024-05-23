@@ -1,0 +1,29 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Each temple has a theme. Find the ten thematic words in the flavor text “warning” that fit the themes of two adjacent temples. Note there are ten sentences in the warning - there will be one word from each sentence as follows: FINCH, COBBLER, SCOUT, SCRAPE, BOW, DALE, CHIP, SWALLOW, MINCE, CHESS
+2. Write the words into the appropriate bridges, always starting at the darker box end. The temple themes are: <em>To Kill a Mockingbird</em> characters, Birds, Eating, Valleys, <em>The Chipmunks</em>, Pies, Knife actions, Games, Boat parts, and Grovel
+3. Extract the letters that intersect the river, ordered by their appearance in the flavor text, to get the answer
+
+{% endblock %}
+
+{% block author-notes-md %}
+
+I started with the concept of “words that have multiple meanings that can belong to two groups”. The hardest part of the design was looping the “chain” back together, and I was happy to find two loops.
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+<img src={% static 'puzzle_resources/solutions/r2/the-river.png' %} alt=river width=75%/>
+
+{% endblock %}

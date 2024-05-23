@@ -1,0 +1,69 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Answer the clues, noticing that the resulting phrases all contain “sun”, “moon”, or “star” in some way.
+2. Enter the phrases uniquely into the grid, one word per white space, such that each given word is used ("THE", "OF", etc) and phrases don't overlap grey squares
+3. Determine the numbering system based on the examples (the numbers 1-12), and the two sample equations (1+1=2 and 2+2=4). One way to look at the numbers is stars have a value of 1, moons are 3, suns are 9. And the three boxes represent, from left to right, the zeroes place, the ones place, and the twos place
+4. Each column contains one or more "sun", "moon", or "star", forming 10 groups of three overlapping symbols. Convert each set of three columns into numbers using the numbering system
+5. Conert the 10 numbers to letters using A1Z26 to get the answer
+
+{% endblock %}
+
+{% block author-notes-md %}
+
+* I think I started with the idea to create a new numbering system, and the grid came later. And it is indeed a hassle that it is so wide.  
+* Instead of “Zappa’s favorite Unit” I wanted to use “Montana dental floss tycoon’s favorite Unit” but figured that would be a bit too obscure!
+
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Clue | Answer with sun/moon/star
+--- | ---
+1	Classic from Breakfast at Tiffany's (2) | MOON RIVER
+2	Dwight D Eisenhower, during WW2 (3) | FIVE STAR GENERAL
+3	The Beatles have something to laugh about, even beneath a shady tree (3) | GOOD DAY SUNSHINE
+4	For tomorrow may rain - what does a Beatle resolve to do? (4) | I’LL FOLLOW THE SUN
+5	Object in early 1900's song encouraged to shine on (2) | HARVEST MOON
+6	"I'm a doctor, not a puzzle constructor" might have been said on this show (but it wasn't) (2) | STAR TREK
+7	Katrina and the Waves 1983 hit (3) | WALKING ON SUNSHINE
+8	This nursery rhyme invokes the curiosity of astrophysicists (4) | TWINKLE TWINKLE LITTLE STAR
+9	Don't worry, it’s just a nickname - this celestial phenomenon does not involve stabbing or murder. Just wait till March 14, 2025 (or sooner, in Zelda) (2) | BLOOD MOON
+10	Bill Withers explains what happens when she's gone (3) | AIN’T NO SUNSHINE
+11	Creedence Clearwater sees this as a sign of trouble on the way (and maybe earthquakes!) (3) | BAD MOON RISING
+12	Addison got these in 2022; every fancy restaurant would like the same (3) | THREE MICHELIN STARS
+13	"That's no moon" was said in this series (2) | STAR WARS
+14	Newspaper with second largest circulation in a windy city, after “The” (3) | CHICAGO SUN TIMES
+15	"Blue Highways" author William (3) | LEAST HEAT MOON
+16	Christian Bale 1987 film (4) | EMPIRE OF THE SUN
+17	Zappa’s favorite Unit (1) | MOON (Moon Unit, his daughter)
+18	Synagogue symbol (3) | STAR OF DAVID
+19	It's been the ruin of many a poor boy, after “The” (5) | HOUSE OF THE RISING SUN
+20	1966 Heinlein classic, after "The" (5) | MOON IS A HARSH MISTRESS
+21	Meteor (2) | SHOOTING STAR
+22	Marlon Brando 1956 film, after “The” (5) | TEAHOUSE OF THE AUGUST MOON
+23	Unification Church founder (3) | SUN MYUNG MOON (yes, two things here!)
+24	Secret or closed meeting (and 1983 film, after “The”) (2) | STAR CHAMBER
+25	Glaser and Soul 70's TV show (3) | STARSKY AND HUTCH
+26	Workstation manufacturer purchased by Oracle (2) | SUN MICROSYSTEMS
+27	Good advice from Tanith Lee in 1976 (4) | DON’T BITE THE SUN
+28	Where the cow jumped, while the place setting eloped (3) | OVER THE MOON
+29  Marvel at this man of iron (2) | TONY STARK (Star + k)
+
+#### Numbering system
+<img src={% static 'puzzle_resources/solutions/r2/sun-moon-and-stars-1.png' %} alt=numbers width=50%/>
+
+#### Completed grid
+<img src={% static 'puzzle_resources/solutions/r2/sun-moon-and-stars-2.png' %} alt=grid width=100%/>
+
+{% endblock %}

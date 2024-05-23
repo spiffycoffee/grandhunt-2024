@@ -1,0 +1,54 @@
+{% extends "solution.html" %}
+{% load static %}
+
+{% block puzzle-author %}
+Dan Miller
+{% endblock %}
+
+{% block solution-body-md %}
+
+1. Fill in the definitions. Note they are in alphabetic order. All answers contain GEM, ROCK, or STONE
+2. Enter the answers uniquely into the boxes overlaying the stalactites (pointing down) and stalagmites (pointing up). The “GEM”, “ROCK”, and “STONE” parts are not to be entered; they should be assumed to be present between the stalactites and stalagmites. For example, “GEMINII” is entered only as “INI” in a stalagmite, with no stalactite present above.
+3. Arrange the letters from the boxes 1-31, yielding STONEDAGGERCARELESSLYLEFTINFINK = STONE DAGGER CARELESSLY LEFT IN FINK. This is a standard cryptic clue. “STONE DAGGER” is the definition; the remainder is the wordplay. In the latter, “CARELESSLY” is an anagram indicator; thus “LEFT IN FINK” needs to be rearranged. Note the enumeration of the answer is provided.
+
+{% endblock %}
+
+{% block author-notes-md %}
+
+* I wanted to do something visually with stalactites and stalagmites, and worked backwards from there.  
+* The “GEM”, “ROCK”, and “STONE” gimmick (once noticed) serves double duty to both help disambiguate possible answers, and force unique placement of the answers into the “grid”.
+
+{% endblock %}
+
+{% block appendix-title %}
+Appendix
+{% endblock %}
+
+{% block appendix-md %}
+
+Clue | Answer | Object
+--- | --- | ---
+You can tune a guitar to get this, or maybe it’s a fish sound?	| BASS TONE | STONE
+Congressman with a coonskin cap: 	| CROCKETT | ROCK
+Kicked out of religious office, or maybe thieves stole a dress: | 	DEFROCKED | ROCK
+Tire maker, or lava, perhaps: |	FIRESTONE | STONE
+His vehicle has four wheels, and flys: 	| GARBAGEMAN | GEM
+Twins... in space!!! 	| GEMINI | GEM
+This type of  ruler or state seeks power over others. Nothing to do with shrubbery: |	HEGEMONIC | GEM
+Displaying an excessively critical point of view: 	| JUDGEMENTAL | GEM
+Status of arch component, or one of 50 nicknames (minus “The”): |	KEYSTONE STATE | STONE
+Might follow upper or anger: 	| MANAGEMENT | GEM
+The approx 290 million of these in the US tend to contain 4, 6 or 8 related items: 	| PISTON ENGINE | STONE
+Modern musical style: 	| ROCK AND ROLL | ROCK
+Skill useful on 7/4 or at NASA; sometimes seen with model: 	| ROCKETRY | ROCK
+Religious hymn, or 2012 Tom Cruise vehicle: 	| ROCK OF AGES | ROCK
+Festive flying items related to another clue: |	SKYROCKETS | ROCK
+Cheech Marin, or one of many in a Shirley Jackson story: 	| STONER | STONE
+Nickname of General, or old field border: |	STONEWALL | STONE
+An Australian spread that, despite the name, does not not contain agricultural pests: 	| VEGEMITE | GEM
+
+#### Completed cave
+<img src={% static 'puzzle_resources/solutions/r2/the-curious-cave.png' %} alt=grid width=75%/>
+
+
+{% endblock %}
