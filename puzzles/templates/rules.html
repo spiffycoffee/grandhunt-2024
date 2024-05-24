@@ -13,7 +13,7 @@
         <ul>
             {% format_time start_time "WEEKDATE_AT_TIME" as hunt_start %}
             {% format_time end_time "WEEKDATE_AT_TIME" as hunt_end %}
-            <li>There are thirty puzzles, consisting of puzzles and metapuzzle(s).</li>
+            <li>There are (at least) 30 puzzles.</li>
             <li>{% blocktranslate %}The puzzlehunt starts on <strong>{{ hunt_start }}</strong> and ends on <strong>{{ hunt_end }}</strong>, at which point puzzle solutions will be available. {% endblocktranslate %}
             {% comment %}
             {% format_time close_time "WEEKDATE_AT_TIME" as hunt_close %}
