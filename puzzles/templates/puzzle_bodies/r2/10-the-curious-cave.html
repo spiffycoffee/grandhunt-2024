@@ -4,9 +4,93 @@
 
 {% block puzzle-body-md %}
 
-<object data={% static 'puzzle_resources/r2/p10/the-curious-cave.pdf' %} type="application/pdf" width="100%" height="640">
-</object>
+<style>
+	td {
+		padding: 0px;
+		padding-left: 20px;
+		border-bottom: none;
+        font-size: 0.9em;
+        height: 50px;
+		/* preventing text wrap seems to prevent puzzle resize, not worth it?
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		*/
+	}
 
-<p><a href={% static 'puzzle_resources/r2/p10/the-curious-cave.pdf' %}>Download PDF</a></p>
+    .right-col {
+        min-width: 250px;
+    }
+</style>
+
+<div class="text">
+Along the path, you discover an entrance to a large cave. Stalactites and stalagmites hang from the ceiling and rise from the floor. Nearby, you notice a set of inscriptions on the walls; pebbles and other debris litter the floor beneath them. You think you can puzzle those carvings out, but the resulting phrase seems rather cryptic.
+</div>
+<div class="text frame-blue crack1" style="text-align:center" markdown="1">
+<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p10/room-1.png' %}>
+<br /><br /><br /><br />
+<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p10/room-2.png' %}>
+<br /><br /><br /><br />
+<img style="max-width: 90%" src={% static 'puzzle_resources/r2/p10/room-3.png' %}>
+</div>
+<div class="text">
+    <em>Note to solvers: some of the answers consist of multiple words</em>
+</div>
+<table style="margin: 40px">
+	<tr>
+		<td>You can tune a guitar to get this, or maybe it’s a fish sound?</td><td> _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Congressman with a coonskin cap:</td><td class="right-col">  _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Kicked out of religious office, or maybe thieves stole a dress:</td> <td> _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Tire maker, or lava, perhaps:</td> <td>  _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>His vehicle has four wheels, and flys:</td> <td>  _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Twins... in space!!!</td> <td> _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>This type of  ruler or state seeks power over others. Nothing to do with shrubbery:</td> <td> _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Displaying an excessively critical point of view:</td> <td> _ _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Status of arch component, or one of 50 nicknames (minus “The”):</td> <td> _ _ _ _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Might follow upper or anger:</td> <td> _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>The approx 290 million of these in the US tend to contain 4, 6 or 8 related items:</td> <td> _ _ _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Modern musical style:</td> <td> _ _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+	<tr>
+		<td>Skill useful on 7/4 or at NASA; sometimes seen with model:</td> <td> _ _ _ _ _ _ _ _</td>
+    </tr>
+	<tr>
+		<td>Religious hymn, or 2012 Tom Cruise vehicle:</td> <td> _ _ _ _ _ _ _ _ _ _</td>
+	</tr>
+    <tr>
+        <td>Festive flying items related to another clue:</td> <td> _ _ _ _ _ _ _ _ _ _</td>
+    </tr>
+    <tr>
+        <td>Cheech Marin, or one of many in a Shirley Jackson story:</td> <td> _ _ _ _ _ _</td>
+    </tr>
+    <tr>
+        <td>Nickname of General, or old field border:</td> <td> _ _ _ _ _ _ _ _ _</td>
+    </tr>
+    <tr>
+        <td>An Australian spread that, despite the name, does not not contain agricultural pests:</td> <td> _ _ _ _ _ _ _ _</td>
+    </tr>
+</table>
 
 {% endblock %}
