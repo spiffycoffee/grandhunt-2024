@@ -6,7 +6,7 @@ from django.utils import timezone
 # it, maybe check those are what you want.
 HUNT_TITLE = 'Grand Hunt 2024'
 # included in various templates and displayed on the static site
-HUNT_ORGANIZERS = 'The Architect'
+HUNT_ORGANIZERS = 'The Agency'
 # included in various templates and set as reply-to for automatic emails
 CONTACT_EMAIL = 'info@thegrandhunt.com'
 # the sender from which automatic emails are sent; your mail sending service
@@ -15,7 +15,7 @@ CONTACT_EMAIL = 'info@thegrandhunt.com'
 MESSAGING_SENDER_EMAIL = 'noreply@grandhuntdigital.com'
 
 # Change this to True to reveal the story page to everyone.
-STORY_PAGE_VISIBLE = False
+STORY_PAGE_VISIBLE = True
 # Change this to True to reveal the meet the team page to everyone.
 MEET_TEAM_PAGE_VISIBLE = False
 # Change this to True when the wrapup exists.
@@ -29,23 +29,23 @@ SURVEYS_AVAILABLE = False
 
 HUNT_START_TIME = timezone.make_aware(datetime.datetime(
     year=2024,
-    month=12,
-    day=1,
-    hour=12,
+    month=7,
+    day=26,
+    hour=15,
     minute=0,
 ))
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
     year=2024,
-    month=12,
-    day=6,
-    hour=12,
+    month=7,
+    day=29,
+    hour=15,
     minute=0,
 ))
 HUNT_CLOSE_TIME = timezone.make_aware(datetime.datetime(
     year=9003,
     month=1,
     day=1,
-    hour=0,
+    hour=15,
     minute=0,
 ))
 
