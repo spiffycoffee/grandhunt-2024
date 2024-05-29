@@ -135,30 +135,28 @@
 </div>
 <br />
 {% if 'round1_open' in milestones.keys %}
-<h3><a href="/story#1">Story: The Job</a></h3>
+<h4><a href="/story#1">Story: The Job</a></h4>
+<h4><a href="/round/the-museum-of-superb-relics">Round: The Museum of Superb Relics</a></h4>
 {% endif %}
 {% if 'meta1_done' in milestones.keys %}
-<h3><a href="/story#2">Story: The Chase</a></h3>
+<h4><a href="/story#2">Story: The Chase</a></h4>
+<h4><a href="/round/the-lost-temple">Round: The Lost Temple</a></h4>
 {% endif %}
 {% if 'meta2_done' in milestones.keys %}
-<h3><a href="/story#3">Story: The Escape</a></h3>
+<h4><a href="/story#3">Story: The Escape</a></h4>
+<h4><a href="/round/the-hack">Round: The Hack</a></h4>
 {% endif %}
 {% if 'meta3_done' in milestones.keys %}
-<h3><a href="/story#4">Story: The Rendezvous</a></h3>
+<h4><a href="/story#4">Story: The Rendezvous</a></h4>
+{% endif %}
+{% if 'meta1_done' in milestones.keys %}
+<h4><a href="/puzzle/the-blueprint">The Blueprint</a></h4>
+{% endif %}
+{% if 'runaround_done' in milestones.keys %}
+<h4><a href="/puzzle/the-secret-blueprint">The Secret Blueprint</a></h4>
 {% endif %}
 {% if 'meta4_done' in milestones.keys %}
-<h3><a href="/story#5">Story: The Rekindling</a></h3>
+<h4><a href="/story#5">Story: The Rekindling</a></h4>
 {% endif %}
-
-<table class="puzzles-list">
-	{% for round in rounds.values %}
-		<tbody>
-			<th colspan="4">
-				<h1><a href="{% url 'round' round.round.slug %}">{{ round.round.name }}</a></h1>
-			</th>
-		</tbody>
-		{% include 'puzzles_list.html' with round=round %}
-	{% endfor %}
-</table>
 
 {% endblock %}

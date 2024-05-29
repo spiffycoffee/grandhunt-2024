@@ -620,6 +620,7 @@ def solve(request):
     '''Submit an answer for a puzzle, and check if it's correct.'''
 
     puzzle = request.context.puzzle
+    round = request.context.round
     team = request.context.team
     is_runaround = puzzle.slug == RUNAROUND_SLUG
     did_finish_metas = 'meta3_done' in milestones(request)
@@ -680,7 +681,13 @@ def solve(request):
                         _('Team %s has finished the hunt!') % team +
                         _('\n**Emails:** <%s>') % request.build_absolute_uri(reverse('finishers')))
                     show_victory_notification(request.context)
-                    return redirect('victory')
+                    messages.success(request, _('You have activated The Lantern!'))
+                    messages.success(request, mark_safe("You have unlocked <a href='/story#5'>the epilogue</a>!"))
+                elif puzzle.slug == RUNAROUND_SLUG:
+                    messages.success(request, mark_safe("You have found <a href='/the-grand-heist'>the secret blueprint</a>!"))
+                elif puzzle.is_meta:
+                    messages.success(request, mark_safe("You have unlocked a <a href='/the-grand-heist'>new round</a>!"))
+                    messages.success(request, _('A new <a href=''/story#%s''>story element</a> is available!') % str(int(round.order) + 1))
             else:
                 messages.error(request, _('%s is incorrect.') % normalized_answer)
             return redirect('solve', puzzle.slug)
@@ -1152,7 +1159,6 @@ def solution_static(request, path):
 @require_GET
 def story(request):
     '''View your team's story page based on your current progress.'''
-    
     story_points = milestones(request)
     return render(request, 'story.html', {'story_points': story_points})
 
@@ -1174,7 +1180,10 @@ def victory(request):
         finished = any(puzzle.slug == META_META_SLUG for puzzle in team.solves.values())
         if not finished:
             raise Http404
-    return render(request, 'victory.html')
+    
+    # Instead of going to a victory page this year, goes to last story element
+    #return render(request, "victory.html")
+    return redirect('/story#5')
 
 
 @require_GET
