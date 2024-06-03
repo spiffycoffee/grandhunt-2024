@@ -607,11 +607,11 @@ figcaption {
     .three-col {
         flex-wrap: wrap;
         gap: 2%;
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
     }
 
     .three-col > div {
-        width: 30%;
-        flex-basis: auto;
+        flex: 0 0 31.5%;
         margin-bottom: 2.4rem;
     }
 
@@ -621,8 +621,9 @@ figcaption {
     }
     
     .two-col > div {
-        width: 36%;
-        flex-basis: auto;
+        flex: 0 0 48.4%;
+       /* width: 36%;
+        flex-basis: auto;*/
         margin-bottom: 2.4rem;
     }
 }
