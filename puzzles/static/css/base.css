@@ -622,8 +622,6 @@ figcaption {
     
     .two-col > div {
         flex: 0 0 48.4%;
-       /* width: 36%;
-        flex-basis: auto;*/
         margin-bottom: 2.4rem;
     }
 }
