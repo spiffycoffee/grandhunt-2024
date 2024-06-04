@@ -314,6 +314,10 @@ figcaption {
         vertical-align: bottom;
     }
 
+    .shortcuts-label {
+        color: var(--btn-text-color);
+    }
+
     .shortcuts {
         border: 2px solid var(--tray-bg-color);
         background-color: white;

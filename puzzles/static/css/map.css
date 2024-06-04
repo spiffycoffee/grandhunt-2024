@@ -294,6 +294,11 @@
 	--heading-text-color: var(--accent-color);
 	--link-text-color: var(--accent-color);
 	--tray-text-color: var(--accent-color);
+	--tray-bg-color: var(--white-color);
+}
+
+.r1 .shortcuts-label {
+	color: var(--accent-color);
 }
 
 .r1 td {
