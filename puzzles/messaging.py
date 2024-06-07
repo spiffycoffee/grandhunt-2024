@@ -142,7 +142,7 @@ class DiscordInterface:
     def __init__(self):
         self.client = None
         self.avatars = None
-        if DISCORD_APP_TOKEN: and not settings.IS_TEST:
+        if DISCORD_APP_TOKEN and not settings.IS_TEST:
             self.client = discord.Client()
             self.client.loop = asyncio.new_event_loop()
             self.client.loop.run_until_complete(self.client.login(DISCORD_APP_TOKEN))
