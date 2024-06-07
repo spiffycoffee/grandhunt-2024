@@ -35,7 +35,7 @@ logger = logging.getLogger('puzzles.messaging')
 # Token for the Discord Application (bot account) that will relay messages to your channel
 # Set it as an environment variable on your server. You can get fancier with your
 # secrets if you want, but you should avoid checking in the token value
-DISCORD_APP_TOKEN = os.environ['DISCORD_APP_TOKEN']
+DISCORD_APP_TOKEN = os.environ.get('DISCORD_APP_TOKEN')
 # the next two should be big decimal numbers; in Discord, you can right
 # click and Copy ID to get them
 GUILD_ID = '1114623486481149972'
@@ -56,7 +56,7 @@ VICTORY_DISCORD_USERNAME = 'PH CongratBot'
 # They can be the same webhook if you don't care about keeping them in separate
 # channels.
 # Webhook URLs should also be treated like secrets since they also contain tokens
-ALERT_WEBHOOK_URL = os.environ['ALERT_WEBHOOK_URL']
+ALERT_WEBHOOK_URL = os.environ.get('ALERT_WEBHOOK_URL')
 SUBMISSION_WEBHOOK_URL = ALERT_WEBHOOK_URL
 FREE_ANSWER_WEBHOOK_URL = ALERT_WEBHOOK_URL
 VICTORY_WEBHOOK_URL = ALERT_WEBHOOK_URL

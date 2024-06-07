@@ -35,6 +35,8 @@ Description=gunicorn daemon
 After=network.target
 
 [Service]
+Environment="ALERT_WEBHOOK_URL=http://example.com/"
+Environment="DISCORD_APP_TOKEN=sometokenvalue"
 User=ubuntu
 Group=www-data
 WorkingDirectory=/var/www/{year}
@@ -43,6 +45,8 @@ ExecStart=/usr/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/
 [Install]
 WantedBy=multi-user.target
 ```
+If you are using the Discord integration, put your Discord secrets in the 2 Environment variable lines. You can put them in later if you do not know the values yet.
+
 Ensure that you replace both usages of the placeholder `{year}` with the year you're setting up.
 
 Then, save and close the nano editor. Use control-s to save and control-x to exit.
