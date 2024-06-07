@@ -2,13 +2,14 @@ import asyncio
 import collections
 import json
 import logging
-import requests
+import os
 import traceback
 
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 from channels.layers import get_channel_layer
 import discord
+import requests
 
 from django.conf import settings
 from django.contrib import messages
@@ -30,24 +31,35 @@ from puzzles.hunt_config import (
 logger = logging.getLogger('puzzles.messaging')
 
 
+# Discord configuration
+# Token for the Discord Application (bot account) that will relay messages to your channel
+# Set it as an environment variable on your server. You can get fancier with your
+# secrets if you want, but you should avoid checking in the token value
+DISCORD_APP_TOKEN = os.environ['DISCORD_APP_TOKEN']
+# the next two should be big decimal numbers; in Discord, you can right
+# click and Copy ID to get them
+GUILD_ID = '1114623486481149972'
+HINT_CHANNEL_ID = '1248514384494460929'
+
 # Usernames that the bot will send messages to Discord with when various things
 # happen. It's really not important that these are different. It's just for
 # flavor.
-ALERT_DISCORD_USERNAME = 'FIXME PH AlertBot'
-CORRECT_SUBMISSION_DISCORD_USERNAME = 'FIXME PH WinBot'
-INCORRECT_SUBMISSION_DISCORD_USERNAME = 'FIXME PH FailBot'
-FREE_ANSWER_DISCORD_USERNAME = 'FIXME PH HelpBot'
-VICTORY_DISCORD_USERNAME = 'FIXME PH CongratBot'
+ALERT_DISCORD_USERNAME = 'PH AlertBot'
+CORRECT_SUBMISSION_DISCORD_USERNAME = 'PH WinBot'
+INCORRECT_SUBMISSION_DISCORD_USERNAME = 'PH FailBot'
+FREE_ANSWER_DISCORD_USERNAME = 'PH HelpBot'
+VICTORY_DISCORD_USERNAME = 'PH CongratBot'
 
 # Should be Discord webhook URLs that look like
 # https://discordapp.com/api/webhooks/(numbers)/(letters)
 # From a channel you can create them under Integrations > Webhooks.
 # They can be the same webhook if you don't care about keeping them in separate
 # channels.
-ALERT_WEBHOOK_URL = 'https://example.com'
-SUBMISSION_WEBHOOK_URL = 'https://example.com'
-FREE_ANSWER_WEBHOOK_URL = 'https://example.com'
-VICTORY_WEBHOOK_URL = 'https://example.com'
+# Webhook URLs should also be treated like secrets since they also contain tokens
+ALERT_WEBHOOK_URL = os.environ['ALERT_WEBHOOK_URL']
+SUBMISSION_WEBHOOK_URL = ALERT_WEBHOOK_URL
+FREE_ANSWER_WEBHOOK_URL = ALERT_WEBHOOK_URL
+VICTORY_WEBHOOK_URL = ALERT_WEBHOOK_URL
 
 # Assuming you want messages on a messaging platform that's not Discord but
 # supports at least a vaguely similar API, change the following code
@@ -121,12 +133,6 @@ def send_mail_wrapper(subject, template, context, recipients):
 
 
 class DiscordInterface:
-    TOKEN = None # FIXME a long token from Discord
-
-    # the next two should be big decimal numbers; in Discord, you can right
-    # click and Copy ID to get them
-    GUILD = 'FIXME13'
-    HINT_CHANNEL = 'FIXME14'
 
     # You also need to enable the "Server Members Intent" under the "Privileged
     # Gateway Intents" section of the "Bot" page of your application from the
@@ -136,10 +142,10 @@ class DiscordInterface:
     def __init__(self):
         self.client = None
         self.avatars = None
-        if self.TOKEN and not settings.IS_TEST:
+        if DISCORD_APP_TOKEN: and not settings.IS_TEST:
             self.client = discord.Client()
             self.client.loop = asyncio.new_event_loop()
-            self.client.loop.run_until_complete(self.client.login(self.TOKEN))
+            self.client.loop.run_until_complete(self.client.login(DISCORD_APP_TOKEN))
             # Look man, I dunno. I have no clue how Python async works and this
             # is all a house of cards that probably works totally differently
             # depending on your environment. If you can find a way to reliably
@@ -152,7 +158,7 @@ class DiscordInterface:
                 members = [
                     discord.Member(data=data, guild=None, state=self.client._connection)
                     for data in self.client.loop.run_until_complete(
-                    self.client.http.get_members(self.GUILD, limit=1000, after=None))
+                    self.client.http.get_members(GUILD_ID, limit=1000, after=None))
                 ]
                 for member in members:
                     self.avatars[member.name] = member.display_avatar.url
@@ -176,7 +182,6 @@ class DiscordInterface:
     # discord.Client().run(TOKEN)
 
     def update_hint(self, hint):
-        return
         HintsConsumer.send_to_all(json.dumps({'id': hint.id,
             'content': render_to_string('hint_list_entry.html', {
                 'hint': hint, 'now': timezone.localtime()})}))
@@ -204,7 +209,7 @@ class DiscordInterface:
         elif hint.discord_id:
             try:
                 self.client.loop.run_until_complete(self.client.http.edit_message(
-                    self.HINT_CHANNEL, hint.discord_id, embeds=[embed]))
+                    HINT_CHANNEL_ID, hint.discord_id, embeds=[embed]))
             except Exception:
                 dispatch_general_alert(_('Discord API failure: modify\n{}').format(
                     traceback.format_exc()))
@@ -212,7 +217,7 @@ class DiscordInterface:
             message = hint.long_discord_message()
             try:
                 discord_id = self.client.loop.run_until_complete(self.client.http.send_message(
-                    self.HINT_CHANNEL, message, embeds=[embed]))['id']
+                    HINT_CHANNEL_ID, message, embeds=[embed]))['id']
             except Exception:
                 dispatch_general_alert(_('Discord API failure: create\n{}').format(
                     traceback.format_exc()))
@@ -221,7 +226,6 @@ class DiscordInterface:
             hint.save(update_fields=('discord_id',))
 
     def clear_hint(self, hint):
-        return
         HintsConsumer.send_to_all(json.dumps({'id': hint.id}))
         if self.client is None:
             logger.info(_('Hint done: {}').format(hint))
@@ -244,7 +248,7 @@ class DiscordInterface:
             debug = _('claimed by {}').format(hint.claimer)
             try:
                 self.client.loop.run_until_complete(self.client.http.edit_message(
-                    self.HINT_CHANNEL, hint.discord_id, content=hint.short_discord_message(), embeds=[embed]))
+                    HINT_CHANNEL_ID, hint.discord_id, content=hint.short_discord_message(), embeds=[embed]))
             except Exception:
                 dispatch_general_alert(_('Discord API failure: modify\n{}').format(
                     traceback.format_exc()))
