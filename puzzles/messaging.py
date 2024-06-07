@@ -324,9 +324,12 @@ class AdminWebsocketConsumer(BroadcastWebsocketConsumer):
 
     @classmethod
     def send_to_all(cls, text_data):
+        # TODO re-enable this when we figure out the deal with redis?
+        """
         async_to_sync(get_channel_layer().group_send)(
             cls.group_id,
             {'type': 'channel.receive_broadcast', 'data': text_data})
+        """
 
 class HintsConsumer(AdminWebsocketConsumer):
     group_id = 'hints'
