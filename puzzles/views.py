@@ -72,7 +72,7 @@ from puzzles.hunt_config import (
     RUNAROUND_SLUG,
 )
 
-from puzzles.messaging import send_mail_wrapper, dispatch_victory_alert, show_victory_notification
+from puzzles.messaging import send_mail_wrapper, dispatch_submission_alert, dispatch_victory_alert, show_victory_notification
 from puzzles.shortcuts import dispatch_shortcut
 
 
@@ -149,7 +149,7 @@ def require_before_hunt_closed_or_admin(request):
 def milestones(request):
     key_points = OrderedDict((
         ('round1_open', ''), ('meta1_done', ''),
-        ('meta2_done', ''), ('meta3_done', ''), 
+        ('meta2_done', ''), ('meta3_done', ''),
         ('runaround_done', ''), ('meta4_done', ''),
     ))
     if request.context.hunt_has_started:
@@ -627,7 +627,7 @@ def solve(request):
     form = None
     survey = None
 
-    #Checking here is the puzzle is the runaround puzzle and the last round's meta wasn't complete 
+    #Checking here is the puzzle is the runaround puzzle and the last round's meta wasn't complete
     #If so, don't allow users to solve this puzzle
     if is_runaround and not did_finish_metas:
         raise Http404
@@ -654,6 +654,14 @@ def solve(request):
 
         form = SubmitAnswerForm(request.POST)
         if puzzle_messages:
+            dispatch_submission_alert(
+                _(':o: {} Team {} submitted {} for {}: {}').format(
+                    puzzle.emoji, team,
+                    normalized_answer, puzzle,
+                    'Partial Answer',
+                ),
+                correct=False)
+
             for message in puzzle_messages:
                 form.add_error(None, mark_safe(message.response))
         elif not normalized_answer:
@@ -1180,7 +1188,7 @@ def victory(request):
         finished = any(puzzle.slug == META_META_SLUG for puzzle in team.solves.values())
         if not finished:
             raise Http404
-    
+
     # Instead of going to a victory page this year, goes to last story element
     #return render(request, "victory.html")
     return redirect('/story#5')
