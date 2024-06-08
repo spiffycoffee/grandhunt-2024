@@ -191,9 +191,11 @@
     </div>
     {% endif %}
     <script>
+	{% comment %} Until Redis is setup, no point in trying to connect to websocket
     {% if team %}
         openSocket('/ws/team', showNotify);
     {% endif %}
+	{% endcomment %}
     {% if messages %}
     {% for message in messages %}
         {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
