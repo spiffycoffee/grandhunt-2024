@@ -655,7 +655,7 @@ def solve(request):
         form = SubmitAnswerForm(request.POST)
         if puzzle_messages:
             dispatch_submission_alert(
-                _(':o: {} Team {} submitted {} for {}: {}').format(
+                _(':o: {} Team {} submitted `{}` for {}: {}').format(
                     puzzle.emoji, team,
                     normalized_answer, puzzle,
                     'Partial Answer',
