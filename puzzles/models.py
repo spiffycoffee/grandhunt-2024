@@ -626,16 +626,18 @@ def notify_on_answer_submission(sender, instance, created, **kwargs):
                 team__is_hidden=False,
             ).values_list('team_id', flat=True).distinct().count()
             sigil = ':x:'
+            answer = ('`{}`').format(instance.submitted_answer)
             if instance.is_correct:
                 sigil = {
                     1: ':first_place:', 2: ':second_place:', 3: ':third_place:'
                 }.get(submitted_teams, ':white_check_mark:')
+                answer = ('||`{}`||').format(instance.submitted_answer)  # Discord spoiler
             elif submitted_teams > 1:
                 sigil = ':skull_crossbones:'
             dispatch_submission_alert(
-                _('{} {} Team {} submitted `{}` for {}: {}{}').format(
+                _('{} {} Team {} submitted {} for {}: {}{}').format(
                     sigil, instance.puzzle.emoji, instance.team,
-                    instance.submitted_answer, instance.puzzle,
+                    answer, instance.puzzle,
                     _('Correct!') if instance.is_correct else _('Incorrect.'),
                     hint_line,
                 ),
