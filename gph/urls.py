@@ -22,6 +22,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.views.i18n import JavaScriptCatalog
 from django.views.decorators.cache import cache_page
+from django.views.defaults import page_not_found
 
 from puzzles import puzzlehandlers
 from puzzles import views
@@ -110,5 +111,6 @@ urlpatterns = [
     path('robots.txt', views.robots),
     # see https://docs.djangoproject.com/en/4.0/topics/i18n/translation/#note-on-performance
     path('jsi18n/', (JavaScriptCatalog.as_view()), name='javascript-catalog'),
+    path('404', lambda r: page_not_found(r, None))
 
 ]
