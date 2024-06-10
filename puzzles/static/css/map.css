@@ -311,7 +311,9 @@
 
 .r1 .window {
 	position: relative;
+	/* moved to base.html so the value can use a Django template
 	border-image: url("/static/map_resources/r1/frame.png");
+	*/
 	border-image-slice: 15.5% 20%;
 	border-image-repeat: round;
 	border-image-width: 25px 40px;
@@ -329,9 +331,9 @@
 	border: 3px solid rgb(169, 179, 95);
 	position: absolute;
 	max-width: fit-content;
-	left: 0; 
-  	right: 0; 
-  	margin: auto;  
+	left: 0;
+  	right: 0;
+  	margin: auto;
 	padding: 6px;
 	bottom: -15px;
 	color: var(--white-color);
@@ -343,8 +345,10 @@
 }
 
 .r1 .endnote {
+	/* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r1/footer.png");
-	background-size: contain;       
+	*/
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
@@ -358,7 +362,9 @@
 }
 
 .r2 .puzzle-main {
+	/* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/background-tile.png");
+	*/
 	background-repeat: repeat;
 	background-size: 1000px 2000px;
 	font-family: monospace;
@@ -372,7 +378,9 @@
 }
 
 .r2 .frame-blue {
-    border-image: url("/static/map_resources/r2/frame-empty.png");
+	/* moved to base.html so the value can use a Django template
+	border-image: url("/static/map_resources/r2/frame-empty.png");
+	*/
 	border-image-slice: 95 65 70 80;
 	border-image-repeat: round;
 	border-image-width: 3rem;
@@ -380,14 +388,18 @@
 }
 
 .r2 .crack1 {
+	/* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/crack1.png");
+	*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: calc(100% - 50px) calc(100% - 40px);
 }
 
 .r2 .full {
+	/* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r2/full.png");
+	*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: calc(100% - 50px) calc(100% - 40px);
@@ -400,14 +412,18 @@
 }
 
 .r3 .puzzle-main {
+	/* moved to base.html so the value can use a Django template
 	background-image: url("/static/map_resources/r3/background-tile.png");
+	*/
 	background-repeat: repeat;
 	background-size: 15px 15px;
 	font-family: monospace;
 }
 
 .r3 .window {
+	/* moved to base.html so the value can use a Django template
     border-image: url("/static/map_resources/r3/window.png");
+	*/
 	border-image-slice:  120 60 60 40;
 	border-image-repeat: round;
 	border-image-width: 37px 15px 15px 10px;

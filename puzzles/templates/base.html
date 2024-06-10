@@ -38,6 +38,32 @@
 
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); 
+
+		{# Override CSS image urls so that Django templating can happen #}
+		.r1 .window {
+			border-image: url("{% static 'map_resources/r1/frame.png' %}");
+		}
+		.r1 .endnote {
+			background-image: url("{% static 'map_resources/r1/footer.png' %}");
+		}
+		.r2 .puzzle-main {
+			background-image: url("{% static 'map_resources/r2/background-tile.png' %}");
+		}
+		.r2 .frame-blue {
+			border-image: url("{% static 'map_resources/r2/frame-empty.png' %}");
+		}
+		.r2 .crack1 {
+			background-image: url("{% static 'map_resources/r2/crack1.png' %}");
+		}
+		.r2 .full {
+			background-image: url("{% static 'map_resources/r2/full.png' %}");
+		}
+		.r3 .puzzle-main {
+			background-image: url("{% static 'map_resources/r3/background-tile.png' %}");
+		}
+		.r3 .window {
+			border-image: url("{% static 'map_resources/r3/window.png' %}");
+		}
     </style>
 </head>
 <body>
