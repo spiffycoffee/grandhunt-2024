@@ -41,7 +41,7 @@
 
 		{# Override CSS image urls so that Django templating can happen #}
 		.r1 .window {
-			border-image: url("{% static 'map_resources/r1/frame.png' %}");
+			border-image-source: url("{% static 'map_resources/r1/frame.png' %}");
 		}
 		.r1 .endnote {
 			background-image: url("{% static 'map_resources/r1/footer.png' %}");
@@ -50,7 +50,7 @@
 			background-image: url("{% static 'map_resources/r2/background-tile.png' %}");
 		}
 		.r2 .frame-blue {
-			border-image: url("{% static 'map_resources/r2/frame-empty.png' %}");
+			border-image-source: url("{% static 'map_resources/r2/frame-empty.png' %}");
 		}
 		.r2 .crack1 {
 			background-image: url("{% static 'map_resources/r2/crack1.png' %}");
@@ -62,7 +62,7 @@
 			background-image: url("{% static 'map_resources/r3/background-tile.png' %}");
 		}
 		.r3 .window {
-			border-image: url("{% static 'map_resources/r3/window.png' %}");
+			border-image-source: url("{% static 'map_resources/r3/window.png' %}");
 		}
     </style>
 </head>
