@@ -456,7 +456,8 @@ class Team(models.Model):
         new_unlocks = []
         for puzzle in context.all_puzzles:
             unlocked_at = None
-            if puzzle.is_meta:
+
+            if puzzle.is_meta and context.team:
                 # array of booleans, puzzles are ordered so index can be a proxy for Round #
                 metas_solved.append(puzzle.id in context.team.solves)
 
@@ -464,12 +465,13 @@ class Team(models.Model):
             if context.hunt_is_prereleased or context.hunt_is_over:
                 puzzles_unlocked[puzzle] = context.start_time
                 continue
-            # If puzzle already has a PuzzleUnlock, retrieve it
-            if puzzle.id in context.team.db_unlocks:
-                puzzles_unlocked[puzzle] = context.team.db_unlocks[puzzle.id].unlock_datetime
-                continue
 
             if context.team:
+                # If puzzle already has a PuzzleUnlock, retrieve it
+                if puzzle.id in context.team.db_unlocks:
+                    puzzles_unlocked[puzzle] = context.team.db_unlocks[puzzle.id].unlock_datetime
+                    continue
+
                 # Time Unlocks
                 if 0 <= puzzle.unlock_hours and (puzzle.unlock_hours == 0 or
                                                  context.team.allow_time_unlocks):

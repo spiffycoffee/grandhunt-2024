@@ -11,8 +11,10 @@
 {% if round.slug != intro_round_slug %}
 <a href="{% url 'round' round.slug %}" class="btn">{% translate "Back to round" %}</a>
 {% endif %}
-{% if team and not hunt_is_closed and not is_runaround or 'meta3_done' in milestones %}
+{% if team and not hunt_is_closed %}
+{% if not is_runaround or is_runaround and 'meta3_done' in milestones %}
 <a href="{% url 'solve' puzzle.slug %}" class="btn">{% translate "Submit a guess" %}</a>
+{% endif %}
 {% endif %}
 {% if not puzzle.is_meta and num_free_answers_remaining > 0 and puzzle_answer is None %}
 <a href="{% url 'free-answer' puzzle.slug %}" class="btn">{% translate "Use free answer" %}</a>

@@ -87,10 +87,11 @@ def validate_puzzle(require_team=False):
         def inner(request, slug):
             puzzle = Puzzle.objects.select_related().filter(slug=slug).first()
             request.context.puzzle = puzzle
-            if not puzzle or puzzle not in request.context.unlocks:
-                messages.error(request, _('Invalid puzzle name.'))
-                return redirect('puzzles')
             if request.context.team:
+                if not puzzle or puzzle not in request.context.unlocks:
+                    messages.error(request, _('Invalid puzzle name.'))
+                    raise Http404
+
                 unlock = request.context.team.db_unlocks.get(puzzle.id)
                 if unlock and not unlock.view_datetime:
                     unlock.view_datetime = request.context.now
@@ -101,7 +102,7 @@ def validate_puzzle(require_team=False):
                     _('You must be signed in and have a registered team to '
                     'access this page.')
                 )
-                return redirect('puzzle', slug)
+                raise Http404
             return f(request)
         return inner
     return decorator
@@ -152,7 +153,10 @@ def milestones(request):
         ('meta2_done', ''), ('meta3_done', ''),
         ('runaround_done', ''), ('meta4_done', ''),
     ))
-    if request.context.hunt_has_started:
+    if not request.context.team and request.context.hunt_is_over:
+        # Show all milestones (with no answers) for map / story
+        return key_points
+    elif request.context.hunt_has_started:
         for puzzle in request.context.unlocks:
             key_points['round%d_open' % puzzle.round.order] = 'true'
         if request.context.team:
@@ -603,10 +607,13 @@ def puzzle(request):
         'is_runaround':
             team and request.context.puzzle.slug == RUNAROUND_SLUG,
         'milestones':
-            team and milestones(request),
+            (team or request.context.hunt_is_over) and milestones(request),
     }
     try:
-        return render(request, template_name, data)
+        if request.context.hunt_has_started:
+            return render(request, template_name, data)
+        else:
+            raise Http404
     except (TemplateDoesNotExist, IsADirectoryError):
         # A plausible cause of it being a directory is that the slug
         # is blank.
@@ -622,14 +629,11 @@ def solve(request):
     puzzle = request.context.puzzle
     round = request.context.round
     team = request.context.team
-    is_runaround = puzzle.slug == RUNAROUND_SLUG
-    did_finish_metas = 'meta3_done' in milestones(request)
     form = None
     survey = None
 
-    #Checking here is the puzzle is the runaround puzzle and the last round's meta wasn't complete
-    #If so, don't allow users to solve this puzzle
-    if is_runaround and not did_finish_metas:
+    # (2024) Don't allow users to solve the runaround puzzle if the last round's meta wasn't complete
+    if puzzle.slug == RUNAROUND_SLUG and 'meta3_done' not in milestones(request):
         raise Http404
 
     if request.method == 'POST' and 'answer' in request.POST:
