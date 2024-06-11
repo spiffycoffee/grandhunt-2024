@@ -588,29 +588,29 @@ def render_puzzles(request):
 @validate_puzzle()
 def puzzle(request):
     '''View a single puzzle's content.'''
-    team = request.context.team
-    template_name = 'puzzle_bodies/r{}/{}-{}'.format(
-            request.context.puzzle.round.pk,
-            request.context.puzzle.order,
-            request.context.puzzle.body_template)
-    data = {
-        'can_view_hints':
-            team and not request.context.hunt_is_closed and (
-                team.num_hints_total > 0 or
-                team.num_free_answers_total > 0
-            ),
-        'can_ask_for_hints':
-            team and not request.context.hunt_is_over and (
-                team.num_hints_remaining > 0 or
-                team.num_free_answers_remaining > 0
-            ),
-        'is_runaround':
-            team and request.context.puzzle.slug == RUNAROUND_SLUG,
-        'milestones':
-            (team or request.context.hunt_is_over) and milestones(request),
-    }
     try:
         if request.context.hunt_has_started:
+            team = request.context.team
+            template_name = 'puzzle_bodies/r{}/{}-{}'.format(
+                    request.context.puzzle.round.pk,
+                    request.context.puzzle.order,
+                    request.context.puzzle.body_template)
+            data = {
+                'can_view_hints':
+                    team and not request.context.hunt_is_closed and (
+                        team.num_hints_total > 0 or
+                        team.num_free_answers_total > 0
+                    ),
+                'can_ask_for_hints':
+                    team and not request.context.hunt_is_over and (
+                        team.num_hints_remaining > 0 or
+                        team.num_free_answers_remaining > 0
+                    ),
+                'is_runaround':
+                    team and request.context.puzzle.slug == RUNAROUND_SLUG,
+                'milestones':
+                    (team or request.context.hunt_is_over) and milestones(request),
+            }
             return render(request, template_name, data)
         else:
             raise Http404
