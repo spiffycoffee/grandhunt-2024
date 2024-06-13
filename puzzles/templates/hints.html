@@ -6,6 +6,13 @@
 <title>{% blocktranslate with puzzle_name=puzzle.name %}Hints: {{ puzzle_name }}{% endblocktranslate %}</title>
 {% endblock %}
 
+{% block html_class %}
+{% if round.slug == 'the-museum-of-superb-relics' %} r1
+{% elif round.slug == 'the-lost-temple' %} r2
+{% elif round.slug == 'the-hack' %} r3
+{% endif %}
+{% endblock %}
+
 {% block top-left-actions %}
 <a href="{% url 'puzzle' puzzle.slug %}" class="btn">{% translate "Back to the puzzle" %}</a>
 {% endblock %}

@@ -297,15 +297,7 @@
 	--tray-bg-color: var(--white-color);
 }
 
-.r1 .shortcuts-label {
-	color: var(--accent-color);
-}
-
-.r1 td {
-	color: var(--accent-color);
-}
-
-.r1 .current-stat {
+.r1 body, .r1 .shortcuts-label, .r1 .current-stat, .r1 td {
 	color: var(--accent-color);
 }
 
