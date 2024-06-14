@@ -297,6 +297,10 @@
 	--tray-bg-color: var(--white-color);
 }
 
+.r1 .puzzle-main {
+	color: black
+}
+
 .r1 body, .r1 .shortcuts-label, .r1 .current-stat, .r1 td {
 	color: var(--accent-color);
 }
@@ -410,6 +414,11 @@
 	background-repeat: repeat;
 	background-size: 15px 15px;
 	font-family: monospace;
+	color: black;
+}
+
+.r3 .puzzle-main h4 {
+	color: black;
 }
 
 .r3 .window {

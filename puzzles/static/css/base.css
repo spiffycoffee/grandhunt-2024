@@ -222,18 +222,12 @@ figcaption {
         background-color: var(--accent-bg-color);
         padding: 20px 30px;
         text-align: center;
-        color: black;
     }
 
     .puzzle-main h1, .puzzle-main h2, .puzzle-main h3, .puzzle-main h4 {
         background: none;
         border-left: none;
         padding: 0;
-    }
-
-    .puzzle-solution {
-        color: var(--white-color);
-        text-align: left;
     }
 
     .btn {
