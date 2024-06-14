@@ -36,10 +36,7 @@ html {
     --btn-bg-color: var(--accent-bg-color);
     --btn-hover-color: var(--accent-hover-color);
 
-    /* 2023 site's values
     --tray-text-color: var(--accent-color);
-    */
-    --tray-text-color: var(--white-color);
     --tray-bg-color: rgba(var(--page-bg-rgb), 0.9);
 
     --text-font: 'Helvetica neue';;
