@@ -37,7 +37,7 @@ HUNT_START_TIME = timezone.make_aware(datetime.datetime(
 HUNT_END_TIME = timezone.make_aware(datetime.datetime(
     year=2024,
     month=8,
-    day=12,
+    day=18,
     hour=15,
     minute=0,
 ))
