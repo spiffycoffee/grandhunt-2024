@@ -32,21 +32,21 @@
         <ul>
             <li>{% blocktranslate %}Each answer is a string of letters A&ndash;Z. Lowercase letters will be changed into uppercase, and any other characters will be stripped before checking for correctness.{% endblocktranslate %}</li>
             <li>{% blocktranslate with max_guesses=max_guesses_per_puzzle %}You have <strong>{{ max_guesses }} total guesses</strong> for each puzzle. If you legitimately run out of guesses and need more, feel free to contact us, though we won&apos;t grant your request if we see that you were, for example, guessing random thematic answers, or brute-forcing all 10-letter words.{% endblocktranslate %}</li>
-            <li>Incorrect guesses and taking hints will <strong>NOT</strong> affect scoring.</li>
+            <li>Incorrect guesses or using lockpicks will <strong>NOT</strong> affect scoring.</li>
             <li>If you submit a partial answer, (i.e. a word or phrase you&apos;d find while solving but isn&apos;t the final answer), you may receive a message telling you to "Keep going!" or something similar. But you won&apos;t earn any points until you get the correct answer.</li>
         </ul>
     </div>
 
     <div class="no-break">
-        <h4 id="Hints">{% translate "Hints" %}</h4>
+        <h4 id="Hints">{% translate "Hints (Lockpicks)" %}</h4>
         <ul>
             {% format_time hint_time "WEEKDATE" as hint_date %}
             {% format_time hint_time "TIME" as hint_time %}
-            <li>Teams start with 1 hint available. Starting on <strong>{{ hint_date }}</strong>, teams will receive <strong>1 freeform hint request</strong> every eight hours.
-            <li>{% blocktranslate %}You can use a hint to get help on a puzzle. This can be something like a nudge in the right direction (i.e. you give us your progress on the puzzle and we&rsquo;ll try to get you unstuck) or an answer to a question (e.g. &ldquo;Which answers to these crossword clues are wrong?&rdquo;).{% endblocktranslate %}</li>
-            <li>If you feel that the hint didn't help you, feel free to email us at <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> and we can help further. Please try to reply back to the original email that you got your hint from, or include the previous hint(s) so we know what we have told you so far.</li>
-            <li>We will do our best to answer hints as fast as possible, but please understand if it takes some time to get to you :) Hopefully, our hint system will not overload us.</li>
-            <li>If you are out of hint credits, but are completely stuck, please let us know through email. We want people to have fun solving puzzles and will be more generous for casual teams.</li>
+            <li>Teams start with 1 lockpick available. Lockpicks are freeforms hints you can ask to get help on a puzzle. Starting on <strong>{{ hint_date }}</strong>, teams will receive <strong>1 Lockpicks</strong> every eight hours.
+            <li>{% blocktranslate %}You can use a lockpick to get help on a puzzle. This can be something like a nudge in the right direction (i.e. you give us your progress on the puzzle and we&rsquo;ll try to get you unstuck) or an answer to a question (e.g. &ldquo;Which answers to these crossword clues are wrong?&rdquo;).{% endblocktranslate %}</li>
+            <li>If you feel that we didn't help you, feel free to email us at <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> and we can help further. Please try to reply back to the original email, or include the previous responses, so we know what we have told you so far.</li>
+            <li>We will do our best to help you pick locks as fast as possible, but please understand if it takes some time to get to you :)</li>
+            <li>If you are out of lockpicks, but are completely stuck, please let us know through email. We want people to have fun solving puzzles and will be more generous for casual teams.</li>
             
 
         </ul>

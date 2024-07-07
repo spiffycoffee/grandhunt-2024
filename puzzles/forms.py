@@ -145,7 +145,7 @@ class RequestHintForm(forms.Form):
             'provide a hint to help you move forward. The more detail you '
             'provide, the less likely it is that we’ll tell you '
             'something you already know. Feel free to include a link to '
-            'your team’s Google Workbook or other shared workspace. '
+            'your team’s Google Sheet or other shared workspace. '
             'You will have to refresh your page to see when a hint has '
             'been answered.  Please be patient, we’re working to get your '
             'hint answered in a timely manner!')

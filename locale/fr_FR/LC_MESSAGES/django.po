@@ -889,7 +889,7 @@ msgid "Currently impersonating"
 msgstr "Personnifiant"
 
 #: puzzles/templates/base.html:95
-msgid "Available hints:"
+msgid "Available lockpicks:"
 msgstr "Indices disponibles :"
 
 #: puzzles/templates/base.html:101
