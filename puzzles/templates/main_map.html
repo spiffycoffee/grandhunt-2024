@@ -134,29 +134,36 @@
 
 </div>
 <br />
-{% if 'round1_open' in milestones.keys %}
-<h4><a href="/story#1">Story: The Job</a></h4>
-<h4><a href="/round/the-museum-of-superb-relics">Round: The Museum of Superb Relics</a></h4>
-{% endif %}
-{% if 'meta1_done' in milestones.keys %}
-<h4><a href="/story#2">Story: The Chase</a></h4>
-<h4><a href="/round/the-lost-temple">Round: The Lost Temple</a></h4>
-{% endif %}
-{% if 'meta2_done' in milestones.keys %}
-<h4><a href="/story#3">Story: The Escape</a></h4>
-<h4><a href="/round/the-hack">Round: The Hack</a></h4>
-{% endif %}
-{% if 'meta3_done' in milestones.keys %}
-<h4><a href="/story#4">Story: The Rendezvous</a></h4>
-{% endif %}
-{% if 'meta1_done' in milestones.keys %}
-<h4><a href="/puzzle/the-blueprint">The Blueprint</a></h4>
-{% endif %}
-{% if 'runaround_done' in milestones.keys %}
-<h4><a href="/puzzle/the-secret-blueprint">The Secret Blueprint</a></h4>
-{% endif %}
-{% if 'meta4_done' in milestones.keys %}
-<h4><a href="/story#5">Story: The Rekindling</a></h4>
-{% endif %}
+<h4>Jump to</h4>
+<ul>
+	{% if 'round1_open' in milestones.keys %}
+	<li><a href="/story#1">Story: The Job</a></li>
+	<li><a href="/round/the-museum-of-superb-relics">Round: The Museum of Superb Relics</a></li>
+	{% endif %}
+	{% if 'meta1_done' in milestones.keys %}
+	<li><a href="/story#2">Story: The Chase</a></li>
+	<li><a href="/round/the-lost-temple">Round: The Lost Temple</a></li>
+	{% endif %}
+	{% if 'meta2_done' in milestones.keys %}
+	<li><a href="/story#3">Story: The Escape</a></li>
+	<li><a href="/round/the-hack">Round: The Hack</a></li>
+	{% endif %}
+	{% if 'meta3_done' in milestones.keys %}
+	<li><a href="/story#4">Story: The Rendezvous</a></li>
+	{% endif %}
+	{% if 'meta1_done' in milestones.keys %}
+	<li><a href="/puzzle/the-blueprint">The Blueprint</a></li>
+	{% endif %}
+	{% if 'runaround_done' in milestones.keys %}
+	<li><a href="/puzzle/the-secret-blueprint">The Secret Blueprint</a></li>
+	{% endif %}
+	{% if 'meta4_done' in milestones.keys %}
+	<li><a href="/story#5">Story: The Rekindling</a></li>
+	{% endif %}
+	{% if 'round1_open' in milestones.keys %}
+	<li><a href={% url 'puzzles' %}>All Puzzles</a></li>
+	{% endif %}
+</ul>
+
 
 {% endblock %}

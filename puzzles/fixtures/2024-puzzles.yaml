@@ -70,7 +70,7 @@
     answer: ROAD BLOCK
     round: 1
     unlock_global: -1
-    unlock_local: 1
+    unlock_local: 0
 - model: puzzles.Puzzle
   pk: 5
   fields:
@@ -81,7 +81,7 @@
     answer: JELLO DESSERT
     round: 1
     unlock_global: -1
-    unlock_local: 2
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 6
   fields:
@@ -92,7 +92,7 @@
     answer: UNDER PRESSURE
     round: 1
     unlock_global: -1
-    unlock_local: 3
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 7
   fields:
@@ -103,7 +103,7 @@
     answer: RANT AND RAVE
     round: 1
     unlock_global: -1
-    unlock_local: 4
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 8
   fields:
@@ -114,7 +114,7 @@
     answer: THIS MEANS WAR
     round: 1
     unlock_global: -1
-    unlock_local: 5
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 9
   fields:
@@ -125,7 +125,7 @@
     answer: WOULD YOU RATHER
     round: 1
     unlock_global: -1
-    unlock_local: 6
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 10
   fields:
@@ -136,7 +136,7 @@
     answer: COME AND GO
     round: 1
     unlock_global: -1
-    unlock_local: 7
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 11
   fields:
@@ -148,7 +148,7 @@
     is_meta: True
     round: 1
     unlock_global: -1
-    unlock_local: 8
+    unlock_local: 7
 
 - model: puzzles.Puzzle
   pk: 12
@@ -192,8 +192,8 @@
     body_template: meandering-streams.html
     answer: RIVER WATER
     round: 2
-    unlock_global: -1
-    unlock_local: 1
+    unlock_global: -2
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 16
   fields:
@@ -204,7 +204,7 @@
     answer: EXPEDITION
     round: 2
     unlock_global: -1
-    unlock_local: 2
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 17
   fields:
@@ -215,7 +215,7 @@
     answer: ALTAR STONE
     round: 2
     unlock_global: -1
-    unlock_local: 3
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 18
   fields:
@@ -226,7 +226,7 @@
     answer: CROCODILES
     round: 2
     unlock_global: -1
-    unlock_local: 4
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 19
   fields:
@@ -237,7 +237,7 @@
     answer: SUN WORSHIP
     round: 2
     unlock_global: -1
-    unlock_local: 5
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 20
   fields:
@@ -248,7 +248,7 @@
     answer: ASTRONOMIC
     round: 2
     unlock_global: -1
-    unlock_local: 6
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 21
   fields:
@@ -259,7 +259,7 @@
     answer: FLINT KNIFE
     round: 2
     unlock_global: -1
-    unlock_local: 7
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 22
   fields:
@@ -271,7 +271,7 @@
     is_meta: True
     round: 2
     unlock_global: -1
-    unlock_local: 8
+    unlock_local: 7
 
 - model: puzzles.Puzzle
   pk: 23
@@ -315,8 +315,8 @@
     body_template: crack-team.html
     answer: RIPPER
     round: 3
-    unlock_global: -1
-    unlock_local: 1
+    unlock_global: -2
+    unlock_local: -1
 - model: puzzles.Puzzle
   pk: 27
   fields:
@@ -327,7 +327,7 @@
     answer: JOB
     round: 3
     unlock_global: -1
-    unlock_local: 2
+    unlock_local: 1
 - model: puzzles.Puzzle
   pk: 28
   fields:
@@ -338,7 +338,7 @@
     answer: DOUBLE
     round: 3
     unlock_global: -1
-    unlock_local: 3
+    unlock_local: 2
 - model: puzzles.Puzzle
   pk: 29
   fields:
@@ -349,7 +349,7 @@
     answer: DULL
     round: 3
     unlock_global: -1
-    unlock_local: 4
+    unlock_local: 3
 - model: puzzles.Puzzle
   pk: 30
   fields:
@@ -360,7 +360,7 @@
     answer: NEXUS
     round: 3
     unlock_global: -1
-    unlock_local: 5
+    unlock_local: 4
 - model: puzzles.Puzzle
   pk: 31
   fields:
@@ -371,7 +371,7 @@
     answer: JEWEL
     round: 3
     unlock_global: -1
-    unlock_local: 6
+    unlock_local: 5
 - model: puzzles.Puzzle
   pk: 32
   fields:
@@ -382,7 +382,7 @@
     answer: VOYAGERS
     round: 3
     unlock_global: -1
-    unlock_local: 7
+    unlock_local: 6
 - model: puzzles.Puzzle
   pk: 33
   fields:
