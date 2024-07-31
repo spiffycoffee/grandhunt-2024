@@ -127,8 +127,11 @@
 	</a>
 </div>
 
-<div class="abs-z1" style="top: 1%; left: 68%; width: 15%;" >
-	<img class="item_img abs-z1" style="width: 100%" src="{% static 'map_resources/main/reward.png' %}"/>
+<div class="map_item abs-z1" style="top: 1%; left: 68%; width: 15%;" >
+	<a href="https://forms.gle/oAuebqhqczp2bUVCA">
+	<img class="item_img abs-z1" style="width: 100%"
+	src="{% static 'map_resources/main/reward.png' %}"/>
+	</a>
 </div>
 {% endif %}
 
@@ -136,6 +139,9 @@
 <br />
 <h4>Jump to</h4>
 <ul>
+	{% if 'meta4_done' in milestones.keys %}
+	<li><a href="https://forms.gle/oAuebqhqczp2bUVCA">Congratulations! Feedback appreciated!</a></li>
+	{% endif %}
 	{% if 'round1_open' in milestones.keys %}
 	<li><a href="/story#1">Story: The Job</a></li>
 	<li><a href="/round/the-museum-of-superb-relics">Round: The Museum of Superb Relics</a></li>

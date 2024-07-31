@@ -695,6 +695,7 @@ def solve(request):
                     show_victory_notification(request.context)
                     messages.success(request, _('You have activated The Lantern!'))
                     messages.success(request, mark_safe("You have unlocked <a href='/story#5'>the epilogue</a>!"))
+                    messages.success(request, mark_safe("Please take our <a href='https://forms.gle/oAuebqhqczp2bUVCA'>survey</a>!"))
                 elif puzzle.slug == RUNAROUND_SLUG:
                     messages.success(request, mark_safe("You have found <a href='/the-grand-heist'>the secret blueprint</a>!"))
                 elif puzzle.is_meta:
