@@ -152,6 +152,7 @@ def milestones(request):
         ('round1_open', ''), ('meta1_done', ''),
         ('meta2_done', ''), ('meta3_done', ''),
         ('runaround_done', ''), ('meta4_done', ''),
+        ('challenges_open', ''),
     ))
     if not request.context.team and request.context.hunt_is_over:
         # Show all milestones (with no answers) for map / story
@@ -160,6 +161,8 @@ def milestones(request):
         for puzzle in request.context.unlocks:
             key_points['round%d_open' % puzzle.round.order] = 'true'
         if request.context.team:
+            if request.context.hint_challenges_are_active:
+                key_points['challenges_open'] = 'true'
             for puzzle in request.context.team.solves.values():
                 if puzzle.slug == RUNAROUND_SLUG:
                     key_points['runaround_done'] = puzzle.answer
@@ -495,7 +498,6 @@ def puzzles(request):
 @require_GET
 def round(request, slug):
     round = Round.objects.filter(slug=slug).first()
-    print(round)
     if round:
         rounds = render_puzzles(request)
         if slug in rounds:

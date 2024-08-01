@@ -111,6 +111,13 @@ class BaseContext:
     def hunt_is_closed(self):
         return self.now >= self.close_time
 
+    # This is a custom check to see if we are offering the hint challenges. 
+    # Currently we are starting them 6 hours into the hunt (Friday at 6pm EST), and ending them 66 hours into the hunt (Monday at 6am EST)
+    def hint_challenges_are_active(self):
+        print(self.time_since_start)
+        print(datetime.timedelta(hours=6))
+        return self.time_since_start > datetime.timedelta(hours=6) and self.time_since_start < datetime.timedelta(hours=66)
+
 # Also include the constants from hunt_config.
 for (key, value) in hunt_config.__dict__.items():
     if key.isupper() and key not in ('HUNT_START_TIME', 'HUNT_END_TIME', 'HUNT_CLOSE_TIME'):

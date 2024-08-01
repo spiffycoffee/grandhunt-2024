@@ -38,17 +38,23 @@
     </div>
 
     <div class="no-break">
-        <h4 id="Hints">{% translate "Hints (Lockpicks)" %}</h4>
+        <h4 id="Hints (Lockpicks">{% translate "Hints (Lockpicks)" %}</h4>
         <ul>
             {% format_time hint_time "WEEKDATE" as hint_date %}
             {% format_time hint_time "TIME" as hint_time %}
-            <li>Teams start with 1 lockpick available. Lockpicks are freeforms hints you can ask to get help on a puzzle. Starting on <strong>{{ hint_date }}</strong>, teams will receive <strong>1 Lockpicks</strong> every eight hours.
+            <li>Teams start with 1 lockpick available. Lockpicks are freeform hints you can ask to get help on a puzzle. Starting on <strong>{{ hint_date }}</strong>, teams will receive <strong>1 Lockpicks</strong> every twelve hours.
             <li>{% blocktranslate %}You can use a lockpick to get help on a puzzle. This can be something like a nudge in the right direction (i.e. you give us your progress on the puzzle and we&rsquo;ll try to get you unstuck) or an answer to a question (e.g. &ldquo;Which answers to these crossword clues are wrong?&rdquo;).{% endblocktranslate %}</li>
             <li>If you feel that we didn't help you, feel free to email us at <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> and we can help further. Please try to reply back to the original email, or include the previous responses, so we know what we have told you so far.</li>
             <li>We will do our best to help you pick locks as fast as possible, but please understand if it takes some time to get to you :)</li>
             <li>If you are out of lockpicks, but are completely stuck, please let us know through email. We want people to have fun solving puzzles and will be more generous for casual teams.</li>
-            
+        </ul>
+    </div>
 
+    <div class="no-break">
+        <h4 id="Hint Challenges (The Locksmith)">{% translate "Hint Challenges (The Locksmith)" %}</h4>
+        <ul>
+            <li>"Hint Challenges" are opportunities to earn additional lockpicks, accessible from the main page as "The Locksmith".</li>
+            <li>The Locksmith's shop will be available throughout the first weekend of the hunt. The first challenge will be available approximately 6 hours into the hunt, and will be refreshed approximately every 12 hours until Monday, August 12th.</li>
         </ul>
     </div>
 

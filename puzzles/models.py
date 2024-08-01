@@ -381,8 +381,10 @@ class Team(models.Model):
             return 0
         # if self.now < self.creation_time + TEAM_AGE_BEFORE_HINTS:
         #     return self.total_hints_awarded
-        eighthours = max(0, int((self.now - (HINT_TIME - self.start_offset)) / datetime.timedelta(hours=8)) + 1)
-        return self.total_hints_awarded + sum(HINTS_PER_DAY[:eighthours])
+        
+        # This is weird code from the prior hunt. Here I'm changing from a hint ever eight hours, to a hint ever 12 hours
+        twelvehours = max(0, int((self.now - (HINT_TIME - self.start_offset)) / datetime.timedelta(hours=12)) + 1)
+        return self.total_hints_awarded + sum(HINTS_PER_DAY[:twelvehours])
 
     def num_hints_used(self):
         return sum(hint.consumes_hint for hint in self.asked_hints)
