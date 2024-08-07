@@ -111,7 +111,7 @@ img {
     <div>
         <h4>{% translate "Who" %}</h4>
         <div class="info-desc">
-            {% with organizer="Constructed Adventures" %}
+			{% with organizer="<a href='https://www.constructedadventures.com'>Constructed Adventures</a>" %}
             {% if hunt_is_closed %}
             {% blocktranslate %}This was a puzzlehunt run by {{ organizer }}.{% endblocktranslate %}
             {% else %}
