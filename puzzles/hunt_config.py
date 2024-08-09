@@ -56,7 +56,7 @@ MAX_MEMBERS_PER_TEAM = 6
 HINTS_ENABLED = True
 # Teams accumulate this many hints each day.
 # Actually every 8 hours but I'm not renaming the variable
-# Above comment was form 2023 hunt, and now it's changed to 12 hours per hint for 2024
+# Above comment was from 2023 hunt, and now it's changed to 12 hours per hint for 2024
 HINTS_PER_DAY = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 # Teams get the first number in HINTS_PER_DAY at this time, and subsequent
 # numbers every day after until the end of HINTS_PER_DAY.
