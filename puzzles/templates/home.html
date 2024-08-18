@@ -75,7 +75,7 @@ img {
 {% blocktranslate with title=hunt_title %}The {{ title }} is now over, but you can still register and progress through the hunt until {{ hunt_close }}.{% endblocktranslate %}
 {% endif %}
 <br>
-{% with feedback_url="https://docs.google.com/forms/d/e/1FAIpQLSdmXgz_N1-SJ1vn7UJpj-qKhKeySIJb6sDKKphbBXZjqKNYyA/viewform" %}
+{% with feedback_url="https://forms.gle/oAuebqhqczp2bUVCA" %}
 {% if wrapup_page_visible %}
 {% url 'wrapup' as wrapup_url %}
 {% blocktranslate %}Please fill out our <a href="{{ feedback_url }}">feedback form</a> and check out our <a href="{{ wrapup_url }}">wrap-up</a>!{% endblocktranslate %}
