@@ -3,8 +3,8 @@
 {% load static %}
 
 {% block top-left-actions %}
-<a href="{% url 'finishers' %}" class="btn">{% translate "Finishers" %}</a>
-<a href="{% url 'bigboard' %}" class="btn">{% translate "Bigboard" %}</a>
+<!-- <a href="{% url 'finishers' %}" class="btn">{% translate "Finishers" %}</a> -->
+<!-- <a href="{% url 'bigboard' %}" class="btn">{% translate "Bigboard" %}</a> -->
 <a href="{% url 'hunt-stats' %}" class="btn">{% translate "Hunt Stats" %}</a>
 {% endblock %}
 
@@ -73,6 +73,8 @@ During The Grand Hunt vol 2:
 <li>71 teams were <b>thorough thieves</b>, solving every puzzle!</li>
 </ul>
 </p>
+
+<p><a href="{% url 'hunt-stats' %}">Hunt stats</a></p>
   
 <p>Note: this wrap up will contain <b>spoilers</b> for various puzzles and the story.</p>
 
@@ -210,7 +212,7 @@ During The Grand Hunt vol 2:
 
 <p><b>But most importantly</b>: if you’re an artist (or web dev) who is interested in a project like this: we want to hear from you!</p>
 
-<p>As a side note, I think it’s worth discussing AI art inside puzzle content itself, as I’ve seen it used more and more by “premiere” puzzle writers. I view AI art in puzzles as just another tool in an ever-growing toolbox for online puzzle hunts. It represents puzzle content (thematic or otherwise) that is not designed to be reverse image search-able. I see it as an analog to intentionally-vague crossword clues that are not meant to be piped through a crossword checker tool blindly. As creation tools evolve, just like solving tools evolve, I would want to take advantage of it.</p>
+<p>As a side note, I think it’s worth discussing AI art inside puzzle content itself, as I’ve seen it used more and more by premier puzzle writers. I view AI art in puzzles as just another tool in an ever-growing toolbox for online puzzle hunts. It represents puzzle content (thematic or otherwise) that is not designed to be reverse image search-able. I see it as an analog to intentionally-vague crossword clues that are not meant to be piped through a crossword checker tool blindly. As creation tools evolve, just like solving tools evolve, I would want to take advantage of it.</p>
 
 <br /><br />
 <h3>Lockpicks (Hints)</h3>
@@ -282,19 +284,16 @@ During The Grand Hunt vol 2:
 <p>If you’re looking to satisfy your craving <b>now</b>, be sure to check out:</p>
 
 <ul>
-<li>Mark Haplin’s new <a href="https://www.markhalpin.com/puzzles/puzzles.html">Labor Day Extravaganza</a>, ch-ch-ch-charging on August 31</li>
-<li>The masters of the online format, <a href="https://2024.galacticpuzzlehunt.com">Galactic Puzzle Hunt</a>, stargazing on September 20</li>
+<li>Mark Haplin’s new <a href="https://www.markhalpin.com/puzzles/puzzles.html">Labor Day Extravaganza</a>, ch-ch-ch-charging in on August 31</li>
+<li>The masters of the online format, <a href="https://2024.galacticpuzzlehunt.com">Galactic Puzzle Hunt</a>, shining down on September 20</li>
 </ul>
 
 <br /><br />
 <h3>Appendix</h3>
 
-<br /><br />
 <h4>From the Desk of Hint HQ</h4>
 
 <p>Sometimes a meme is worth a thousand hints</p>
-
-
 
 <img src={% static 'wrapup_resources/hint1.png' %} alt="Burial Bling" width="50%" />
 
