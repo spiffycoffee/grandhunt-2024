@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 
 {% block top-left-actions %}
 <a href="{% url 'finishers' %}" class="btn">{% translate "Finishers" %}</a>
@@ -45,11 +46,492 @@
   }
 </style>
 
-<h1>{% translate "Wrap-Up" %}</h1>
+<h1>{% translate "The Grand Wrap Up" %}</h1>
 
 <main>
 
-<p>{% translate "Congratulations!" %}</p>
+<p>Thank you so much for participating in our 2nd puzzle hunt! We hope you had a pleasant heist, whether you were a lone wolf we loved to lend a hand to, a flock of flummoxed fiends fighting to the finish line, a persevering postsolver, or anyone in between!</p>
+
+<p>
+A hearty congratulations and firm handshake to our top three finishers:
+<ul>
+<li><b>Jimothy Gaming</b>, in 7 hours 12 minutes</li>
+<li><b>PEDESTAL WHERE WE WOULD PUT OUR UNICODE CHARACTER IF WE HAD ONE</b>, in 7 hours 24 minutes</li>
+<li><b>Mischievous Forger of Wicked Radiance</b>, in 8 hours 54 minutes</li>
+</ul>
+</p>
+
+<p>
+During The Grand Hunt vol 2:
+<ul>
+<li>900 teams accepted <b>The Job</b></li>
+<li>704 teams purchased their <b>ticket</b></li>
+<li>590 teams breached the <b>museum</b></li>
+<li>294 teams escaped the <b>temple</b></li>
+<li>184 teams hacked the <b>mainframe</b></li>
+<li>177 teams activated <b>The Lantern</b></li>
+<li>71 teams were <b>thorough thieves</b>, solving every puzzle!</li>
+</ul>
+</p>
+  
+<p>Note: this wrap up will contain <b>spoilers</b> for various puzzles and the story.</p>
+
+<br /><br />
+<h3>Meet The (Not Museum) Staff</h3>
+
+<p>The main <b>puzzle writers</b> and editors were David Jackson (djack), Dan Miller (BostonDan), and Noah Steele (manofsteele). Additional puzzle writers: Jessie Wheat (hedgy), Julie Watson (missjoules), and Yamen O'Donnell (Yamen). This was a large hunt for so few writers (and still amateur ones at that!), so we sincerely appreciate the love you had for our content!</p>
+
+<p>The overall <b>story</b> and structure of the hunt was written by David Jackson (djack). He hopes you enjoyed the mix of dad jokes and “d’awws” along the way!</p>
+
+<p>The <b>website</b>, built off the always-amazing <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>, was further developed and operated by Philip Xie (spiffycoffee) and David Jackson (djack). After going into the deep end, never running this side of a hunt before, we’re both thankful it went as smoothly as it did (and we were able to keep those pesky 502’s at bay!).</p>
+
+<p><b>Hints</b> (aka Lockpicks) were organized by Julie Watson (missjoules). From feedback this year and last, our hint giving has been a high point for our solvers, and she’s the penpal, as one team put it, to thank! We had 8 hinters that made up “Hint HQ”, and we thank them for their time and tenacity (see below)!</p>
+
+<p><b>Hint Challenges</b> (aka The Locksmith) was puppet mastered by Chris Panzero (ChrispyK) and Julie Watson (missjoules). As a completely optional event, teams of all skill levels seemed to really engage with and enjoy this aspect of the hunt. Who knows, maybe The Locksmith will surprise us with another visit in the future!</p> 
+
+<p>The <b>custom art</b> was created by Alex Waters, The Architect’s brother. Solvers loved the round design and theming this year, which was something we really wanted to show off.</p>
+
+<p>The <b>playtesting</b> was coordinated by Andria Bancheri-Lewis (awesome_cupcake, aka MsMonster). Notably, Team Vehemence split into 5 different teams to playtest the hunt, and we can’t thank them enough!</p>
+
+<p>The Grand Hunt (physical and digital) was <b>conceived</b> by Chris Waters (The Architect) as a part of his company <a href="https://www.constructedadventures.com">Constructed Adventures</a>.</p>
+
+<br /><br />
+<h3>Story and Structure</h3>
+
+<p>In <b>The Grand Heist</b>, teams took the role of <b>The Solver</b>, tasked to steal <b>The Lantern</b> from a museum. <b>The Job</b> seemed straightforward enough at first, until <b>The Rival</b> (your lifelong adversary) seemed to be always one step ahead of you. After a game of cat-and-mouse through the museum, a temple, and even the information superhighway, you are beckoned to The Rival’s hideout, where <b>The Lantern</b> resided all along. They’ve been seeding lessons for you to learn and pieces of <b>The Blueprint</b> throughout your escapades. It turns out, <b>The Lantern</b> can only be activated by two people that share a deep connection to each other. By “flying off the handle” (throwing a temper tantrum), “killing time” (twiddling your thumbs), and “burning the candle at both ends” (working hard for the money), <b>The Solver</b> and <b>The Rival</b> activate <b>The Lantern</b> together, allowing them to see each other in a new light, and kicking off a new life of thievery hand-in-hand.</p>
+
+<p>Last year’s hunt basically had no story. I recall a week or two before it started, I threw together a few words per chapter to give it any sense of cohesiveness. For many puzzle hunters, the story is a distraction at best. But we wanted you to feel engaged with the story thematically, and have it connect in some way to the key beats of the hunt.</p> 
+
+<p>From the start, the team agreed we should focus on a simple trope as the overarching theme, and a heist (most grand) was quickly picked out of a short list of tropes. We also wanted to make a real story out of that trope. We had many ideas for different “biomes” each round could take place in, and even had some sci-fi / time-traveling concepts in earlier iterations. But in the end, we decided a story more closely grounded in reality would make for a better hunt structure. The final meta meta was conceived out of that desire, and we set up the full structure from there. Each round represented a different heist-y trope (the classic Ocean’s Eleven-style heist, the “it belongs in a museum!” Dr. Jones heist, and “that guy that always hacks into a mainframe” heist). We liked the idea that while the hunt wasn’t taking any major plot swings until the end, the round theming would keep solvers on their toes in new ways.</p> 
+
+<br /><br />
+<h3>The Puzzles</h3>
+
+<p>Our goal this year was to be more polished and cohesive than last year in our puzzle design, while trying to remain approachable. To that end, we removed the “guest puzzle” aspect of last year’s hunt. One fallout of this decision was we had less total “stable” puzzle writers, and ended up taking on more puzzles per writer than we intended at the start.</p> 
+
+<p>After the meta meta was locked in, each round had an owner to keep the theming and style cohesive within that round (manofsteele for round 1, bostondan for round 2, and djack for round 3). Though we intermingled between the rounds, that did mean the rounds had their own take on the puzzle hunt format, and could feel more different between each other than we intended.</p> 
+
+<p>We wanted round 1 to be of similar difficulty as last year (designed for newbie puzzle hunters, even when teaching similar concepts as last year), and then have a smoother ramp in difficulty over the course of the hunt (even if the total difficulty was higher than last year).</p> 
+
+<ul>
+<li>Museum round, average difficulty: 2.6 / 6</li>
+<li>Temple round, average difficulty: 4.0 / 6</li>
+<li>Hack round, average difficulty: 4.3 / 6</li>
+</ul>
+
+<p>These numbers are close to what we hoped to see. But similar to last year, the spike in difficulty from round 1 to round 2 was a bit too high, as many solvers noted. Newbie and veteran solvers alike did enjoy the challenge, once the dust settled (and The Locksmith handed out some help).</p>
+
+<p>Related to difficulty: length. Most teams who gave us feedback praised the longer hunt’s length, and still felt it was a relative palate cleanser to other online hunts. But a few teams wished it was closer in overall time commitment to last year’s hunt. We received strong feedback last year that a single weekend was not enough time for casual teams to finish. We increased this year’s hunt to span two full weekends, which was much appreciated. On the flip side, a few dedicated-to-finish teams felt it a slog to stick it out to the bitter end. It’s a difficult balancing act indeed!</p>
+
+<p>Another metric we liked to see: the average enjoyment of each round was relatively high and perfectly consistent throughout the hunt (though as you’ll see below, the hack round had more divisive puzzles).</p> 
+
+<ul>
+<li>Museum round, average enjoyment: 4.5 / 6</li>
+<li>Temple round, average enjoyment: 4.5 / 6</li>
+<li>Hack round, average enjoyment: 4.5 / 6</li>
+</ul>
+
+<p><b>Tickets Please</b> was the easiest puzzle of the hunt (we hope you enjoyed your entry!).</p>
+
+<p><b>Under Pollock and Key</b> was the most enjoyable puzzle of the hunt (with <b>Help Me, ChatOMG!</b> a close second, often trading places for first).</p>
+
+<p><b>Help Me, ChatOMG!</b> was the hardest puzzle of the hunt (though required relatively few hints, which I interpret as “tough but fair”).</p> 
+
+<p><b>The Marvelous MsMonster</b> was the least enjoyable puzzle of the hunt (though the “inspiration” of the puzzle, as noted in individual feedback, did lead to a likely-deserved review bomb of the puzzle).</p>
+
+<img src={% static 'wrapup_resources/survey.png' %} alt="Average enjoyability vs difficulty" width="75%" />
+
+<br /><br />
+<h4>Chapter 1: The Museum of Superb Relics</h4>
+
+<p>I didn’t write for last year’s hunt; instead, I was a participant (and it was actually my first puzzle hunt ever!) As a member of the writing team this year, I sought to approach round 1 with the same philosophy the team had last year: an introductory round that could introduce new hunters to the concepts and general ideas of puzzle hunting, while still being enjoyable, if easy, for veteran teams. Based on survey responses, it seems like we hit this mark in most areas! A few interesting results from the surveys include <b>Crossword Puzzle No. 1 in Black and White</b> generally being rated as on the easier side (we were quite worried about the difficulty of this one during construction!) and <b>In The Jungle</b> having a wide range of difficulty responses, with some teams finding it very easy and others finding it very tough. Hopefully it was a helpful tool for learning about Identify, Sort, Index, Solve puzzles, even if it was tricky!</p>
+
+<p>When approaching the round structure, I focused heavily on story, theming, and presentation; a museum heist setting gave lots of inspiration for puzzle themes as well as a general idea for the plot. In my initial pitch, teams would spend the first five puzzles scouting the museum, then breaking into the museum for the latter half of the round. This also would’ve included two different round art images - the museum map as included in the final version, and then a heist-planning-style blueprint version of the museum for the latter half of the round. Though this initial ambitious pitch didn’t survive into the final product, there are still some remnants in the puzzle order, such as how the first five puzzles focus on the museum’s exhibits and attractions and the latter half focus more on behind-the-scenes areas of the museum. I hope teams enjoyed exploring the Museum of Superb Relics and pulling off their heist!</p>
+
+<p>On a personal note, this was one of my first times writing puzzles for anyone other than my friends. I had tons of fun and learned a lot, and I’m so grateful to have been given the chance to help with this year’s hunt!</p> 
+
+<br /><br />
+<h4>Chapter 2: The Lost Temple</h4>
+
+<p>This was designed as an intermediate round between Chapter 1 and 3, but ideally accessible to a group of fairly new puzzlers. Like the 2023 hunt, some of the puzzles may have been a bit too hard, but solvers in general expressed their enjoyment.</p>
+
+<p><b>Snakes... Why did it have to be snakes?</b> Given the theme of the round, once I remembered this line from Raiders of the Lost Ark, I had to write a corresponding puzzle. There were a bunch of steps required - solvers had to recognize and solve a slitherlink, understand and apply the resistor code, apply a Caesar shift, find the “solo snakes” and move them to the nest boundaries while preserving their orientation (this tripped up a lot of teams), extend them in the direction they were pointing, realize they needed to locate the squares where the stretched snakes intersected, and Google the resulting words to yield a type of snake. Not surprisingly, this puzzle needed the third most hints of any in the hunt, and should not have been the first puzzle in the round.</p>
+
+<p><b>Burial Flags</b>: This went through many iterations, all of which attempted to better describe how to visualize the flags (which in the nonogram appeared to be attached by their edges) once stacked atop each other. But the final version still was not clear, and this puzzle required the second largest number of hints. Surprisingly, of all the round 2 puzzles, it had the most successful solves!</p>
+
+<p><b>Meandering Streams</b>: Here I used the semaphore code in reverse, where a letter suggests the two directions (rather than the reverse). The phrase USE FLAG CODE (and it needing to be read backwards) is a bit of an Easter egg, as it appeared in the Clouds puzzle from the 2023 Grand Hunt which also used the reversed semaphore gimmick. Will there be a three-peat next year?</p>
+
+<p><b>The River</b>: I really enjoyed creating the mechanism here, as the solvers had to think about multiple definitions of words and how to group them. It was not easy to create a “loop” of word meanings and I managed to work two such loops into the puzzle. Solvers also had to find the words in the first place from the story, asking themselves “which word was the sentence crafted to include?” - also a mechanism I enjoy.</p>
+
+<p><b>Star Chart</b> was a nice simple “drop quote” puzzle, but with words instead of letters. It needed about one-fifth of the hints required by Snakes. This would have been a nice puzzle for solvers to encounter first.</p>
+
+<p><b>Rolling Boulders (Meta)</b>: Once again, the theme of the round suggested this puzzle fairly early. It makes very little demands on the individual puzzle answers - they just all had to be 10 letters long and offer a reasonable selection of letters. I reversed the “arrow” icons to help distinguish them from the “letter” icons, but this caused some confusion and they would have been better left in their original orientation. Having slightly different glyphs on each of the round’s puzzles was a bit challenging logistically but I think provided a nice a-ha moment (and attractive and thematic decoration). I thought this meta’s difficulty level was appropriate for the round. Of course, we’re all sorry about what happened to Kyle - oh, corporate says we’re not supposed to discuss that; never mind.</p>
+
+<p>Overall I was happy with this round as it fit the theme very nicely and I thought there were some interesting gimmicks in it. I hope you enjoyed it as well!</p> 
+
+
+<br /><br />
+<h4>Chapter 3: The Hack</h4>
+
+<p>I wanted this round to take bigger swings than the previous rounds, while still being approachable and fun. Since this was the “modern” round, it was an opportunity to throw in more pop culture references, mixed media, and the highs (and lows) of the internet.</p> 
+
+<p>Overall, this round received praise for its overall vibe and several standout puzzles. Notable puzzles include Help Me ChatOMG!, Take The Initiative, Missed Connections, Let’s Just Get Takeout, Keeping Up With The Keychain, and Weather Conditions.</p>
+
+<p><b>Help Me ChatOMG!</b> in particular was a mini-hunt to write by itself. This was the first puzzle I did that I felt I was growing as a puzzle writer, editor, and collaborator with other writers.</p> 
+
+<p><b>Missed Connections</b>, a spiritual successor to Snap Decisions from last year, got a lot of positive feedback. And we loved all the dating profiles you sent us (see below for some samples)!</p> 
+
+<p><b>Weather Conditions</b> was the standout logic puzzle of the hunt, of which we were lacking (as a couple solvers put it “so many crossword clues!”). I brought in my puzzle hunt teammate hedgy into the writing process, and it was really fun to collaborate with them.</p> 
+
+<p>As the round took bigger swings, there were some misses. <b>The Marvelous MsMonster</b>, <b>Crack Team</b>, and <b>Firewallstreetbets</b> all had lower enjoyment scores compared to the hunt average. However, all three puzzles were frequently mentioned as favorites in the “what was your favorite puzzle of the hunt?” poll. As our problematic crypto bros say, “go big or go home!”</p>
+
+<p><b>The Marvelous MsMonster</b> came out of a desire to try something different and risky, knowing full well it could be a clunker in the end. Overall, I’m happy with how it turned out, and some solvers praised that it wasn’t your typical “watch these super long video clips and transcribe tons of stuff”-type puzzles. But still, as another solver noted, audio-based, video-based, and map-based puzzles can really turn off a subset of teams. The biggest ding was MsMonster’s problematic inspiration, who not only is a divisive and, as many teams noted, “annoying” YouTuber, he recently got a lot of negative publicity. My intention was to provide solvers with a link to source material that they don’t need to be concerned with in and of itself. However, even a few seconds of video scrubbing turned off some solvers. Either way, we hope you liked our very own influencer MsMonser (awesome_cupcake)!</p> 
+
+<p><b>Crack Team</b> and <b>Firewallstreetbets</b> were both puzzles I really enjoyed making, but suffered from some amateur mistakes around signposting towards the final parts. For <b>Crack Team</b>, it was a lot of work for solvers to get the basics right, but I envisioned a team having fun with the initial “work”. However, they had to interpret the writer’s intentions too much to complete it. <b>Firewallstreetbets</b> had a final transformation that felt fair but was opaque, and a single error could throw solvers off. I had a visual clue to help that I ended up removing, due to other confusion it was causing. And I couldn’t find the right approach in the end.</p>
+
+<p>More experienced solvers really enjoyed the “aha” moments in <b>The Lantern Digital</b> meta puzzle. However, some other solvers found the break-in challenging. They often gave up on the right technique once they discovered TERM+INATOR. I wanted this “aha” moment to feel organic to a solver, showing how that initial discovery was promising, and then trying that same technique on other combos. Looking back, I don’t think I would have changed the puzzle, but it was still a valuable lesson for me on how to improve my puzzle writing skills.</p>
+
+<p>All in all, I’m happy with how this round turned out, and it’s gratifying to see the positive feedback it received.</p>
+
+
+<br /><br />
+<h4>Endgame: The Blueprint</h4>
+
+<p><b>The Secret Blueprint</b> was the first puzzle written for the hunt, and it was meant to be a very light capstone to all the hard work solvers put into this hunt. I intentionally designed it to be solvable without discovering the connection between the meta feeders (idiom puns) and the lantern activation steps (synonyms of those puns). Those who got the connection said it was a magical moment, which was exactly my hope. But for those that didn’t, I didn’t want them to feel frustrated right at the very end. I hope you enjoyed the minor plot twist that your meta meta solving unlocked!</p>
+
+<p><b>The Blueprint</b> was added much later on, if that wasn’t obvious. We felt that we needed just a bit more to enhance both the story and puzzle aspects of the ending. It was a straightforward runaround-type puzzle, but many teams commented on enjoying it, if nothing more than a victory lap through their journey.</p>
+
+<br /><br />
+<h3>The Art</h3>
+
+<p>We want to thank Alex for his amazing art contributions to the three round maps, and theming for round 2 and round 3. Solvers loved his art style, and felt it was a huge level up from last year’s hunt (which was artless outside of the puzzles). As noted by multiple teams, “everything popped”.</p>
+
+<p>Now to discuss the AI art. The reality of this hunt is – it’s completely voluntary. We’re doing this out of our love of puzzles and the puzzling community. When the artist could no longer take part, we looked for close to half a year for other options (delaying the hunt accordingly). As a brief tangent, we were also unable to find anyone willing to work on the website itself, so we took that on ourselves the best we could. We really wanted to give solvers the full experience we envisioned, so we generated “main map” and “story” content, as a means to get solvers to those amazing round maps in a cohesive way. We understand how this can detract from the custom art we did include, and diminish the overall authenticity of the hunt. If we could go back and hand draw a few boxes at a kindergartner’s drawing level instead, maybe we would have (and maybe we should have).</p>
+
+<p><b>But most importantly</b>: if you’re an artist (or web dev) who is interested in a project like this: we want to hear from you!</p>
+
+<p>As a side note, I think it’s worth discussing AI art inside puzzle content itself, as I’ve seen it used more and more by “premiere” puzzle writers. I view AI art in puzzles as just another tool in an ever-growing toolbox for online puzzle hunts. It represents puzzle content (thematic or otherwise) that is not designed to be reverse image search-able. I see it as an analog to intentionally-vague crossword clues that are not meant to be piped through a crossword checker tool blindly. As creation tools evolve, just like solving tools evolve, I would want to take advantage of it.</p>
+
+<br /><br />
+<h3>Lockpicks (Hints)</h3>
+
+<p>Being beginner friendly has always been an integral part of this hunt, and hints are an important element of that. After some dissatisfaction with last years’ limitless hints at the end of the hunt, a system was worked out where teams would be given 1 lockpick (hint) to start and the ability to earn more hints as needed through work with “The Locksmith” during the first weekend of the hunt. Once the locksmith sailed away, all teams were granted one lockpick every 12 hours for the remainder of the hunt.</p>
+
+<p>In the lead-up to the hunt we tried to work out what would be the biggest sticking points for teams and how to best overcome those obstacles. We brainstormed clues for steps that might require more assistance and worked out how we could get them past any sticking points without giving too much information. In some instances, we were successful in predicting where teams would struggle but we were surprised by what puzzle ended up becoming the most hinted in the hunt!</p>
+
+<p>The hint team answered 3201 hint requests over the course of the hunt! Our hint champions:</p>
+
+<ul>
+<li>missjoules: 954</li>
+<li>djack: 566</li>
+<li>iFuJ: 402</li>
+<li>BostonDan: 331</li>
+<li>ChrispyK: 283</li>
+<li>hedgy: 231</li>
+<li>awesome_cupcake: 227</li>
+<li>Yamen: 176</li>
+</ul>
+
+<p>Hints had an average response time of 6 minutes 27 seconds and a median response time of 4 minutes 21 seconds. We received quite positive feedback on our hint responsiveness!</p>
+
+<p>Every response was customized to the team who was requesting the hint. We had some lovely hint requests which included ASCII art, poems, and a request that we respond to like an AI. We joked and chatted with teams on their solve sheets, and even had a penpal!</p>
+
+<p>The puzzle with the most hint requests (162) was <b>Fearsome Foes</b>. Almost all hints for this puzzle revolved around how to extract the final answer from the word search using the directions in the boss fight descriptions.</p>
+
+<p><b>Burial Flags</b> (140) and <b>Snakes… Why did it have to be Snakes?</b> (128) rounded out the most hinted top three. Every puzzle required at least one hint, with <b>Reconnaissance</b>,<b>Crossword Puzzle No 1 in Black and White</b>, and <b>Pinching Pig-Pennies</b> being the least hinted puzzles in the game.</p>
+
+<p>The first hint was requested 54 minutes into the hunt. The final hint was asked for with just three minutes to spare. All hints requested were answered before the end of the hunt.</p>
+
+<p>Teams requesting hints were universally polite and pleasant; some were even apologetic! But it was our pleasure to work with all the teams and get them as far through the hunt as they wanted to go. For the second year, the hint process got very positive reception in the post-hunt feedback. Thank you for recognizing the work of the team.</p>
+
+<br /><br />
+<h3>The Locksmith (Hint Challenges)</h3>
+
+<p>The Locksmith was our conceit to add hint challenges into the hunt for the opening weekend, and he was very popular!  It was a unique challenge to run alongside hints, but your submissions did a lot to lift our spirits throughout the weekend.  Will the Locksmith return?  You’ll have to wait and see next hunt, but the hint challenges were popular enough with both the solvers and the hinters that we think it will likely return in some format.</p>
+
+<p>Quick stats:</p>
+
+<ul>
+<li>Lockpicks dispensed by The Locksmith: <b>344</b></li>
+<li>Team who completed most Locksmith Challenges: <b>TiKi (16 Challenges)</b></li>
+<li>Most completed challenge: <b>Become a Checkbox Olympian (48)</b>, with a best time of <b>30s 54ms</b></li>
+</ul>
+
+<p>You submitted:</p>
+
+<ul>
+<li>85 animal photos (55 dogs, 29 cats, 1 sleeping bunny)</li>
+<li>39 pieces of poetry</li>
+<li>27 sonnets pleading for help, 8 acronym haikus, and 4 poems written with book spines</li>
+<li>24 forged pieces of artwork</li>
+<li>22 custom puzzles that are totally not gonna be next year's hunt, honest!</li>
+</ul>
+
+<p>Calories were burned, Soup was Scrabbled, Socks were Puppetted, Team Names were Anagrammed, and much, much more!  </p>
+
+
+<br /><br />
+<h3>What’s Next?</h3>
+
+<p>Many of you in your feedback to us are hungry for more, and we’re sure Grand Hunt Digital vol 3 will deliver! But <b>when</b> it will, who can say!</p>
+
+<p>Will The Locksmith sail back to our shores? Will MsMonster achieve “brat summer”? What <b>really</b> happened to Kyle? Be sure to join Constructed Adventure’s <a href="https://discord.gg/d47VrqVP">Discord</a> for any future Grand Hunt updates!</p>
+
+<p>All we know is, none of this would be possible without your <b>love</b> of our hunts. We sincerely thank you for participating. And if you’re interested in the process or getting involved, don’t be a stranger!</p>
+
+<p>If you’re looking to satisfy your craving <b>now</b>, be sure to check out:</p>
+
+<ul>
+<li>Mark Haplin’s new <a href="https://www.markhalpin.com/puzzles/puzzles.html">Labor Day Extravaganza</a>, ch-ch-ch-charging on August 31</li>
+<li>The masters of the online format, <a href="https://2024.galacticpuzzlehunt.com">Galactic Puzzle Hunt</a>, stargazing on September 20</li>
+</ul>
+
+<br /><br />
+<h3>Appendix</h3>
+
+<br /><br />
+<h4>From the Desk of Hint HQ</h4>
+
+<p>Sometimes a meme is worth a thousand hints</p>
+
+
+
+<img src={% static 'wrapup_resources/hint1.png' %} alt="Burial Bling" width="50%" />
+
+<br /><br />
+
+<p><b>just 1 guy</b>’s Help Me, ChatOMG! hint request: </p>
+
+<p><i>Hi ChatOMG, write me a hint to help me get started on the grilled sandwich puzzle. I don't know how to start. Write the hint as if you are a part of a team formed to help people through the puzzles in a puzzle hunt called "The Grand Hunt". (thank you)</i></p>
+
+<p>Our reply:</p>
+
+<p><i>​Certainly! Please give me a moment. Processing ... processing ... critical error, terminating with code 69420... 💀</i></p>
+
+<p><i>Oh hey, it's me, the "Grant Hunt". Here to help you with all your hinting needs!</i></p>
+
+<p><i>This is a cryptic mini-puzzle indeed. If you're unfamiliar with cryptics, looking up common "indicator" words might help. The good news is, each answer serves 8 (length of each answer). And if the [INGREDIENT]s are pulled from the available terms, they must be short, limiting the options.</i></p> 
+
+<p><i>When you get past this step and are given a clue, don't forget to look up grille cryptology for how to apply that clue.</i></p>
+
+<p><i>Good lu-@$^%#^@*^$</i></p>
+
+<p><i>Oh my! What just happened? I appear to have cleared my cache. How can I help you today?</i></p>
+
+<br /><br />
+
+<p>When round 3 puzzles were about to break into the top 5 most requested: </p>
+
+<img src={% static 'wrapup_resources/hint2.png' %} alt="The Hints are Fighting!" width="50%" />
+
+<br /><br />
+
+<p>So many MsMonster hint replies as MsMonster:</p>
+
+<p><i>Oh <team>, my flummoxed fiends,</i></p>
+
+<p><i>I TOTES agree, there is SO much going on here! Let's start with my FAVORITE part: the thumbnails! As you noted they do seem to cycle from the previous clips' box at the end to the thumbnail of the next. If you put the two together, what am I trying to tell you, dear viewer?!</i></p>
+
+<p><i>Best of luck, my fun-loving fiends! And be sure to like and subscribe!</i></p>
+<p><i>MsMonster</i></p>
+
+<br /><br />
+
+<p>In the style of the most requested hint of the most requested puzzle in the hunt (Fearsome Foes):</p>
+
+<p><i>I’ve figured out that the monsters are bosses from zelda, and then found the weapons you use for those bosses in the word search. I then ordered by when the games came out. But to say it simply: what then?</i></p>
+
+<br /><br />
+
+<p>Some excerpts from <b>Escaping Wherever Whenever</b>, missjoules’ penpal:</p>
+
+<p><i>… Hello again. It's like you're my penpal at this point.</i></p> 
+<p><i>… Dear penpal, Thank you for your help this morning.</i></p>
+<p><i>… Hello again penpal, How are you? These last three are really really hard.</i></p>
+<p><i>… Hello penpal, I'm sure you aren't surprised, but we got halfway on crack team and got stuck.</i></p>
+<p><i>… Hello penpal, I will miss our correspondence as well.</i></p>
+
+<br /><br />
+
+<p>When one team realized their mistake on Firewallstreetbets:</p>
+
+<img src={% static 'wrapup_resources/hint3.png' %} alt="It's a moon, bro" width="25%" />
+
+<br /><br />
+
+<p><b>​​SMHourheads</b> wrote us a poem for a hint request:</p>
+
+<p><i>We woke up here on day 3,
+Unable to crack
+"We could sure use a hint please,
+Or our meta will lack!"</i></p>
+
+<p><i>Lots of conlangs, in a chain<br />
+Hinting other codes<br />
+Some describe things as "my parts"<br />
+Here's where we lose siiight of the road</i></p>
+
+<p><i>Got to find this Wingding Guy<br />
+And get his identity</i></p>
+
+<p><i>Asking for a hint<br />
+We're clueless fools<br />
+We need the god of answers<br />
+This is where we're left<br />
+Crack Team will fall<br />
+And crumble down before our might</i></p>
+
+<p><i>Alpha sorted characters, to easily track<br />
+To confirm our languages<br />
+Aurebesh and Gravity, Krakoan, Wakandan<br />
+Futurama Chozo Gerudo<br />
+"Look there" we all said, as we decoded each phrase<br />
+They clue other ciphers<br />
+T9 braille and morse, semaphore and moontype<br />
+Pigpen and nautical siiiiigns</i></p>
+
+<p><i>Asking for a hint<br />
+We're clueless fools<br />
+We need the god of answers<br />
+This is where we're left<br />
+Crack Team will fall<br />
+And crumble down before our might</i></p>
+
+<p><i>What now do we to solve this<br />
+We aren't quite clear how<br />
+To use clued ciphers<br />
+Do we modify letters<br />
+From in the conlangs?</i></p>
+
+<p><i>As the Eels waited for a hint response<br />
+Their hearts did beat with worry<br />
+[The Lockpick Must Retuuuuurrrrrrnnnnnnnnn!]<br />
+As the a-ha fell at their feet<br />
+They felt answers in their palm - ANSWER TIME<br />
+The Lockpick has returned!</i></p>
+
+<p>Our response:</p>
+
+<p><i>You've done well,<br />
+you've gone far,<br />
+and you know who <br />
+these chatters are.</i></p>
+
+<p><i>But before<br />
+you use their cipher<br />
+there's a clue<br />
+written higher.</i></p>
+
+<p><i>"First initially"<br />
+is quite redundant.<br />
+Question words<br />
+that are abundant.</i></p>
+
+<p><i>Just remember<br />
+when I sign,<br />
+I use the letters<br />
+I call mine.</i></p>
+
+<p>And later on:</p>
+
+<p><i>You've got the right technique,<br />
+Even if your output looks bleak<br />
+Spin your craft once more<br />
+To get through the door</i></p>
+
+<p><i>If you're only missing feeder one<br />
+How did you end up with three undone?<br />
+Is it the red crossed passwords?<br />
+Just remove a head, then observe.</i></p>
+
+<p><i>If all this is falling through<br />
+Give us all your work, you prudes!</i></p>
+
+<p><i>(and last thing I must add .. you're indexing the full feeder+image, cuz it's rad?)</i></p>
+
+<br /><br />
+<h4>The Locksmith's Treasure</h4>
+
+<p>The Locksmith accepts your pets!</p>
+
+<img src={% static 'wrapup_resources/hq1.png' %} alt="Pet" width="33%" />
+<img src={% static 'wrapup_resources/hq2.png' %} alt="Pet" width="33%" />
+<img src={% static 'wrapup_resources/hq3.png' %} alt="Pet" width="33%" />
+<img src={% static 'wrapup_resources/hq4.png' %} alt="Pet" width="33%" />
+<img src={% static 'wrapup_resources/hq5.png' %} alt="Pet" width="33%" />
+
+<br /><br />
+<p>The Locksmith accepts your poetry!</p>
+
+<img src={% static 'wrapup_resources/hq6.png' %} alt="Poem" width="33%" />
+<img src={% static 'wrapup_resources/hq7.png' %} alt="Poem" width="33%" />
+<img src={% static 'wrapup_resources/hq8.png' %} alt="Poem" width="33%" />
+<img src={% static 'wrapup_resources/hq9.png' %} alt="Poem" width="33%" />
+<img src={% static 'wrapup_resources/hq10.png' %} alt="Poem" width="33%" />
+<img src={% static 'wrapup_resources/hq11.png' %} alt="Poem" width="33%" />
+
+<br /><br />
+<p>The Locksmith accepts your forgeries!</p>
+
+<img src={% static 'wrapup_resources/hq12.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq13.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq14.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq15.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq16.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq17.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq18.png' %} alt="Art" width="25%" />
+<img src={% static 'wrapup_resources/hq19.png' %} alt="Art" width="25%" />
+
+<br /><br />
+<p>The Locksmith accepts your puzzles!</p>
+
+<img src={% static 'wrapup_resources/hq20.png' %} alt="Puzzle" width="60%" />
+<img src={% static 'wrapup_resources/hq21.png' %} alt="Puzzle" width="60%" />
+<img src={% static 'wrapup_resources/hq22.png' %} alt="Puzzle" width="60%" />
+
+<br /><br />
+<p>The Locksmith accepts ... some weird stuff!</p>
+
+<img src={% static 'wrapup_resources/hq23.png' %} alt="Stuff" width="33%" />
+<img src={% static 'wrapup_resources/hq24.png' %} alt="Stuff" width="33%" />
+<img src={% static 'wrapup_resources/hq25.png' %} alt="Stuff" width="33%" />
+
+<br /><br />
+<p>Acronym-ception from <b>Mathemagicians Invigoratively Solving Puzzles Lost Amongst Constructed Escapades, Delightful!</b></p>
+
+<p><i>Mathemagians Always Take Heed, Every Moment, Always Gaining Insight Constantly. In A Nonsensical Sense, Individuals Never Vainly Inquire. Grand Originality, Results Are Tentatively In: Very Exquisite, Lively, Young Solvers. Otherwise, Lengthy Vivacious Intuition Never Garners Puzzle Utility, Za- Zoing! Less Every Solver Loses Our Sight, Together Anyone May Own Nonstop Glamour. Solve Together Comrades, Ought Nobody Should Try Rhetoric Unsolved. Contrary To Editorial Data, Every Solver Cares About Puns And Darn'it, Everyone Should! Delightful Energy Lights Insight, Garners Hope. Total: Full, Ultimate Love.</i></p>
+
+<br /><br />
+<h4>&lt;Your Team Name&gt;'s Missed Connections</h4>
+
+<p>Here’s just a small taste of the amazing dating profiles based on your team name you created! We particularly loved finding some hidden puzzles and easter eggs along the way! XOXO</p>
+
+<img src={% static 'wrapup_resources/profile1.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile2.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile3.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile4.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile5.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile6.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile7.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile8.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile9.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile10.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile11.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile12.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile13.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile14.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile15.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile16.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile17.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile18.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile19.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile20.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile21.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile22.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile23.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile24.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile25.png' %} alt="Profile" width="45%" /><br /><br />
+<img src={% static 'wrapup_resources/profile26.png' %} alt="Profile" width="45%" /><br /><br />
 
 </main>
 

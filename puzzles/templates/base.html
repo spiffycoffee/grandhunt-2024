@@ -107,11 +107,11 @@
                     {% translate "Updates" %}
                 </a>
                 {% endif %}
-                {% if wrapup_page_visible %}
+                <!-- {% if wrapup_page_visible %}
                 <a{% if '/wrapup' in request.path %} class="selected-tab"{% endif %} href="{% url 'wrapup' %}">
                     {% translate "Wrap-Up" %}
                 </a>
-                {% endif %}
+                {% endif %} -->
                 {% if meet_team_page_visible %}
                 <a{% if request.path == '/meet-team' %} class="selected-tab"{% endif %} href="{% url 'meet-team' %}">
                     {% translate "Meet the Staff" %}
